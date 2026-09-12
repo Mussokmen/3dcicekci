@@ -1,0 +1,98 @@
+export type GuideArticle = {
+  slug: string;
+  name: string;
+  path: string;
+  description: string;
+  body: string[];
+};
+
+export const guides: GuideArticle[] = [
+  {
+    slug: "bursa-cicek-gonderimi",
+    name: "Bursa çiçek gönderimi nasıl işler?",
+    path: "/rehber/bursa-cicek-gonderimi",
+    description: "Bursa içinde çiçek tesliminin WhatsApp, mahalle ve saatle nasıl planlandığı.",
+    body: [
+      "Vitrinden bir ürün seçip WhatsApp’tan yazarsınız. Mahalle, açık adres tarifi, alıcı adı ve istenen saat aralığı yeterlidir. İlçe sayfalarında Osmangazi, Nilüfer, Yıldırım, Mudanya, Gemlik, İnegöl, Görükle, Gürsu, Kestel, Yenişehir, İznik, Karacabey, Mustafakemalpaşa ve Orhangazi için kısa notlar vardır.",
+      "Kurye güzergâhı o günkü siparişlere göre kurulur. Bursa içinde aynı gün teslim ederiz; 7/24 WhatsApp’tan yazabilirsiniz. Mahalle ve saati mesajda belirtin.",
+      "Sepet, üyelik veya otomatik ödeme yoktur. Güncel durumu mesajda konuşuruz; sitede stok rakamı göstermeyiz.",
+    ],
+  },
+  {
+    slug: "whatsapp-siparis",
+    name: "WhatsApp’tan çiçek siparişi",
+    path: "/rehber/whatsapp-siparis",
+    description: "Bursa’nın Çiçekçisi’nde WhatsApp siparişinde hangi bilgilerin gerektiği.",
+    body: [
+      "Mesaja ürün adını veya sayfa linkini, teslim mahallesini ve kart notunu ekleyin. Fotoğrafı vitrindekiyle karşılaştırmak için ürün sayfasındaki görseli referans alın.",
+      "Ödeme ve teslim detayı yazışmada netleşir. Form veya hesap oluşturmayız. Kişisel veriyi sipariş için gerekli olduğu kadar kullanırız; ayrıntı gizlilik sayfasındadır.",
+    ],
+  },
+  {
+    slug: "orkide-teslim",
+    name: "Orkide tesliminde nelere dikkat edilir?",
+    path: "/rehber/orkide-teslim",
+    description: "Saksılı orkidenin Bursa tesliminde saksı, dal ve bekletme notları.",
+    body: [
+      "Fotoğrafta kaç dal göründüğüne bakın. Tek salkım ile dolu saksı aynı şey değildir. Saksıyı devirmemek için aracı dik tutarız; alıcının kapıda olması beklemeyi kısaltır.",
+      "Bakım vaadi vermeyiz. Kısa ışık notu yeterlidir. Ofis teslimlerinde kat ve kabul saatini yazın.",
+    ],
+  },
+  {
+    slug: "celenk-siparisi",
+    name: "Çelenk siparişi",
+    path: "/rehber/celenk-siparisi",
+    description: "Bursa çelenk siparişinde ölçü, renk ve kurdele metni.",
+    body: [
+      "Metni karakter karakter kontrol edin. İsim ve unvan teslimden sonra düzelmez. Kapı önü ile salon çelengi ölçek olarak ayrıdır.",
+      "Anma saatine yetişmesi için erken yazın. Vitrindeki çelenk fotoğrafları ölçü hakkında fikir verir; net santimi mesajda konuşuruz.",
+    ],
+  },
+  {
+    slug: "ayni-gun-teslim",
+    name: "Aynı gün teslim",
+    path: "/rehber/ayni-gun-teslim",
+    description: "Bursa’da aynı gün çiçek teslimi ve 7/24 WhatsApp siparişi.",
+    body: [
+      "Bursa ili içinde aynı gün teslim ederiz. Osmangazi, Nilüfer, Yıldırım veya daha uzak ilçelerde mahalleyi ve istediğiniz saati WhatsApp’a yazmanız yeter. 7/24 açığız.",
+      "Gece veya gündüz düşen mesajlar aynı hattadır. Teslim dakikasını yol ve alıcının kapıda olması belirler; bunu mesajda netleştiririz. Stok yoksa alternatifini söyleriz.",
+      "Çelenk ve özel tasarımda ölçü ile metni baştan yazın. Hastane, site ve işyeri girişlerinde güvenlik kaydı teslimi uzatabilir; alıcı telefonu işe yarar.",
+      "Karacabey, Mustafakemalpaşa, Yenişehir, İznik gibi uzun güzergâhlarda da aynı gün teslim planlarız. Adres tarifini ayrıntılı yazın ki kapıda beklemeyelim.",
+    ],
+  },
+  {
+    slug: "kart-notu",
+    name: "Kart notu nasıl yazılır?",
+    path: "/rehber/kart-notu",
+    description: "Çiçek kartında kısa, okunaklı not için pratik çerçeve.",
+    body: [
+      "İki üç cümle yeter. Alıcının adı ve gönderenin adı karışmasın diye “kime / kimden” diye yazın. El yazısı okunaklı olsun diye notu mesajda basılı metin olarak isteriz.",
+      "Çelenk kurdelesi karttan ayrıdır; orada da metni ayrıca belirtin.",
+    ],
+  },
+  {
+    slug: "buket-secimi",
+    name: "Buket seçerken",
+    path: "/rehber/buket-secimi",
+    description: "Gül, zambak ve kır buketi arasında Bursa teslimi için sade bir seçim rehberi.",
+    body: [
+      "Kırmızı gül klasik kutlama dilidir. Zambak kokuludur; kapalı ofiste rahatsız edebilir. Kır buketi rengi dağıtır, teşekkür ve doğum gününde sakin durur.",
+      "Fotoğraftaki sap sayısı ve ambalaj, teslimde referanstır. Mevsim nedeniyle küçük fark olabilir; bunu saklamayız, yazışmada söyleriz.",
+    ],
+  },
+  {
+    slug: "site-guvenlikli-teslim",
+    name: "Site ve güvenlikli teslim",
+    path: "/rehber/site-guvenlikli-teslim",
+    description: "Bursa’da site, güvenlik ve işyeri girişinde çiçek tesliminin nasıl konuşulduğu.",
+    body: [
+      "Nilüfer, Ataevler ve benzeri sitelerde kurye çoğu zaman lobide karşılanır. Blok, daire ve varsa ziyaretçi kaydı için alıcı telefonu mesajda durmalıdır. Güvenlik “kime” diye sorduğunda isim uyuşmazsa teslim uzar; çiçek bekler.",
+      "İşyeri ve hastanede kat, birim ve kabul saati yoksa aranjmanı kapıda tutmayız. Pencereyi kaydırmak, sıcakta bekletmekten iyidir. Kampüs içi teslim Görükle’de çoğu zaman kapı noktasında biter.",
+      "Çelenk gibi büyük düzenler asansör ve kapı genişliği ister. Ölçüyü baştan yazın. Form veya üyelik yoktur; bu bilgileri yalnızca o teslim için WhatsApp’ta isteriz.",
+    ],
+  },
+];
+
+export function getGuideBySlug(slug: string) {
+  return guides.find((item) => item.slug === slug);
+}

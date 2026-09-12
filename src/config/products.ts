@@ -24,7 +24,7 @@ type ProductRecord = {
   featured?: boolean;
 };
 
-const catalogImages = import.meta.glob("../assets/urunler/*.{jpeg,jpg,png,webp}", {
+const catalogImages = import.meta.glob("../assets/urunler/*.webp", {
   eager: true,
   import: "default",
 }) as Record<string, string>;
@@ -41,13 +41,29 @@ function catalogImage(filename: string) {
   return match[1];
 }
 
+function productDescription(record: ProductRecord) {
+  const useByCategory: Record<string, string> = {
+    buketler:
+      "Bursa tesliminde ev, ofis veya ziyaret kapısına gider. Kart notu ve mahalleyi WhatsApp’tan yazın.",
+    orkideler:
+      "Saksılı düzen Bursa’da masa ve ofis hediyesi için sık seçilir. Dal sayısı fotoğraftakiyle aynı dilden teslim edilir; bekletmemek için saati konuşuruz.",
+    kutular:
+      "Kutu düzeni yolda saplı bukete göre daha durağandır. Bursa içinde hediye ve kutlama tesliminde mahalle tarifini mesaja ekleyin.",
+    celenkler:
+      "Kapı önü veya anma için ölçü ve kurdele metni baştan net olsun. Bursa tesliminde yanlış yazım teslimden sonra düzeltilmez.",
+  };
+
+  const use = useByCategory[record.category] ?? "Bursa ili içinde teslim için WhatsApp’tan yazın.";
+  return `${record.description} ${use}`;
+}
+
 const records: ProductRecord[] = [
   {
     slug: "klasik-kirmizi-gul-buketi",
     name: "Klasik Kırmızı Gül Buketi",
     category: "buketler",
     description: "Kırmızı güllerden oluşan klasik el buketi.",
-    file: "klasik-kirmizi-gul-buketi.jpeg",
+    file: "klasik-kirmizi-gul-buketi.webp",
     featured: true,
   },
   {
@@ -55,7 +71,7 @@ const records: ProductRecord[] = [
     name: "Beyaz Gül Buketi",
     category: "buketler",
     description: "Beyaz güllerle hazırlanmış buket.",
-    file: "beyaz-gul-buketi.jpeg",
+    file: "beyaz-gul-buketi.webp",
     featured: true,
   },
   {
@@ -63,7 +79,7 @@ const records: ProductRecord[] = [
     name: "Kırmızı Gül Kubbe Buketi",
     category: "buketler",
     description: "Kubbe formunda kırmızı gül buketi.",
-    file: "kirmizi-gul-kubbe-buketi.jpeg",
+    file: "kirmizi-gul-kubbe-buketi.webp",
     featured: true,
   },
   {
@@ -71,14 +87,14 @@ const records: ProductRecord[] = [
     name: "Kırmızı Gül Kubbe Buketi (El)",
     category: "buketler",
     description: "Elde sunumlu kırmızı gül kubbe buketi.",
-    file: "kirmizi-gul-kubbe-el.jpeg",
+    file: "kirmizi-gul-kubbe-el.webp",
   },
   {
     slug: "senin-icin-kirmizi-gul-buketi",
     name: "Senin İçin Kırmızı Gül Buketi",
     category: "buketler",
     description: "Kırmızı güllerle hazırlanmış hediye buketi.",
-    file: "senin-icin-kirmizi-gul-buketi.jpeg",
+    file: "senin-icin-kirmizi-gul-buketi.webp",
     featured: true,
   },
   {
@@ -86,21 +102,21 @@ const records: ProductRecord[] = [
     name: "Kırmızı Gül Cipsofilya Buketi",
     category: "buketler",
     description: "Kırmızı gül ve cipsofilya buketi.",
-    file: "kirmizi-gul-cipsofilya-buketi.jpeg",
+    file: "kirmizi-gul-cipsofilya-buketi.webp",
   },
   {
     slug: "kirmizi-gul-yesil-buketi",
     name: "Kırmızı Gül Yeşil Buketi",
     category: "buketler",
     description: "Yeşil yeşilliklerle tamamlanmış kırmızı gül buketi.",
-    file: "kirmizi-gul-yesil-buketi.jpeg",
+    file: "kirmizi-gul-yesil-buketi.webp",
   },
   {
     slug: "palmiyeli-kirmizi-gul-buketi",
     name: "Palmiyeli Kırmızı Gül Buketi",
     category: "buketler",
     description: "Palmiye detaylı kırmızı gül buketi.",
-    file: "palmiyeli-kirmizi-gul-buketi.jpeg",
+    file: "palmiyeli-kirmizi-gul-buketi.webp",
     featured: true,
   },
   {
@@ -108,7 +124,7 @@ const records: ProductRecord[] = [
     name: "Papatya Buketi",
     category: "buketler",
     description: "Papatyalardan oluşan buket.",
-    file: "papatya-buketi.jpeg",
+    file: "papatya-buketi.webp",
     featured: true,
   },
   {
@@ -116,7 +132,7 @@ const records: ProductRecord[] = [
     name: "Pembe Alstroemeria Buketi",
     category: "buketler",
     description: "Pembe alstroemeria buketi.",
-    file: "pembe-alstroemeria-buketi.jpeg",
+    file: "pembe-alstroemeria-buketi.webp",
     featured: true,
   },
   {
@@ -124,7 +140,7 @@ const records: ProductRecord[] = [
     name: "Pembe Zambak Lizyantus Buketi",
     category: "buketler",
     description: "Pembe zambak ve lizyantus buketi.",
-    file: "pembe-zambak-lizyantus-buketi.jpeg",
+    file: "pembe-zambak-lizyantus-buketi.webp",
     featured: true,
   },
   {
@@ -132,14 +148,14 @@ const records: ProductRecord[] = [
     name: "Pembe Zambak Buketi",
     category: "buketler",
     description: "Pembe zambak buketi.",
-    file: "pembe-zambak-buketi.jpeg",
+    file: "pembe-zambak-buketi.webp",
   },
   {
     slug: "lila-zambak-buketi",
     name: "Lila Zambak Buketi",
     category: "buketler",
     description: "Lila zambak buketi.",
-    file: "lila-zambak-buketi.jpeg",
+    file: "lila-zambak-buketi.webp",
     featured: true,
   },
   {
@@ -147,28 +163,28 @@ const records: ProductRecord[] = [
     name: "Pudra Zambak Buketi",
     category: "buketler",
     description: "Pudra tonlarında zambak buketi.",
-    file: "pudra-zambak-buketi.jpeg",
+    file: "pudra-zambak-buketi.webp",
   },
   {
     slug: "beyaz-zambak-buketi",
     name: "Beyaz Zambak Buketi",
     category: "buketler",
     description: "Beyaz zambak buketi.",
-    file: "beyaz-zambak-buketi.jpeg",
+    file: "beyaz-zambak-buketi.webp",
   },
   {
     slug: "beyaz-zambak-gerbera-buketi",
     name: "Beyaz Zambak Gerbera Buketi",
     category: "buketler",
     description: "Beyaz zambak ve gerbera buketi.",
-    file: "beyaz-zambak-gerbera-buketi.jpeg",
+    file: "beyaz-zambak-gerbera-buketi.webp",
   },
   {
     slug: "pembe-karanfil-buketi",
     name: "Pembe Karanfil Buketi",
     category: "buketler",
     description: "Pembe karanfil buketi.",
-    file: "pembe-karanfil-buketi.jpeg",
+    file: "pembe-karanfil-buketi.webp",
     featured: true,
   },
   {
@@ -176,7 +192,7 @@ const records: ProductRecord[] = [
     name: "Renkli Kasımpatı Buketi",
     category: "buketler",
     description: "Karışık renkli kasımpatı buketi.",
-    file: "renkli-kasimpati-buketi.jpeg",
+    file: "renkli-kasimpati-buketi.webp",
     featured: true,
   },
   {
@@ -184,28 +200,28 @@ const records: ProductRecord[] = [
     name: "Pembe Mor Kasımpatı Buketi",
     category: "buketler",
     description: "Pembe ve mor kasımpatı buketi.",
-    file: "pembe-mor-kasimpati-buketi.jpeg",
+    file: "pembe-mor-kasimpati-buketi.webp",
   },
   {
     slug: "pembe-kir-buketi",
     name: "Pembe Kır Buketi",
     category: "buketler",
     description: "Pembe kır çiçeklerinden buket.",
-    file: "pembe-kir-buketi.jpeg",
+    file: "pembe-kir-buketi.webp",
   },
   {
     slug: "pembe-mor-papatya-buketi",
     name: "Pembe Mor Papatya Buketi",
     category: "buketler",
     description: "Pembe ve mor papatya buketi.",
-    file: "pembe-mor-papatya-buketi.jpeg",
+    file: "pembe-mor-papatya-buketi.webp",
   },
   {
     slug: "beyaz-orhide-seramik-saksi",
     name: "Beyaz Orkide Seramik Saksı",
     category: "orkideler",
     description: "Seramik saksıda beyaz orkide.",
-    file: "beyaz-orhide-seramik-saksi.jpeg",
+    file: "beyaz-orhide-seramik-saksi.webp",
     featured: true,
   },
   {
@@ -213,7 +229,7 @@ const records: ProductRecord[] = [
     name: "Mavi Orkide Gold Kafes",
     category: "orkideler",
     description: "Gold kafes detaylı mavi orkide.",
-    file: "mavi-orhide-gold-kafes.jpeg",
+    file: "mavi-orhide-gold-kafes.webp",
     featured: true,
   },
   {
@@ -221,112 +237,112 @@ const records: ProductRecord[] = [
     name: "Mavi Orkide",
     category: "orkideler",
     description: "Saksılı mavi orkide.",
-    file: "mavi-orhide-sehpada.jpeg",
+    file: "mavi-orhide-sehpada.webp",
   },
   {
     slug: "benekli-orhide",
     name: "Benekli Orkide",
     category: "orkideler",
     description: "Benekli orkide.",
-    file: "benekli-orhide.jpeg",
+    file: "benekli-orhide.webp",
   },
   {
     slug: "benekli-orhide-kose",
     name: "Benekli Orkide (Köşe)",
     category: "orkideler",
     description: "Benekli orkide saksı aranjmanı.",
-    file: "benekli-orhide-kose.jpeg",
+    file: "benekli-orhide-kose.webp",
   },
   {
     slug: "beyaz-orhide-gun-isigi",
     name: "Beyaz Orkide",
     category: "orkideler",
     description: "Saksılı beyaz orkide.",
-    file: "beyaz-orhide-gun-isigi.jpeg",
+    file: "beyaz-orhide-gun-isigi.webp",
   },
   {
     slug: "beyaz-orhide-salkim",
     name: "Beyaz Salkım Orkide",
     category: "orkideler",
     description: "Salkım formunda beyaz orkide.",
-    file: "beyaz-orhide-salkim.jpeg",
+    file: "beyaz-orhide-salkim.webp",
   },
   {
     slug: "beyaz-orhide-tul-ambalaj",
     name: "Beyaz Orkide Tül Ambalaj",
     category: "orkideler",
     description: "Tül ambalajlı beyaz orkide.",
-    file: "beyaz-orhide-tul-ambalaj.jpeg",
+    file: "beyaz-orhide-tul-ambalaj.webp",
   },
   {
     slug: "dogum-gunu-beyaz-orhide",
     name: "Doğum Günü Beyaz Orkide",
     category: "orkideler",
     description: "Doğum günü için beyaz orkide.",
-    file: "dogum-gunu-beyaz-orhide.jpeg",
+    file: "dogum-gunu-beyaz-orhide.webp",
   },
   {
     slug: "dogum-gunu-orhide-masa",
     name: "Doğum Günü Orkide",
     category: "orkideler",
     description: "Masa düzeninde doğum günü orkidesi.",
-    file: "dogum-gunu-orhide-masa.jpeg",
+    file: "dogum-gunu-orhide-masa.webp",
   },
   {
     slug: "kapi-onunde-beyaz-orhide",
     name: "Beyaz Orkide Teslim",
     category: "orkideler",
     description: "Teslim görünümlü beyaz orkide.",
-    file: "kapi-onunde-beyaz-orhide.jpeg",
+    file: "kapi-onunde-beyaz-orhide.webp",
   },
   {
     slug: "krem-saksi-beyaz-orhide",
     name: "Krem Saksı Beyaz Orkide",
     category: "orkideler",
     description: "Krem saksıda beyaz orkide.",
-    file: "krem-saksi-beyaz-orhide.jpeg",
+    file: "krem-saksi-beyaz-orhide.webp",
   },
   {
     slug: "krem-saksi-orhide-tebrik",
     name: "Krem Saksı Orkide",
     category: "orkideler",
     description: "Krem saksıda tebrik orkidesi.",
-    file: "krem-saksi-orhide-tebrik.jpeg",
+    file: "krem-saksi-orhide-tebrik.webp",
   },
   {
     slug: "mor-orhide-hediye-paketi",
     name: "Mor Orkide Hediye Paketi",
     category: "orkideler",
     description: "Hediye paketinde mor orkide.",
-    file: "mor-orhide-hediye-paketi.jpeg",
+    file: "mor-orhide-hediye-paketi.webp",
   },
   {
     slug: "mor-orhide-kartli",
     name: "Mor Orkide",
     category: "orkideler",
     description: "Kartlı mor orkide.",
-    file: "mor-orhide-kartli.jpeg",
+    file: "mor-orhide-kartli.webp",
   },
   {
     slug: "salkim-orhide-pencere",
     name: "Salkım Orkide",
     category: "orkideler",
     description: "Salkım orkide.",
-    file: "salkim-orhide-pencere.jpeg",
+    file: "salkim-orhide-pencere.webp",
   },
   {
     slug: "baris-cicegi",
     name: "Barış Çiçeği",
     category: "orkideler",
     description: "Saksılı barış çiçeği.",
-    file: "baris-cicegi.jpeg",
+    file: "baris-cicegi.webp",
   },
   {
     slug: "kare-kutu-gul-ferrero",
     name: "Kare Kutu Gül Ferrero",
     category: "kutular",
     description: "Kare kutuda gül ve Ferrero.",
-    file: "kare-kutu-gul-ferrero.jpeg",
+    file: "kare-kutu-gul-ferrero.webp",
     featured: true,
   },
   {
@@ -334,84 +350,84 @@ const records: ProductRecord[] = [
     name: "Kırmızı Kalp Gül Ferrero",
     category: "kutular",
     description: "Kalp kutuda kırmızı gül ve Ferrero.",
-    file: "kirmizi-kalp-gul-ferrero.jpeg",
+    file: "kirmizi-kalp-gul-ferrero.webp",
   },
   {
     slug: "kalp-kutu-gul-ferrero-ayicik",
     name: "Kalp Kutu Gül Ferrero Ayıcık",
     category: "kutular",
     description: "Kalp kutuda gül, Ferrero ve ayıcık.",
-    file: "kalp-kutu-gul-ferrero-ayicik.jpeg",
+    file: "kalp-kutu-gul-ferrero-ayicik.webp",
   },
   {
     slug: "kalp-kutu-gul-kinder",
     name: "Kalp Kutu Gül Kinder",
     category: "kutular",
     description: "Kalp kutuda gül ve Kinder.",
-    file: "kalp-kutu-gul-kinder.jpeg",
+    file: "kalp-kutu-gul-kinder.webp",
   },
   {
     slug: "kalp-kutu-gul-nutella",
     name: "Kalp Kutu Gül Nutella",
     category: "kutular",
     description: "Kalp kutuda gül ve Nutella.",
-    file: "kalp-kutu-gul-nutella.jpeg",
+    file: "kalp-kutu-gul-nutella.webp",
   },
   {
     slug: "kirmizi-kutu-gul-milka",
     name: "Kırmızı Kutu Gül Milka",
     category: "kutular",
     description: "Kırmızı kutuda gül ve Milka.",
-    file: "kirmizi-kutu-gul-milka.jpeg",
+    file: "kirmizi-kutu-gul-milka.webp",
   },
   {
     slug: "siyah-kutu-gul-bueno",
     name: "Siyah Kutu Gül Bueno",
     category: "kutular",
     description: "Siyah kutuda gül ve Bueno.",
-    file: "siyah-kutu-gul-bueno.jpeg",
+    file: "siyah-kutu-gul-bueno.webp",
   },
   {
     slug: "yuvarlak-kutu-gul-kinder",
     name: "Yuvarlak Kutu Gül Kinder",
     category: "kutular",
     description: "Yuvarlak kutuda gül ve Kinder.",
-    file: "yuvarlak-kutu-gul-kinder.jpeg",
+    file: "yuvarlak-kutu-gul-kinder.webp",
   },
   {
     slug: "kirmizi-beyaz-ayaga-celenk",
     name: "Kırmızı Beyaz Ayağa Çelenk",
     category: "celenkler",
     description: "Ayağa kırmızı-beyaz çelenk.",
-    file: "kirmizi-beyaz-ayaga-celenk.jpeg",
+    file: "kirmizi-beyaz-ayaga-celenk.webp",
   },
   {
     slug: "kirmizi-beyaz-ciftli-celenk",
     name: "Kırmızı Beyaz Çiftli Çelenk",
     category: "celenkler",
     description: "Çiftli kırmızı-beyaz çelenk.",
-    file: "kirmizi-beyaz-ciftli-celenk.jpeg",
+    file: "kirmizi-beyaz-ciftli-celenk.webp",
   },
   {
     slug: "kirmizi-beyaz-halka-celenk",
     name: "Kırmızı Beyaz Halka Çelenk",
     category: "celenkler",
     description: "Halka formunda kırmızı-beyaz çelenk.",
-    file: "kirmizi-beyaz-halka-celenk.jpeg",
+    file: "kirmizi-beyaz-halka-celenk.webp",
   },
   {
     slug: "kirmizi-beyaz-oval-celenk",
     name: "Kırmızı Beyaz Oval Çelenk",
     category: "celenkler",
     description: "Oval kırmızı-beyaz çelenk.",
-    file: "kirmizi-beyaz-oval-celenk.jpeg",
+    file: "kirmizi-beyaz-oval-celenk.webp",
   },
   {
     slug: "pembe-mor-ciftli-celenk",
     name: "Pembe Mor Çiftli Çelenk",
     category: "celenkler",
     description: "Çiftli pembe-mor çelenk.",
-    file: "pembe-mor-ciftli-celenk.jpeg",
+    file: "pembe-mor-ciftli-celenk.webp",
   },
 ];
 
@@ -424,7 +440,7 @@ export const products: Product[] = records.map((record) => {
     slug: record.slug,
     name: record.name,
     category: record.category,
-    description: record.description,
+    description: productDescription(record),
     image,
     gallery,
     featured: Boolean(record.featured),
@@ -449,9 +465,43 @@ export function getProductsByCategory(categorySlug: string) {
 }
 
 export function getFeaturedProducts() {
-  return products.filter((product) => product.featured);
+  return getProductsBySlugs(featuredProductSlugs);
+}
+
+export function getBestsellerProducts() {
+  return getProductsBySlugs(bestsellerProductSlugs);
+}
+
+export function getProductsBySlugs(slugs: readonly string[]) {
+  return slugs
+    .map((slug) => getProductBySlug(slug))
+    .filter((product): product is Product => Boolean(product));
 }
 
 export function getCategoryName(categorySlug: string) {
   return categories.find((category) => category.slug === categorySlug)?.name ?? categorySlug;
 }
+
+/** Ana sayfa ve mağaza vitrini — satış sayısı uydurulmaz, slug listesi elle seçilir. */
+export const featuredProductSlugs = [
+  "klasik-kirmizi-gul-buketi",
+  "beyaz-gul-buketi",
+  "kirmizi-gul-kubbe-buketi",
+  "senin-icin-kirmizi-gul-buketi",
+  "papatya-buketi",
+  "pembe-alstroemeria-buketi",
+  "beyaz-orhide-seramik-saksi",
+  "kare-kutu-gul-ferrero",
+] as const;
+
+/** Çok satanlar — popülerlik verisi olmadığı için manuel seçim. */
+export const bestsellerProductSlugs = [
+  "palmiyeli-kirmizi-gul-buketi",
+  "pembe-zambak-lizyantus-buketi",
+  "lila-zambak-buketi",
+  "pembe-karanfil-buketi",
+  "mavi-orhide-gold-kafes",
+  "kalp-kutu-gul-ferrero-ayicik",
+  "kirmizi-beyaz-halka-celenk",
+  "renkli-kasimpati-buketi",
+] as const;

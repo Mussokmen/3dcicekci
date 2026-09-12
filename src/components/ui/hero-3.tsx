@@ -24,10 +24,10 @@ interface AnimatedMarqueeHeroProps {
 }
 
 const primaryCtaClass =
-  "inline-flex items-center justify-center px-8 py-2.5 rounded-full bg-red-500 text-white font-semibold shadow-lg transition-colors hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75";
+  "inline-flex min-h-11 w-full items-center justify-center rounded-full bg-stone-900 px-6 py-2.5 text-sm font-semibold text-white shadow-lg transition-colors hover:bg-stone-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-400 sm:w-auto sm:px-8";
 
 const secondaryCtaClass =
-  "inline-flex items-center justify-center px-8 py-2.5 rounded-full border border-border bg-card/50 text-foreground font-semibold shadow-lg backdrop-blur-sm transition-colors hover:bg-card/80 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75";
+  "inline-flex min-h-11 w-full items-center justify-center rounded-full border border-stone-300 bg-white/95 px-6 py-2.5 text-sm font-semibold text-stone-900 shadow-md backdrop-blur-sm transition-colors hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-400 sm:w-auto sm:px-8";
 
 export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
   tagline,
@@ -58,12 +58,12 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
         className,
       )}
     >
-      <div className="relative z-20 flex shrink-0 flex-col items-center px-4 pt-5 md:pt-8">
+      <div className="relative z-20 flex shrink-0 flex-col items-center px-4 pt-1 md:pt-2">
         <motion.div
           initial="hidden"
           animate="show"
           variants={FADE_IN_ANIMATION_VARIANTS}
-          className="mb-4 inline-block rounded-full border border-border bg-card/50 px-4 py-1.5 text-sm font-medium text-muted-foreground backdrop-blur-sm"
+            className="mb-2 hidden rounded-full border border-border bg-card/50 px-4 py-1.5 text-sm font-medium text-muted-foreground backdrop-blur-sm md:inline-block"
         >
           {tagline}
         </motion.div>
@@ -79,7 +79,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
               },
             },
           }}
-          className="text-4xl md:text-5xl font-bold tracking-tighter text-foreground"
+          className="text-2xl font-bold tracking-tighter text-foreground md:text-4xl"
         >
           {typeof title === "string" ? (
             title.split(" ").map((word, i) => (
@@ -101,7 +101,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
           animate="show"
           variants={FADE_IN_ANIMATION_VARIANTS}
           transition={{ delay: 0.5 }}
-          className="mt-2 max-w-xl text-sm md:text-base text-muted-foreground"
+          className="mt-2 line-clamp-2 max-w-xl px-1 text-sm text-muted-foreground md:line-clamp-none md:text-base"
         >
           {description}
         </motion.p>
@@ -111,9 +111,9 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
           animate="show"
           variants={FADE_IN_ANIMATION_VARIANTS}
           transition={{ delay: 0.6 }}
-          className="mt-3 flex flex-wrap items-center justify-center gap-3"
+          className="mt-3 flex w-full max-w-sm flex-col items-stretch justify-center gap-2 sm:max-w-none sm:flex-row sm:flex-wrap sm:items-center sm:gap-3"
         >
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <motion.div className="w-full sm:w-auto" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link to={ctaHref} className={primaryCtaClass}>
               {ctaText}
             </Link>
@@ -131,7 +131,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
         </motion.div>
       </div>
 
-      <div className="relative z-10 flex min-h-0 w-full flex-1 items-center overflow-hidden">
+      <div className="relative z-10 hidden min-h-0 w-full flex-1 items-center overflow-hidden md:flex md:min-h-40">
         <motion.div
           className="flex w-max gap-5"
           animate={{ x: ["-100%", "0%"] }}
@@ -145,7 +145,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
             <Link
               key={`${item.href}-${index}`}
               to={item.href}
-              className="relative aspect-[3/4] h-40 md:h-56 flex-shrink-0"
+              className="relative aspect-[3/4] h-32 flex-shrink-0 md:h-40"
               style={{
                 rotate: `${index % 2 === 0 ? -2 : 5}deg`,
               }}
