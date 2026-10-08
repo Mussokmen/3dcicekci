@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import type { Product } from "@/config/products";
 import { getCategoryName } from "@/config/products";
-import { buildWhatsAppUrl, whatsappCommerceLine } from "@/config/site";
+import { buildWhatsAppUrl } from "@/config/site";
 
 type ProductCardProps = {
   product: Product;
@@ -31,21 +31,21 @@ export function ProductCard({ product, showOrderActions = false }: ProductCardPr
           {product.price != null ? (
             <p className="mt-1 text-sm text-stone-700">{product.price} TL</p>
           ) : null}
-          <p className="mt-1 text-sm leading-snug text-stone-700">
-            {product.price != null ? "Ödeme WhatsApp üzerinden." : whatsappCommerceLine}
-          </p>
         </div>
       </Link>
       {showOrderActions ? (
-        <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
-          <Link to={`/urun/${product.slug}`} className="text-stone-800 underline-offset-4 hover:underline">
+        <div className="mt-3 grid grid-cols-2 gap-2">
+          <Link
+            to={`/urun/${product.slug}`}
+            className="inline-flex min-h-11 items-center justify-center rounded-full border border-stone-300 bg-white px-2 text-center text-[13px] font-semibold text-stone-900 shadow-sm hover:bg-stone-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-900"
+          >
             İncele
           </Link>
           <a
             href={buildWhatsAppUrl(product.whatsappMessage)}
             target="_blank"
             rel="noreferrer"
-            className="text-stone-600 hover:text-stone-900"
+            className="inline-flex min-h-11 items-center justify-center rounded-full bg-stone-900 px-2 text-center text-[13px] font-semibold text-white shadow-sm hover:bg-stone-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-900"
           >
             WhatsApp
           </a>

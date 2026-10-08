@@ -16,10 +16,6 @@ export function HomeVitrine() {
             Tüm mağazayı aç
           </Link>
         </div>
-        <p className="mt-3 max-w-xl text-base text-stone-600">
-          Buket, orkide, kutu ve çelenk aranjmanları. İncelemek veya WhatsApp’tan sipariş vermek için
-          ürünü seçin.
-        </p>
         <div className="mt-10">
           <ProductGrid products={products} showOrderActions />
         </div>
