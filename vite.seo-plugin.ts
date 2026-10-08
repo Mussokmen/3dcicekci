@@ -89,18 +89,21 @@ function webpSize(filePath: string) {
 }
 
 function collectRoutes(root: string): RouteMeta[] {
-  const privacySummary = `${site.name} siparişi WhatsApp ile alır. Sitede kart bilgisi toplanmaz. İletişim: ${site.phoneDisplay}.`;
+  const privacySummary = `${site.name} siparişi WhatsApp ile alır. Sitede kart bilgisi toplanmaz. İletişim: ${site.phoneDisplay}. Ad, telefon ve teslim bilgisi yalnızca hazırlık ve teslim için kullanılır.`;
   const cookieSummary =
-    "Site, vitrini göstermek için temel tarayıcı işleyişine dayanır. Pazarlama amaçlı izleme çerezi veya sepet çerezi kullanmayız.";
-  const aboutSummary = "Bursa'da atölyede hazırlanan buket, orkide ve hediye aranjmanları.";
+    "Vitrin, tarayıcının temel işleyişiyle açılır. Pazarlama çerezi, sepet çerezi veya izleme kaydı tutulmaz. Çerez tercihleri tarayıcı ayarından yönetilir.";
+  const aboutSummary =
+    "Bursa'nın Çiçekçisi, Bursa'da taze çiçek hazırlayan yerel bir atölyedir. Fotoğraflar kendi çekimlerimizdir. Sipariş WhatsApp ile alınır; teslim aynı gün ve dikkatli yapılır.";
   const contactSummary =
-    "Bursa çiçek siparişi WhatsApp ile alınır. Hizmet bölgesi Bursa ili. Teslim aynı gün planlanır.";
-  const bursaSummary = "Bursa ili genelinde buket, orkide, kutu ve çelenk teslimi.";
+    "Sipariş ve teslim için WhatsApp ile yazın veya telefon edin. Hat 7/24 açıktır. Hizmet bölgesi Bursa ili. Teslim aynı gün planlanır.";
+  const bursaSummary =
+    "Bursa’nın on yedi ilçesine buket, orkide, kutu ve çelenk. Sipariş WhatsApp ile alınır; teslim aynı gün planlanır. Görükle, Nilüfer mahallesidir.";
   const customSummary =
-    "Bursa’da ölçü ve renge göre özel buket, kutu, orkide ve çelenk. WhatsApp sipariş.";
-  const occasionSummary = "Doğum günü, teşekkür, hasta ziyareti, çelenk ve orkide için Bursa teslimi.";
+    "Ölçü ve renge göre buket, kutu, orkide ve çelenk atölyede hazırlanır. Sipariş WhatsApp ile alınır. Teslim Bursa ili içindedir.";
+  const occasionSummary =
+    "Doğum günü, teşekkür, hasta ziyareti, çelenk ve ofis orkidesi için Bursa teslimi. Sipariş WhatsApp ile alınır; çiçek atölyede taze hazırlanır.";
   const guideSummary =
-    "Bursa çiçek gönderimi, WhatsApp sipariş, orkide ve çelenk hakkında kısa yazılar.";
+    "Bursa çiçek gönderimi, WhatsApp siparişi, orkide, çelenk, kart notu ve aynı gün teslim üzerine atölye notları.";
 
   const routes: RouteMeta[] = [
     {
@@ -205,7 +208,7 @@ function collectRoutes(root: string): RouteMeta[] {
       title: `${occasion.name} · ${site.name}`,
       description: occasion.description,
       heading: occasion.name,
-      summary: occasion.description,
+      summary: occasion.body.join(" "),
     });
   }
 
@@ -215,7 +218,7 @@ function collectRoutes(root: string): RouteMeta[] {
       title: `${guide.name} · ${site.name}`,
       description: guide.description,
       heading: guide.name,
-      summary: guide.description,
+      summary: guide.body.join(" "),
     });
   }
 

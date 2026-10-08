@@ -16,9 +16,16 @@ export function GuideIndexPage() {
         ]}
       />
       <h1 className="text-4xl tracking-tight text-stone-900">Rehber</h1>
-      <p className="mt-4 text-base leading-relaxed text-stone-600">
-        Sürekli blog yayını yok. Aşağıdaki yazılar sipariş ve teslimi netleştirmek içindir.
-      </p>
+      <div className="mt-4 space-y-4 text-base leading-relaxed text-stone-600">
+        <p>
+          Rehber, Bursa’da çiçek siparişinin nasıl ilerlediğini anlatır. Yazılar atölyenin kendi işinden
+          çıkar: taze hazırlık, aynı gün teslim, kart notu ve WhatsApp ile kısa sipariş.
+        </p>
+        <p>
+          Her başlık ayrı bir konuyu tutar. Gönderim, orkide, çelenk, kart notu ve site girişi birbirinin
+          tekrarı değildir. Sipariş, vitrindeki üründen başlar.
+        </p>
+      </div>
       <ul className="mt-8 space-y-4">
         {guides.map((item) => (
           <li key={item.path}>

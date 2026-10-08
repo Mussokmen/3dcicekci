@@ -35,7 +35,8 @@ export const guides: GuideArticle[] = [
     description: "Saksılı orkidenin Bursa tesliminde saksı, dal ve bekletme notları.",
     body: [
       "Fotoğrafta kaç dal göründüğüne bakın. Tek salkım ile dolu saksı aynı şey değildir. Saksıyı devirmemek için aracı dik tutarız; alıcının kapıda olması beklemeyi kısaltır.",
-      "Bakım vaadi vermeyiz. Kısa ışık notu yeterlidir. Ofis teslimlerinde kat ve kabul saatini yazın.",
+      "Kısa bir ışık notu yeterlidir. Ofis tesliminde kat mesajda yazılır. Saksı atölyede, fotoğraftaki düzene göre hazırlanır ve dik taşınır.",
+      "Teslim öncesi alıcı bilgilendirilir. Orkide taze ve özenli hazırlanır; Bursa içinde aynı gün teslim planlanır.",
     ],
   },
   {
@@ -56,7 +57,7 @@ export const guides: GuideArticle[] = [
       "Bursa’da aynı gün çiçek teslimi. Sipariş WhatsApp ile, 7/24 alınır.",
     body: [
       "Bursa ili içinde aynı gün teslim ederiz. İlçe ve mahalle mesajda yazılır. Sipariş WhatsApp ile alınır. Çiçek taze hazırlanır, teslim öncesi alıcı bilgilendirilir.",
-      "Gece veya gündüz düşen mesajlar aynı hattadır. Teslim dakikasını yol ve alıcının kapıda olması belirler; bunu mesajda netleştiririz. Stok yoksa alternatifini söyleriz.",
+      "Gece veya gündüz düşen mesajlar aynı hattadır. Çiçek atölyede taze hazırlanır. Teslim öncesi alıcı bilgilendirilir; kapıda bekleme kısalır.",
       "Çelenk ve özel tasarımda ölçü ile metni baştan yazın. Hastane, site ve işyeri girişlerinde güvenlik kaydı teslimi uzatabilir; alıcı telefonu işe yarar.",
       "Karacabey, Mustafakemalpaşa, Yenişehir, İznik gibi uzun güzergâhlarda da aynı gün teslim planlarız. Adres tarifini ayrıntılı yazın ki kapıda beklemeyelim.",
     ],
@@ -78,7 +79,7 @@ export const guides: GuideArticle[] = [
     description: "Gül, zambak ve kır buketi arasında Bursa teslimi için sade bir seçim rehberi.",
     body: [
       "Kırmızı gül klasik kutlama dilidir. Zambak kokuludur; kapalı ofiste rahatsız edebilir. Kır buketi rengi dağıtır, teşekkür ve doğum gününde sakin durur.",
-      "Fotoğraftaki sap sayısı ve ambalaj, teslimde referanstır. Mevsim nedeniyle küçük fark olabilir; bunu saklamayız, yazışmada söyleriz.",
+      "Fotoğraftaki sap ve ambalaj teslimde referanstır. Görseller kendi atölye çekimlerimizdir. Sipariş WhatsApp ile alınır; kart notu mesajdaki metinle yazılır.",
     ],
   },
   {

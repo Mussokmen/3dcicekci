@@ -15,8 +15,9 @@ export const occasions: Occasion[] = [
     description: "Bursa’da doğum günü için buket ve hediye kutusu. Sipariş WhatsApp’tan.",
     categorySlugs: ["buketler", "kutular"],
     body: [
-      "Doğum gününde renk ve ölçü, alıcının evine veya ofisine göre değişir. Vitrindeki buket ve kutulardan birini seçip mahalle ile saati yazmanız yeterli. Pasta veya balon vaat etmiyoruz; çiçek düzenini fotoğraftaki gibi hazırlarız.",
-      "Kart notunu kısa tutmak teslimde okunmayı kolaylaştırır. Aynı gün yetişip yetişmeyeceğini stok ve yola bakarak söyleriz.",
+      "Doğum gününde renk ve ölçü, alıcının evine veya ofisine göre seçilir. Vitrindeki buket ve kutulardan biri yazılır; düzen fotoğraftaki gibi, atölyede taze hazırlanır.",
+      "Kart notu kısa tutulur ve mesajdaki metinle yazılır. Sipariş WhatsApp ile alınır. Teslim Bursa içinde aynı gün planlanır; alıcı teslim öncesi bilgilendirilir.",
+      "Hazırlık özenlidir. Ambalaj kapıya kadar korunur. Fotoğraflar kendi atölye çekimlerimizdir.",
     ],
   },
   {
@@ -49,7 +50,7 @@ export const occasions: Occasion[] = [
     categorySlugs: ["celenkler"],
     body: [
       "Çelenk siparişinde renk, ölçü ve kurdele metni baştan net olmalıdır. Yanlış yazılan isim teslimde düzeltilemez. Kapı önü, salon veya araç süslemesi ayrı ölçek ister.",
-      "Anma ve taziye teslimleri saate duyarlıdır. Mümkün olan en erken mesaj, hazırlık için yer açar. Stok yoksa mevcut çelenk fotoğraflarından alternatif gösteririz.",
+      "Anma teslimi zamanında planlanır. Hazırlık erken başlar. Çelenk atölyede, kendi fotoğraflarımızdaki düzene göre kurulur. Teslim öncesi alıcı bilgilendirilir.",
     ],
   },
   {
@@ -70,7 +71,7 @@ export const occasions: Occasion[] = [
     description: "Bursa’da çikolatalı ve gül kutuları. WhatsApp sipariş.",
     categorySlugs: ["kutular"],
     body: [
-      "Kutu düzenleri yolda saplı bukete göre daha az bozulur. İçindeki çikolata markası fotoğrafta görünür; stok yoksa kutuyu değiştirmeden söylemeyiz, alternatif konuşuruz.",
+      "Kutu düzenleri yolda saplı bukete göre daha durağan kalır. İç düzen, fotoğrafta görünen hâliyle hazırlanır. Görseller kendi atölye çekimlerimizdir.",
       "Sevgililer günü ve doğum günü yoğunluğunda saati erken yazın. Teslim Bursa ili içinde, mahalle tarifine göredir.",
     ],
   },
