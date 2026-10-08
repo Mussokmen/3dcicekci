@@ -18,7 +18,8 @@ export function WhatsAppSupportCard({ className, message }: WhatsAppSupportCardP
     >
       <h2 className="text-lg font-medium text-stone-900">WhatsApp hattı</h2>
       <p className="mt-2 max-w-md text-sm leading-relaxed text-stone-600">
-        Sipariş ve teslim soruları için yazın. Form yoktur; 7/24 açığız.
+        Sipariş ve teslim soruları için yazın. Form yoktur; 7/24 açığız. Saat aralığı ve teslimat
+        ücreti WhatsApp’ta kesinleşir.
       </p>
       <a
         href={href}

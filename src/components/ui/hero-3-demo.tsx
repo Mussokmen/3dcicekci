@@ -1,6 +1,6 @@
 import { AnimatedMarqueeHero } from "@/components/ui/hero-3";
 import { getProductBySlug } from "@/config/products";
-import { buildWhatsAppUrl } from "@/config/site";
+import { buildWhatsAppUrl, homeIntro } from "@/config/site";
 
 const marqueeFiles = import.meta.glob("../../assets/marquee/*.{jpg,jpeg,png,webp,avif}", {
   eager: true,
@@ -30,7 +30,7 @@ const AnimatedHeroDemo = () => {
           Büyük Bir His
         </>
       }
-      description="Sevdiklerinize en güzel duyguları, özenle hazırlanmış taze çiçeklerle gönderin. Bursa'nın her köşesine sevginizi ulaştıralım."
+      description={homeIntro}
       ctaText="Çiçekleri Keşfet"
       ctaHref="/magaza"
       secondaryCtaText="WhatsApp'tan Sipariş Ver"

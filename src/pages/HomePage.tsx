@@ -18,7 +18,7 @@ export function HomePage() {
   return (
     <>
       <SiteHeader />
-      <main className="relative flex h-svh flex-col overflow-hidden bg-[#f7f3ee]">
+      <main id="icerik" tabIndex={-1} className="relative bg-[#f7f3ee] outline-none">
         <Seo
           title={site.defaultTitle}
           description={site.defaultDescription}
@@ -30,7 +30,7 @@ export function HomePage() {
             url: site.url,
           }}
         />
-        <div className="relative min-h-0 flex-1 overflow-hidden">
+        <div className="relative">
           <img
             src={heroBackground}
             alt="Bursa çiçekçi vitrini, sakura fon"
@@ -41,24 +41,30 @@ export function HomePage() {
             className="absolute inset-0 h-full w-full object-cover object-[center_42%]"
           />
           <div className="absolute inset-0 bg-white/20" aria-hidden="true" />
-          <div className="relative z-10 flex h-full min-h-0 flex-col pt-14">
+          <div className="relative z-10 pt-14">
             <AnimatedHeroDemo />
           </div>
         </div>
         <section className="relative z-10 grid w-full shrink-0 grid-cols-1 gap-2 bg-[#f7f3ee] px-2 py-1.5 min-[700px]:grid-cols-2 md:gap-2.5 md:px-3 md:py-2">
-          <Link to="/magaza/buketler" className="block min-w-0">
+          <Link to="/magaza/buketler" className="relative block min-w-0">
             <img
               src={buketBanner}
-              alt="Mükemmel Buketler — WhatsApp sipariş"
+              alt="Mükemmel Buketler — Buketler kategorisi"
               className="h-auto w-full rounded-2xl object-contain shadow-lg"
             />
+            <span className="absolute top-[58%] left-[5%] flex h-[12%] w-[28%] items-center justify-center rounded-full bg-[#f6f1e8] text-[clamp(0.7rem,1.6vw,1rem)] font-semibold text-stone-900 shadow-sm">
+              Buketler
+            </span>
           </Link>
-          <Link to="/magaza/orkideler" className="block min-w-0">
+          <Link to="/magaza/orkideler" className="relative block min-w-0">
             <img
               src={orkideBanner}
-              alt="Renkli Orkideler — WhatsApp sipariş"
+              alt="Renkli Orkideler — Orkideler kategorisi"
               className="h-auto w-full rounded-2xl object-contain shadow-lg"
             />
+            <span className="absolute top-[58%] left-[5%] flex h-[12%] w-[28%] items-center justify-center rounded-full bg-[#f6f1e8] text-[clamp(0.7rem,1.6vw,1rem)] font-semibold text-stone-900 shadow-sm">
+              Orkideler
+            </span>
           </Link>
         </section>
       </main>

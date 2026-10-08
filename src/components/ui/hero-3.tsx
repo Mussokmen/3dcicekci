@@ -1,9 +1,19 @@
 "use client";
 
-import React from "react";
+import React, { useSyncExternalStore } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+
+function subscribeReducedMotion(onStoreChange: () => void) {
+  const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+  media.addEventListener("change", onStoreChange);
+  return () => media.removeEventListener("change", onStoreChange);
+}
+
+function getReducedMotion() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
 
 interface MarqueeItem {
   src: string;
@@ -50,11 +60,13 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
   };
 
   const duplicatedImages = [...images, ...images];
+  const reduceMotion = useSyncExternalStore(subscribeReducedMotion, getReducedMotion, () => true);
+  const stripImages = reduceMotion ? images : duplicatedImages;
 
   return (
     <section
       className={cn(
-        "relative flex h-full min-h-0 w-full flex-col overflow-hidden text-center",
+        "relative flex w-full flex-col overflow-hidden text-center",
         className,
       )}
     >
@@ -101,7 +113,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
           animate="show"
           variants={FADE_IN_ANIMATION_VARIANTS}
           transition={{ delay: 0.5 }}
-          className="mt-2 line-clamp-2 max-w-xl px-1 text-sm text-muted-foreground md:line-clamp-none md:text-base"
+          className="mt-2 max-w-xl rounded-2xl bg-white/80 px-3 py-2 text-sm leading-relaxed text-stone-800 md:text-base"
         >
           {description}
         </motion.p>
@@ -131,33 +143,51 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
         </motion.div>
       </div>
 
-      <div className="relative z-10 hidden min-h-0 w-full flex-1 items-center overflow-hidden md:flex md:min-h-40">
-        <motion.div
-          className="flex w-max gap-5"
-          animate={{ x: ["-100%", "0%"] }}
-          transition={{
-            ease: "linear",
-            duration: 75,
-            repeat: Infinity,
-          }}
-        >
-          {duplicatedImages.map((item, index) => (
-            <Link
-              key={`${item.href}-${index}`}
-              to={item.href}
-              className="relative aspect-[3/4] h-32 flex-shrink-0 md:h-40"
-              style={{
-                rotate: `${index % 2 === 0 ? -2 : 5}deg`,
-              }}
-            >
-              <img
-                src={item.src}
-                alt={item.alt}
-                className="w-full h-full object-cover rounded-2xl shadow-md"
-              />
-            </Link>
-          ))}
-        </motion.div>
+      <div className="relative z-10 mt-4 w-full overflow-hidden pb-3 md:mt-6 md:pb-4">
+        {reduceMotion ? (
+          <div className="flex gap-4 overflow-x-auto px-4 pb-1">
+            {stripImages.map((item) => (
+              <Link
+                key={item.href}
+                to={item.href}
+                className="relative aspect-[3/4] h-36 flex-shrink-0 md:h-48"
+              >
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  className="h-full w-full rounded-2xl object-cover shadow-md"
+                />
+              </Link>
+            ))}
+          </div>
+        ) : (
+          <motion.div
+            className="flex w-max gap-5"
+            animate={{ x: ["-100%", "0%"] }}
+            transition={{
+              ease: "linear",
+              duration: 75,
+              repeat: Infinity,
+            }}
+          >
+            {stripImages.map((item, index) => (
+              <Link
+                key={`${item.href}-${index}`}
+                to={item.href}
+                className="relative aspect-[3/4] h-36 flex-shrink-0 md:h-48"
+                style={{
+                  rotate: `${index % 2 === 0 ? -2 : 5}deg`,
+                }}
+              >
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  className="h-full w-full rounded-2xl object-cover shadow-md"
+                />
+              </Link>
+            ))}
+          </motion.div>
+        )}
       </div>
     </section>
   );

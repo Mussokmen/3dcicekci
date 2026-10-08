@@ -18,7 +18,7 @@ import {
   productTrustChips,
 } from "@/config/product-detail";
 import { getCategoryName, getProductBySlug } from "@/config/products";
-import { absoluteUrl, buildWhatsAppUrl } from "@/config/site";
+import { absoluteUrl, buildWhatsAppUrl, deliveryWindowNote, whatsappCommerceLine } from "@/config/site";
 
 export function ProductDetailPage() {
   const { slug = "" } = useParams();
@@ -39,7 +39,7 @@ export function ProductDetailPage() {
     <main className="mx-auto max-w-6xl px-4 py-12 pb-28 md:px-6 md:py-16 lg:pb-16">
       <Seo
         title={product.name}
-        description={`${product.name}. 7/24 açığız; Bursa içinde aynı gün teslim. Sipariş WhatsApp’tan.`}
+        description={product.description}
         path={`/urun/${product.slug}`}
         image={product.image}
         type="product"
@@ -78,10 +78,16 @@ export function ProductDetailPage() {
         <span className="text-stone-700">{product.name}</span>
       </nav>
 
-      <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
-        <ProductGallery name={product.name} images={product.gallery} />
+      <p className="mb-6 max-w-xl text-sm leading-relaxed text-stone-800">
+        {product.price != null ? `${product.price} TL. Ödeme WhatsApp üzerinden.` : whatsappCommerceLine}
+      </p>
 
-        <div className="lg:sticky lg:top-24 lg:self-start">
+      <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
+        <div className="order-2 lg:order-1">
+          <ProductGallery name={product.name} images={product.gallery} />
+        </div>
+
+        <div className="order-1 lg:sticky lg:top-24 lg:order-2 lg:self-start">
           <p className="text-[11px] tracking-[0.16em] text-stone-500 uppercase">{categoryName}</p>
           <h1 className="mt-3 text-3xl tracking-tight text-stone-900 md:text-4xl">{product.name}</h1>
 
@@ -95,6 +101,7 @@ export function ProductDetailPage() {
               </li>
             ))}
           </ul>
+          <p className="mt-3 max-w-md text-sm leading-relaxed text-stone-600">{deliveryWindowNote}</p>
 
           <p className="mt-5 max-w-md text-base leading-relaxed text-stone-600">{product.description}</p>
 

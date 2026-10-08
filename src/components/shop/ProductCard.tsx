@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import type { Product } from "@/config/products";
 import { getCategoryName } from "@/config/products";
-import { buildWhatsAppUrl } from "@/config/site";
+import { buildWhatsAppUrl, whatsappCommerceLine } from "@/config/site";
 
 type ProductCardProps = {
   product: Product;
@@ -31,6 +31,9 @@ export function ProductCard({ product, showOrderActions = false }: ProductCardPr
           {product.price != null ? (
             <p className="mt-1 text-sm text-stone-700">{product.price} TL</p>
           ) : null}
+          <p className="mt-1 text-sm leading-snug text-stone-700">
+            {product.price != null ? "Ödeme WhatsApp üzerinden." : whatsappCommerceLine}
+          </p>
         </div>
       </Link>
       {showOrderActions ? (

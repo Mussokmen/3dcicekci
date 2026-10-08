@@ -17,7 +17,7 @@ export function ContactPage() {
     <main className="mx-auto max-w-3xl px-4 py-10 md:px-6">
       <Seo
         title="İletişim"
-        description="Bursa çiçek siparişi için WhatsApp’tan yazın. 7/24 açığız. Hizmet bölgesi Bursa ili. Form yoktur."
+        description="Bursa çiçek siparişi için WhatsApp’tan yazın. 7/24 açığız. Saat aralığı ve teslimat ücreti WhatsApp’ta kesinleşir. Hizmet bölgesi Bursa ili. Form yoktur."
         path="/iletisim"
         breadcrumbs={[
           { name: "Ana Sayfa", path: "/" },

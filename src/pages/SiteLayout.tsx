@@ -6,7 +6,9 @@ export function SiteLayout() {
   return (
     <div className="min-h-svh bg-[#f7f3ee] pt-14 text-stone-900">
       <SiteHeader />
-      <Outlet />
+      <div id="icerik" tabIndex={-1} className="outline-none">
+        <Outlet />
+      </div>
       <SiteFooter />
     </div>
   );

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { absoluteUrl, floristJsonLd, site } from "@/config/site";
+import { absoluteUrl, floristJsonLd, pageUrl, site } from "@/config/site";
 
 type BreadcrumbItem = {
   name: string;
@@ -66,7 +66,7 @@ export function Seo({
   useEffect(() => {
     const fullTitle = title.includes(site.name) ? title : `${title} · ${site.name}`;
     const desc = description ?? site.defaultDescription;
-    const url = absoluteUrl(path === "/" ? "/" : path);
+    const url = pageUrl(path);
     const imageUrl = absoluteUrl(image ?? site.ogImagePath);
 
     document.title = fullTitle;
@@ -120,7 +120,7 @@ export function Seo({
           "@type": "ListItem",
           position: index + 1,
           name: item.name,
-          item: absoluteUrl(item.path),
+          item: pageUrl(item.path),
         })),
       });
     } else {
