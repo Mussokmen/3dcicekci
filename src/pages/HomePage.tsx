@@ -6,7 +6,6 @@ import heroBackground from "@/assets/hero-bg.webp";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { HomeCategoryStrip } from "@/components/home/HomeCategoryStrip";
-import { HomeLeadProducts } from "@/components/home/HomeLeadProducts";
 import { HomeCustomDesign } from "@/components/home/HomeCustomDesign";
 import { HomeVitrine } from "@/components/home/HomeVitrine";
 import { TrustHighlights } from "@/components/content/TrustHighlights";
@@ -46,7 +45,6 @@ export function HomePage() {
             <AnimatedHeroDemo />
           </div>
         </div>
-        <HomeLeadProducts />
         <section className="relative z-10 grid w-full shrink-0 grid-cols-1 gap-2 bg-[#f7f3ee] px-2 py-1.5 min-[700px]:grid-cols-2 md:gap-2.5 md:px-3 md:py-2">
           <Link to="/magaza/buketler" className="relative block min-w-0">
             <img
