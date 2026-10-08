@@ -50,13 +50,10 @@ export function hasGoogleBusiness() {
 export const deliveryWindowNote =
   "Saat aralığı ve teslimat ücreti WhatsApp’ta kesinleşir.";
 
-export const whatsappCommerceLine =
-  "Fiyat WhatsApp’ta kesinleşir; ödeme WhatsApp üzerinden.";
-
 export const homeHeading = "Küçük Bir Çiçek, Büyük Bir His";
 
 export const homeIntro =
-  "Sevdiklerinize en güzel duyguları, özenle hazırlanmış taze çiçeklerle gönderin. Bursa’nın her köşesine sevginizi ulaştıralım. Fiyat WhatsApp’ta kesinleşir; ödeme WhatsApp üzerinden.";
+  "Sevdiklerinize en güzel duyguları, özenle hazırlanmış taze çiçeklerle gönderin. Bursa’nın her köşesine sevginizi ulaştıralım.";
 
 export const shopIntro =
   "Buket, orkide, kutu ve çelenk aranjmanları. Siparişler WhatsApp üzerinden alınır.";

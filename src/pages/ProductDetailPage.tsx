@@ -18,7 +18,7 @@ import {
   productTrustChips,
 } from "@/config/product-detail";
 import { getCategoryName, getProductBySlug } from "@/config/products";
-import { absoluteUrl, buildWhatsAppUrl, deliveryWindowNote, whatsappCommerceLine } from "@/config/site";
+import { absoluteUrl, buildWhatsAppUrl, deliveryWindowNote } from "@/config/site";
 
 export function ProductDetailPage() {
   const { slug = "" } = useParams();
@@ -77,10 +77,6 @@ export function ProductDetailPage() {
         <span className="px-2">/</span>
         <span className="text-stone-700">{product.name}</span>
       </nav>
-
-      <p className="mb-6 max-w-xl text-sm leading-relaxed text-stone-800">
-        {product.price != null ? `${product.price} TL. Ödeme WhatsApp üzerinden.` : whatsappCommerceLine}
-      </p>
 
       <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
         <div className="order-2 lg:order-1">
