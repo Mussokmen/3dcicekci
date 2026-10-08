@@ -29,12 +29,12 @@ export function CustomDesignPage() {
         <p>
           Hazır vitrin her duruma yetmeyebilir: farklı bir ölçü, belirli bir renk, masa yerine kapı, veya
           vitrindeki iki ürünün karışımı. Bursa’nın Çiçekçisi olarak bunları atölyede, tarifinize göre
-          kuruyoruz. Yeni sahte ürün eklemiyoruz; konuştuğumuz düzeni hazırlarız.
+          kuruyoruz. Konuştuğumuz düzeni atölyede, taze çiçekle hazırlarız.
         </p>
         <p>
           Referans olarak vitrindeki bir fotoğrafı gönderebilir veya “daha alçak, daha açık pembe, kartlı”
           gibi net bir cümle yazabilirsiniz. Mevsim nedeniyle çiçek cinsi değişebilir; bunu baştan söyleriz.
-          Fiyat ve stok sitede yazmaz; güncel durumu mesajda paylaşırız.
+          Düzen, kendi atölye çekimlerimizdeki ölçeği esas alır. Sipariş WhatsApp ile alınır.
         </p>
         <p>
           Teslim Bursa ili içindedir. Mahalle, saat ve kart notu aynı WhatsApp yazışmasında yeter. Büyük

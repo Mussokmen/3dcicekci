@@ -16,7 +16,7 @@ const steps = [
   },
   {
     title: "Bursa teslimi",
-    text: "Mahalle ve saati konuşuruz. Stok, fiyat veya teslim dakikası uydurmayız; o günkü hazırlığa göre netleştiririz.",
+    text: "Mahalle ve alıcı mesajda yer alır. Çiçek taze hazırlanır, teslim öncesi bilgilendirme yapılır.",
   },
 ] as const;
 
@@ -28,7 +28,7 @@ export function HomeCustomDesign() {
         <h2 className="mt-3 text-3xl tracking-tight text-stone-900 md:text-4xl">Özel tasarımlar</h2>
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-stone-600">
           Vitrindeki hazır ürünlerin yanında, ölçü ve renge göre özel buket, kutu, orkide ve çelenk de
-          kuruyoruz. Katalogda olmayan bir düzen için WhatsApp yeter; sahte stok veya fiyat yazmayız.
+          kuruyoruz. Ölçü ve rengi WhatsApp’tan yazmanız yeter; düzen atölyede taze çiçekle hazırlanır.
         </p>
         <ul className="mt-10 grid gap-8 sm:grid-cols-3">
           {steps.map((step) => (

@@ -466,7 +466,7 @@ export function getCategoryName(categorySlug: string) {
   return categories.find((category) => category.slug === categorySlug)?.name ?? categorySlug;
 }
 
-/** Ana sayfa ve mağaza vitrini — satış sayısı uydurulmaz, slug listesi elle seçilir. */
+/** Ana sayfa ve mağaza vitrini — öne çıkanlar slug listesiyle seçilir. */
 export const featuredProductSlugs = [
   "klasik-kirmizi-gul-buketi",
   "beyaz-gul-buketi",

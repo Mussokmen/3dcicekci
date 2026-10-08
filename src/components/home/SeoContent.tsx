@@ -11,10 +11,9 @@ export function SeoContent() {
             yakışan bir Bursa buketi ya da saksılı düzen çıkarırız.
           </p>
           <p>
-            Bursa çiçekçi arayanlar için vitrinimizi bilinçli olarak sakin tuttuk. Ürün fotoğrafları
-            kendi çekimlerimiz; stok sayısı, puan veya indirim etiketi uydurmuyoruz. Beğendiğiniz
-            çalışmayı WhatsApp’tan yazmanız yeterli. Bursa çiçek gönderimi için mahalle, teslim saati ve
-            kart notunu birlikte netleştiririz.
+            Bursa çiçekçi arayanlar vitrinde kendi atölye çekimlerimizi görür. Beğendiğiniz çalışmayı
+            WhatsApp’tan yazmanız yeter. Mahalle, alıcı ve kart notu sipariş öncesi netleşir; teslim
+            öncesi alıcı bilgilendirilir.
           </p>
           <p>
             Ataevler, Balat, Beşevler ve kentin diğer semtlerinde çiçek ulaştırmayı planlarken yolu ve

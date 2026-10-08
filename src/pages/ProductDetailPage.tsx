@@ -14,7 +14,7 @@ import {
   productDeliveryLinks,
 } from "@/config/product-detail";
 import { getCategoryName, getProductBySlug } from "@/config/products";
-import { absoluteUrl, buildWhatsAppUrl, deliveryWindowNote } from "@/config/site";
+import { absoluteUrl, buildWhatsAppUrl } from "@/config/site";
 
 export function ProductDetailPage() {
   const { slug = "" } = useParams();
@@ -93,13 +93,14 @@ export function ProductDetailPage() {
             <div className="grid gap-1 border-b border-stone-200 py-3 sm:grid-cols-[7.5rem_1fr] sm:items-baseline sm:gap-6">
               <dt className="font-medium text-stone-900">Sipariş</dt>
               <dd className="leading-relaxed text-stone-600">
-                WhatsApp üzerinden alınır. Sepet, üyelik ve kart ödemesi yoktur.
+                WhatsApp ile, kısa ve kişisel bir mesajla alınır. Mahalle, alıcı ve kart notu yazılır.
               </dd>
             </div>
             <div className="grid gap-1 border-b border-stone-200 py-3 sm:grid-cols-[7.5rem_1fr] sm:items-baseline sm:gap-6">
               <dt className="font-medium text-stone-900">Teslim</dt>
               <dd className="leading-relaxed text-stone-600">
-                Bursa ili içinde aynı gün teslim edilir. {deliveryWindowNote}
+                Bursa ili içinde aynı gün, zamanında ve dikkatli teslim edilir. Teslim öncesi alıcı
+                bilgilendirilir.
               </dd>
             </div>
             <div className="grid gap-1 border-b border-stone-200 py-3 sm:grid-cols-[7.5rem_1fr] sm:items-baseline sm:gap-6">
@@ -177,7 +178,7 @@ export function ProductDetailPage() {
         <h2 className="text-2xl tracking-tight text-stone-900">Özel tasarım</h2>
         <p className="mt-3 max-w-2xl text-base leading-relaxed text-stone-600">
           Bu ürünü referans göstererek ölçü veya renk değiştirebilirsiniz. Katalog dışı düzenler atölyede
-          kurulur; fiyat sitede yazmaz.
+          kurulur. Hazırlık öncesi ölçü ve renk mesajda netleşir.
         </p>
         <p className="mt-6">
           <Link to="/ozel-tasarim" className="text-sm text-stone-800 underline-offset-4 hover:underline">
