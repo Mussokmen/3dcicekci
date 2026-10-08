@@ -3,7 +3,7 @@ import { CategoryNavigation } from "@/components/shop/CategoryNavigation";
 import { ProductGrid } from "@/components/shop/ProductGrid";
 import { Seo } from "@/components/Seo";
 import { getFeaturedProducts, products } from "@/config/products";
-import { buildWhatsAppUrl, generalWhatsAppMessage, site } from "@/config/site";
+import { buildWhatsAppUrl, generalWhatsAppMessage, shopIntro } from "@/config/site";
 
 const whatsappHref = buildWhatsAppUrl(generalWhatsAppMessage());
 
@@ -12,13 +12,13 @@ export function ShopPage() {
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-8 md:px-6 md:py-10">
-      <Seo title="Mağaza" description={site.defaultDescription} path="/magaza" />
+      <Seo title="Mağaza" description={shopIntro} path="/magaza" />
       <header className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
         <div className="max-w-2xl">
           <p className="text-[11px] tracking-[0.2em] text-stone-500 uppercase">Vitrin</p>
           <h1 className="mt-2 text-3xl tracking-tight text-stone-900 md:text-5xl">Mağaza</h1>
           <p className="mt-3 max-w-xl text-base leading-relaxed text-stone-600">
-            Buket, orkide, kutu ve çelenk aranjmanları. Siparişler WhatsApp üzerinden alınır.
+            {shopIntro}
           </p>
         </div>
         <a

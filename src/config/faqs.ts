@@ -17,12 +17,12 @@ export const faqs: FaqItem[] = [
   {
     question: "Aynı gün teslim var mı?",
     answer:
-      "Evet. Bursa ili içinde aynı gün teslim ederiz. Mahalle ve istenen saati WhatsApp’ta yazın; 7/24 açığız.",
+      "Evet. Bursa ili içinde aynı gün teslim ederiz. Mahalle ve istenen saati WhatsApp’ta yazın; 7/24 açığız. Saat aralığı ve teslimat ücreti WhatsApp’ta kesinleşir.",
   },
   {
     question: "7/24 açık mısınız?",
     answer:
-      "Evet. WhatsApp sipariş hattı 7/24 açıktır. Aynı gün teslim için mahalle, alıcı ve kart notunu mesaja eklemeniz yeter.",
+      "Evet. WhatsApp sipariş hattı 7/24 açıktır. Aynı gün teslim için mahalle, alıcı ve kart notunu mesaja eklemeniz yeter. Saat aralığı ve teslimat ücreti WhatsApp’ta kesinleşir.",
   },
   {
     question: "Fiyat ve stok sitede neden yok?",

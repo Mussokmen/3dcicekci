@@ -7,7 +7,7 @@ export function NotFoundPage() {
   return (
     <div className="min-h-svh bg-[#f7f3ee] pt-14 text-stone-900">
       <SiteHeader />
-      <main className="flex min-h-[70svh] flex-col items-center justify-center px-4 text-center">
+      <main id="icerik" tabIndex={-1} className="flex min-h-[70svh] flex-col items-center justify-center px-4 text-center outline-none">
         <Seo
           title="Sayfa bulunamadı"
           description="Aradığınız sayfa yok. Mağaza veya Bursa teslimat sayfalarına dönebilirsiniz."

@@ -36,6 +36,7 @@ export function BursaIndexPage() {
           Çiçekçisi olarak il genelinde teslim planlarız; Osmangazi’den Nilüfer’e, Yıldırım’dan Mudanya ve
           Gemlik’e, İnegöl ve Görükle’ye kadar güzergâhı WhatsApp’ta netleştiririz. Stok sayısı veya teslim
           dakikası uydurmayız. 7/24 WhatsApp’tan yazabilirsiniz; Bursa içinde aynı gün teslim ederiz.
+          Saat aralığı ve teslimat ücreti WhatsApp’ta kesinleşir.
         </p>
         <p>
           Sipariş vitrindeki fotoğraftan başlar. Beğendiğiniz buketi, orkideyi, kutuyu veya çelengi yazın;
@@ -46,6 +47,7 @@ export function BursaIndexPage() {
         </p>
         <p>
           Aynı gün teslim Bursa ili içindedir. 7/24 açığız; mahalle ve istediğiniz saati mesaja yazın.
+          Saat aralığı ve teslimat ücreti WhatsApp’ta kesinleşir.
           Çelenk ve büyük düzenlerde ölçü, renk ve metni baştan iletmeniz hazırlığı hızlandırır. Doğum günü
           ve teşekkür buketleri de aynı gün çıkar.
         </p>
@@ -81,7 +83,8 @@ export function BursaIndexPage() {
         <p>
           Teslimi planlarken kurye güzergâhı o günkü siparişlere göre kurulur. Aynı gün teslim ederiz; tam
           dakikayı yol ve alıcının kapıda olması belirler. Sorularınızı ilçe sayfasından, rehber yazılarından
-          veya 7/24 WhatsApp hattından iletebilirsiniz.
+          veya 7/24 WhatsApp hattından iletebilirsiniz. Saat aralığı ve teslimat ücreti WhatsApp’ta
+          kesinleşir.
         </p>
       </div>
 

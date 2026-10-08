@@ -7,12 +7,13 @@ export const site = {
   url: "https://mussokmen.github.io/3dcicekci",
   defaultTitle: "Bursa'nın Çiçekçisi | Bursa Çiçek Siparişi",
   defaultDescription:
-    "Bursa çiçekçi vitrini. 7/24 açığız; buket, orkide, kutu ve çelenk için aynı gün teslim. Sipariş WhatsApp üzerinden.",
+    "Bursa çiçekçi vitrini. 7/24 açığız; buket, orkide, kutu ve çelenk için aynı gün teslim. Saat aralığı ve teslimat ücreti WhatsApp’ta kesinleşir. Sipariş WhatsApp üzerinden.",
   ogImagePath: "/og-cover.jpg",
   locale: "tr_TR",
   region: "Bursa",
   areaServed: "Bursa ili",
-  hoursDisplay: "7/24 açık · Bursa içinde aynı gün teslim",
+  hoursDisplay:
+    "7/24 açık · Bursa içinde aynı gün teslim · saat aralığı ve teslimat ücreti WhatsApp’ta kesinleşir",
   whatsappNumber: "905417334396",
   phoneDisplay: "0541 733 43 96",
   phoneTel: "+905417334396",
@@ -46,10 +47,33 @@ export function hasGoogleBusiness() {
   return site.googleBusinessUrl.startsWith("https://");
 }
 
+export const deliveryWindowNote =
+  "Saat aralığı ve teslimat ücreti WhatsApp’ta kesinleşir.";
+
+export const whatsappCommerceLine =
+  "Fiyat WhatsApp’ta kesinleşir; ödeme WhatsApp üzerinden.";
+
+export const homeHeading = "Küçük Bir Çiçek, Büyük Bir His";
+
+export const homeIntro =
+  "Sevdiklerinize en güzel duyguları, özenle hazırlanmış taze çiçeklerle gönderin. Bursa’nın her köşesine sevginizi ulaştıralım. Fiyat WhatsApp’ta kesinleşir; ödeme WhatsApp üzerinden.";
+
+export const shopIntro =
+  "Buket, orkide, kutu ve çelenk aranjmanları. Siparişler WhatsApp üzerinden alınır.";
+
 export function absoluteUrl(path: string) {
   if (path.startsWith("http")) return path;
   const normalized = path.startsWith("/") ? path : `/${path}`;
   return `${site.url}${normalized}`;
+}
+
+/** GitHub Pages iç sayfaları sondaki / ile sunar; ana sayfa / olarak kalır. */
+export function pageUrl(path: string) {
+  const origin = site.url.replace(/\/$/, "");
+  if (path === "/" || path === "") return `${origin}/`;
+  const normalized = path.startsWith("/") ? path : `/${path}`;
+  const slashed = normalized.endsWith("/") ? normalized : `${normalized}/`;
+  return `${origin}${slashed}`;
 }
 
 export function buildWhatsAppUrl(message: string) {

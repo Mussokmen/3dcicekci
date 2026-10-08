@@ -83,6 +83,12 @@ export function SiteHeader() {
           : "border-white/40 bg-white/45 backdrop-blur-[6px]",
       )}
     >
+      <a
+        href="#icerik"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-[70] focus:inline-flex focus:min-h-11 focus:items-center focus:rounded-full focus:bg-stone-900 focus:px-4 focus:text-sm focus:font-medium focus:text-white"
+      >
+        İçeriğe atla
+      </a>
       <div className="mx-auto flex h-14 w-full max-w-6xl min-w-0 items-center justify-between gap-4 overflow-x-clip px-4 md:px-6">
         <Link
           to="/"

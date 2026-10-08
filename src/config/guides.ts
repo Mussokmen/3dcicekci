@@ -14,7 +14,7 @@ export const guides: GuideArticle[] = [
     description: "Bursa içinde çiçek tesliminin WhatsApp, mahalle ve saatle nasıl planlandığı.",
     body: [
       "Vitrinden bir ürün seçip WhatsApp’tan yazarsınız. Mahalle, açık adres tarifi, alıcı adı ve istenen saat aralığı yeterlidir. İlçe sayfalarında Osmangazi, Nilüfer, Yıldırım, Mudanya, Gemlik, İnegöl, Görükle, Gürsu, Kestel, Yenişehir, İznik, Karacabey, Mustafakemalpaşa ve Orhangazi için kısa notlar vardır.",
-      "Kurye güzergâhı o günkü siparişlere göre kurulur. Bursa içinde aynı gün teslim ederiz; 7/24 WhatsApp’tan yazabilirsiniz. Mahalle ve saati mesajda belirtin.",
+      "Kurye güzergâhı o günkü siparişlere göre kurulur. Bursa içinde aynı gün teslim ederiz; 7/24 WhatsApp’tan yazabilirsiniz. Mahalle ve saati mesajda belirtin. Saat aralığı ve teslimat ücreti WhatsApp’ta kesinleşir.",
       "Sepet, üyelik veya otomatik ödeme yoktur. Güncel durumu mesajda konuşuruz; sitede stok rakamı göstermeyiz.",
     ],
   },
@@ -52,9 +52,10 @@ export const guides: GuideArticle[] = [
     slug: "ayni-gun-teslim",
     name: "Aynı gün teslim",
     path: "/rehber/ayni-gun-teslim",
-    description: "Bursa’da aynı gün çiçek teslimi ve 7/24 WhatsApp siparişi.",
+    description:
+      "Bursa’da aynı gün çiçek teslimi ve 7/24 WhatsApp siparişi. Saat aralığı ve teslimat ücreti WhatsApp’ta kesinleşir.",
     body: [
-      "Bursa ili içinde aynı gün teslim ederiz. Osmangazi, Nilüfer, Yıldırım veya daha uzak ilçelerde mahalleyi ve istediğiniz saati WhatsApp’a yazmanız yeter. 7/24 açığız.",
+      "Bursa ili içinde aynı gün teslim ederiz. Osmangazi, Nilüfer, Yıldırım veya daha uzak ilçelerde mahalleyi ve istediğiniz saati WhatsApp’a yazmanız yeter. 7/24 açığız. Saat aralığı ve teslimat ücreti WhatsApp’ta kesinleşir.",
       "Gece veya gündüz düşen mesajlar aynı hattadır. Teslim dakikasını yol ve alıcının kapıda olması belirler; bunu mesajda netleştiririz. Stok yoksa alternatifini söyleriz.",
       "Çelenk ve özel tasarımda ölçü ile metni baştan yazın. Hastane, site ve işyeri girişlerinde güvenlik kaydı teslimi uzatabilir; alıcı telefonu işe yarar.",
       "Karacabey, Mustafakemalpaşa, Yenişehir, İznik gibi uzun güzergâhlarda da aynı gün teslim planlarız. Adres tarifini ayrıntılı yazın ki kapıda beklemeyelim.",
