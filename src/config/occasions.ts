@@ -27,7 +27,7 @@ export const occasions: Occasion[] = [
     categorySlugs: ["buketler"],
     body: [
       "Teşekkür düzeninde abartısız bir buket çoğu zaman daha doğru durur. Mevsim çiçeği veya sade gül, işyeri masasına da ev holüne de uyar.",
-      "Teslimi alıcının müsait olduğu saate denk getirmek için WhatsApp’ta kısa bir pencere konuşuruz. Fiyat listesi uydurmayız; ürünü seçip yazın.",
+      "Sipariş WhatsApp ile alınır. Alıcı teslim öncesi bilgilendirilir. Ürünü seçip mahalle ve kart notunu yazmanız yeter.",
     ],
   },
   {
@@ -60,7 +60,7 @@ export const occasions: Occasion[] = [
     categorySlugs: ["orkideler"],
     body: [
       "Ofis tesliminde kabul saati ve kat bilgisi olmadan bekletmek orkideye zarar verir. Fotoğraftaki saksı ve dal sayısıyla teslimi eşleştirmeye çalışırız; tek dal ile dolu saksıyı karıştırmayın.",
-      "Işık ve sulama notunu kısa tutarız; bakım vaadi veya garanti uydurmayız. Nilüfer ve Osmangazi işyerlerinde bu ürün sık seçilir.",
+      "Işık ve sulama notunu kısa tutarız. Nilüfer ve Osmangazi işyerlerinde bu ürün sık seçilir. Saksı atölyede, fotoğraftaki düzene göre hazırlanır.",
     ],
   },
   {

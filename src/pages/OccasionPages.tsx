@@ -20,8 +20,8 @@ export function OccasionIndexPage() {
       />
       <h1 className="text-4xl tracking-tight text-stone-900">Özel günler</h1>
       <p className="mt-4 text-base leading-relaxed text-stone-600">
-        Yeni ürün uydurmuyoruz. Aşağıdaki sayfalar mevcut vitrini, doğum günü veya çelenk gibi niyetlere
-        bağlar. Teslim Bursa ili içindedir.
+        Aşağıdaki sayfalar mevcut vitrini doğum günü, teşekkür veya çelenk gibi niyetlere bağlar. Teslim
+        Bursa ili içindedir. Sipariş WhatsApp ile alınır.
       </p>
       <ul className="mt-8 space-y-4">
         {occasions.map((item) => (

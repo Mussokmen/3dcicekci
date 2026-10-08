@@ -28,15 +28,16 @@ export function AboutPage() {
         <p>
           Hizmet bölgemiz Bursa ili genelidir. Osmangazi, Nilüfer, Yıldırım, Mudanya, Gemlik, İnegöl,
           Görükle, Gürsu, Kestel, Yenişehir, İznik, Karacabey, Mustafakemalpaşa ve Orhangazi başta olmak
-          üzere ulaştırabildiğimiz her adresi mesajda söyleriz. Cadde kapı numarası netleşince iletişim
-          sayfasına yazılacaktır; sahte adres yayınlamıyoruz.
+          üzere teslim planlarız. Sipariş WhatsApp ile alınır; teslim öncesi alıcı bilgilendirilir.
         </p>
         <p>
           Çekimleri atölyede, gün ışığında alırız. Fotoğraftaki sap, saksı ve ambalaj teslimde referanstır;
           mevsim farkını gizlemeyiz. Kim hazırlıyor sorusunun cevabı abartısızdır: aranjmanı burada kurar,
           yola yakın tamamlarız. Ölçü ve renge göre özel tasarım da kurarız; tarifi WhatsApp’tan alırız.
         </p>
-        <p>Stok, puan ve indirim etiketi uydurmayız. Güncel durumu yazışarak paylaşırız.</p>
+        <p>
+          Fotoğraflar kendi atölye çekimlerimizdir. Aranjman taze çiçekle, görseldeki düzene göre hazırlanır.
+        </p>
       </div>
       <TrustHighlights compact />
       <p className="mt-8 flex flex-wrap gap-4 text-sm">

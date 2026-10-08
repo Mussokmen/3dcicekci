@@ -4,7 +4,6 @@ import { Seo } from "@/components/Seo";
 import { faqJsonLd } from "@/config/faqs";
 import {
   getDistrictAreas,
-  getNeighborhoods,
   getNeighborhoodsByParent,
   getServiceAreaBySlug,
 } from "@/config/areas";
@@ -12,13 +11,12 @@ import { buildWhatsAppUrl, generalWhatsAppMessage } from "@/config/site";
 
 export function BursaIndexPage() {
   const districts = getDistrictAreas();
-  const neighborhoods = getNeighborhoods();
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-10 md:px-6">
       <Seo
         title="Bursa Çiçek Gönderimi"
-        description="Bursa ili genelinde buket, orkide, kutu ve çelenk teslimi. Sipariş WhatsApp üzerinden alınır."
+        description="Bursa’nın on yedi ilçesine buket, orkide, kutu ve çelenk. Sipariş WhatsApp ile alınır; teslim aynı gün planlanır."
         path="/bursa"
         breadcrumbs={[
           { name: "Ana Sayfa", path: "/" },
@@ -32,59 +30,27 @@ export function BursaIndexPage() {
       </h1>
       <div className="mt-6 space-y-4 text-base leading-relaxed text-stone-600">
         <p>
-          Bursa’da çiçek siparişi çoğu zaman bir mahalleye, bir saate ve bir karta bağlıdır. Bursa’nın
-          Çiçekçisi olarak il genelinde teslim planlarız; Osmangazi’den Nilüfer’e, Yıldırım’dan Mudanya ve
-          Gemlik’e, İnegöl ve Görükle’ye kadar güzergâhı WhatsApp’ta netleştiririz. Stok sayısı veya teslim
-          dakikası uydurmayız. 7/24 WhatsApp’tan yazabilirsiniz; Bursa içinde aynı gün teslim ederiz.
-          Saat aralığı ve teslimat ücreti WhatsApp’ta kesinleşir.
+          Bursa’nın Çiçekçisi, il genelinde taze çiçek hazırlayan yerel bir atölyedir. Çiçek siparişi
+          WhatsApp ile alınır. Buket, orkide, kutu ve çelenk, kendi atölyemizde çekilmiş fotoğraflardaki
+          düzene göre özenle hazırlanır.
         </p>
         <p>
-          Sipariş vitrindeki fotoğraftan başlar. Beğendiğiniz buketi, orkideyi, kutuyu veya çelengi yazın;
-          alıcı adı, mahalle, bina tarifi ve istenen saat aralığını ekleyin. Kart notunu da aynı mesajda
-          göndermeniz yeterli. Teslimi aceleye getirmek taze çiçeğe zarar verir; yaz aylarında aranjmanı
-          yola yakın hazırlarız. Kışın ise soğuk ve rüzgâr ambalajı etkiler; kapıda bekletmemek için alıcıyı
-          haberdar etmenizi isteriz.
+          Aynı gün teslim Bursa’nın on yedi ilçesini kapsar: Osmangazi, Nilüfer, Yıldırım, Mudanya, Gemlik,
+          İnegöl, Gürsu, Kestel, Yenişehir, İznik, Karacabey, Mustafakemalpaşa, Orhangazi, Büyükorhan,
+          Harmancık, Keles ve Orhaneli. Görükle bir ilçe değil, Nilüfer mahallesidir.
         </p>
         <p>
-          Aynı gün teslim Bursa ili içindedir. 7/24 açığız; mahalle ve istediğiniz saati mesaja yazın.
-          Saat aralığı ve teslimat ücreti WhatsApp’ta kesinleşir.
-          Çelenk ve büyük düzenlerde ölçü, renk ve metni baştan iletmeniz hazırlığı hızlandırır. Doğum günü
-          ve teşekkür buketleri de aynı gün çıkar.
+          Mesajda ürün, mahalle, alıcı adı ve kart notu yer alır. Teslim öncesi alıcı bilgilendirilir.
+          Çiçek yola yakın tamamlanır; ambalaj kapıya kadar korunur. Kart notu, mesajdaki metinle yazılır.
         </p>
         <p>
-          İlçe sayfalarında o bölgede sık istenen ürünlere ve yola dair kısa notlar var. Ataevler, Balat ve
-          Beşevler Nilüfer içinde ayrı mahalle sayfalarıdır; kopya metinle onlarca mahalle açmıyoruz. Teslim
-          etmediğimiz bir yeri de vaat etmeyiz — Bursa içinde ulaştırabildiğimiz her adresi mesajda
-          konuşuruz. Google’da “Bursa çiçekçi” araması sizi buraya getirdiyse, vitrin fotoğrafları ve bu
-          teslim metni gerçek işleyişi anlatır; sahte şube veya cadde adresi yoktur.
+          İlçe sayfaları yolun ve kapının farkını anlatır. Nilüfer’de site bloğu, Osmangazi’de işyeri ve
+          hastane girişi, Yıldırım’da mahalle sokağı, sahil ilçelerinde bina tarifi, güney ilçelerinde köy
+          ve mevki ayrı yazılır. Mahalle sayfaları bu ilçelerin içindeki sık kapıları ayrıca tarif eder.
         </p>
         <p>
-          Buketler ev ve ofis kapısına, orkideler masaya, kutular yolda daha az bozulan hediyelere, çelenkler
-          kapı önü ve anmaya yöneliktir. Hangisinin duruma uyduğunu abartmadan söyleriz. Fotoğraftaki sap
-          sayısı, saksı doluluğu ve ambalaj teslimde referanstır; mevsim nedeniyle küçük fark olabilir, bunu
-          gizlemeyiz. Fiyat ve stok sitede yazmaz çünkü günlük çiçek değişir; güncel tutarı yazışmada
-          paylaşırız.
-        </p>
-        <p>
-          WhatsApp siparişinde üyelik veya sepet yoktur. Mesaja ürün adı veya sayfa bağlantısı, teslim
-          mahallesi, varsa site/blok, alıcı telefonu ve kart notu yeter. Ödeme şekli konuşulur; sitede kart
-          çekilmez. Kişisel bilgi yalnızca hazırlık ve teslim için kullanılır; form toplamayız. Ayrıntı
-          gizlilik sayfasındadır.
-        </p>
-        <p>
-          Osmangazi’de işyeri ve hastane girişleri, Nilüfer’de site güvenliği, Yıldırım’da sokak tarifleri,
-          Mudanya ve Gemlik’te yol süresi, İnegöl’de işyeri kabul saati teslimi etkiler. Görükle’de yurt ve
-          kampüs yakını kapı noktası ayrıca konuşulur. Gürsu, Kestel, Yenişehir, İznik, Karacabey,
-          Mustafakemalpaşa ve Orhangazi için de ayrı ilçe notları vardır. Bu farklar yüzden her ilçeye aynı
-          cümleyi kopyalamadık; ilgili sayfadan o bölgeye özel notu okuyabilirsiniz. Özel gün niyetleri
-          (doğum günü, teşekkür, hasta ziyareti, çelenk, ofis orkide) ayrı landing’lerde mevcut vitrine
-          bağlanır.
-        </p>
-        <p>
-          Teslimi planlarken kurye güzergâhı o günkü siparişlere göre kurulur. Aynı gün teslim ederiz; tam
-          dakikayı yol ve alıcının kapıda olması belirler. Sorularınızı ilçe sayfasından, rehber yazılarından
-          veya 7/24 WhatsApp hattından iletebilirsiniz. Saat aralığı ve teslimat ücreti WhatsApp’ta
-          kesinleşir.
+          Hazırlık atölyede, taze çiçekle yapılır. Sipariş hattı 7/24 açıktır. Kişisel bilgi yalnızca
+          hazırlık ve teslim için kullanılır; ayrıntı gizlilik sayfasındadır.
         </p>
       </div>
 
@@ -102,16 +68,30 @@ export function BursaIndexPage() {
         ))}
       </ul>
 
-      <h2 className="mt-12 text-2xl tracking-tight text-stone-900">Nilüfer mahalleleri</h2>
-      <ul className="mt-4 space-y-2 text-sm">
-        {neighborhoods.map((item) => (
-          <li key={item.path}>
-            <Link to={item.path} className="underline-offset-4 hover:underline">
-              {item.shortName}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      {(
+        [
+          ["nilufer", "Nilüfer mahalleleri"],
+          ["osmangazi", "Osmangazi mahalleleri"],
+          ["yildirim", "Yıldırım mahalleleri"],
+        ] as const
+      ).map(([parent, title]) => {
+        const items = getNeighborhoodsByParent(parent);
+        if (items.length === 0) return null;
+        return (
+          <section key={parent}>
+            <h2 className="mt-12 text-2xl tracking-tight text-stone-900">{title}</h2>
+            <ul className="mt-4 grid gap-2 text-sm sm:grid-cols-2">
+              {items.map((item) => (
+                <li key={item.path}>
+                  <Link to={item.path} className="underline-offset-4 hover:underline">
+                    {item.shortName}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        );
+      })}
 
       <p className="mt-8 text-sm text-stone-600">
         <Link to="/ozel-gunler" className="underline-offset-4 hover:underline">

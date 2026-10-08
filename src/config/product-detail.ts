@@ -61,7 +61,7 @@ const productFaqQuestions = [
   "Siparişi nasıl veririm?",
   "Aynı gün teslim var mı?",
   "7/24 açık mısınız?",
-  "Fiyat ve stok sitede neden yok?",
+  "Hazırlık nasıl ilerler?",
 ] as const;
 
 export function getProductCategoryNotes(category: string) {

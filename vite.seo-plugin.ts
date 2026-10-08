@@ -89,12 +89,12 @@ function webpSize(filePath: string) {
 }
 
 function collectRoutes(root: string): RouteMeta[] {
-  const privacySummary = `${site.name} vitrininde sipariş, fiyat ve ödeme WhatsApp üzerinden yürür. Site kart bilgisi almaz. İletişim: ${site.phoneDisplay}.`;
+  const privacySummary = `${site.name} siparişi WhatsApp ile alır. Sitede kart bilgisi toplanmaz. İletişim: ${site.phoneDisplay}.`;
   const cookieSummary =
     "Site, vitrini göstermek için temel tarayıcı işleyişine dayanır. Pazarlama amaçlı izleme çerezi veya sepet çerezi kullanmayız.";
   const aboutSummary = "Bursa'da atölyede hazırlanan buket, orkide ve hediye aranjmanları.";
   const contactSummary =
-    "Bursa çiçek siparişi için WhatsApp üzerinden yazın. Hizmet bölgesi Bursa ili. Saat aralığı ve teslimat ücreti WhatsApp’ta kesinleşir.";
+    "Bursa çiçek siparişi WhatsApp ile alınır. Hizmet bölgesi Bursa ili. Teslim aynı gün planlanır.";
   const bursaSummary = "Bursa ili genelinde buket, orkide, kutu ve çelenk teslimi.";
   const customSummary =
     "Bursa’da ölçü ve renge göre özel buket, kutu, orkide ve çelenk. WhatsApp sipariş.";
@@ -195,7 +195,7 @@ function collectRoutes(root: string): RouteMeta[] {
       title: `${area.name} · ${site.name}`,
       description: area.description,
       heading: area.name,
-      summary: area.description,
+      summary: area.body.join(" "),
     });
   }
 

@@ -7,22 +7,21 @@ export const site = {
   url: "https://mussokmen.github.io/3dcicekci",
   defaultTitle: "Bursa'nın Çiçekçisi | Bursa Çiçek Siparişi",
   defaultDescription:
-    "Bursa çiçekçi vitrini. 7/24 açığız; buket, orkide, kutu ve çelenk için aynı gün teslim. Saat aralığı ve teslimat ücreti WhatsApp’ta kesinleşir. Sipariş WhatsApp üzerinden.",
+    "Bursa çiçekçi vitrini. Buket, orkide, kutu ve çelenk atölyede taze hazırlanır; Bursa içinde aynı gün teslim edilir. Sipariş WhatsApp ile alınır.",
   ogImagePath: "/og-cover.jpg",
   locale: "tr_TR",
   region: "Bursa",
   areaServed: "Bursa ili",
-  hoursDisplay:
-    "7/24 açık · Bursa içinde aynı gün teslim · saat aralığı ve teslimat ücreti WhatsApp’ta kesinleşir",
+  hoursDisplay: "7/24 açık · Bursa içinde aynı gün teslim · sipariş WhatsApp ile alınır",
   whatsappNumber: "905417334396",
   phoneDisplay: "0541 733 43 96",
   phoneTel: "+905417334396",
   /**
-   * PLACEHOLDER — cadde adresi netleşince doldurulacak. Sahte adres yok.
+   * PLACEHOLDER — cadde adresi netleşince doldurulacak.
    */
   streetAddress: "",
   /**
-   * PLACEHOLDER — Google İşletme profil URL’si. Sahte Haritalar linki yok.
+   * PLACEHOLDER — Google İşletme profil URL’si.
    */
   googleBusinessUrl: "",
   /**
@@ -46,9 +45,6 @@ export function hasCanonicalDomain() {
 export function hasGoogleBusiness() {
   return site.googleBusinessUrl.startsWith("https://");
 }
-
-export const deliveryWindowNote =
-  "Saat aralığı ve teslimat ücreti WhatsApp’ta kesinleşir.";
 
 export const homeHeading = "Küçük Bir Çiçek, Büyük Bir His";
 

@@ -18,7 +18,7 @@ const items = [
   },
   {
     title: "Aynı gün teslim",
-    text: "Bursa içinde aynı gün teslim ederiz. Saat aralığı ve teslimat ücreti WhatsApp’ta kesinleşir.",
+    text: "Bursa içinde aynı gün, zamanında ve dikkatli teslim ederiz.",
     icon: SameDayIcon,
   },
   {

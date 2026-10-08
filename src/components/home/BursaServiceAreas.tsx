@@ -10,9 +10,8 @@ export function BursaServiceAreas() {
       <div className="mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-20">
         <h2 className="text-3xl tracking-tight text-stone-900">Bursa’nın her yerine çiçek</h2>
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-stone-600">
-          Osmangazi, Nilüfer, Yıldırım, Mudanya, Gemlik, İnegöl, Görükle, Gürsu, Kestel, Yenişehir, İznik,
-          Karacabey, Mustafakemalpaşa ve Orhangazi dahil Bursa ili içinde teslim planlarız. Mahalle ve saati
-          WhatsApp’ta netleştiririz.
+          Bursa’nın on yedi ilçesine aynı gün teslim planlarız. Görükle bir ilçe değil, Nilüfer
+          mahallesidir. Sipariş WhatsApp ile alınır; mahalle ve kart notu mesajda yazılır.
         </p>
         <p className="mt-3 text-sm text-stone-600">
           <Link to="/rehber/bursa-cicek-gonderimi" className="underline-offset-4 hover:underline">

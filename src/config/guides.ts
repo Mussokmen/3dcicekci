@@ -13,9 +13,9 @@ export const guides: GuideArticle[] = [
     path: "/rehber/bursa-cicek-gonderimi",
     description: "Bursa içinde çiçek tesliminin WhatsApp, mahalle ve saatle nasıl planlandığı.",
     body: [
-      "Vitrinden bir ürün seçip WhatsApp’tan yazarsınız. Mahalle, açık adres tarifi, alıcı adı ve istenen saat aralığı yeterlidir. İlçe sayfalarında Osmangazi, Nilüfer, Yıldırım, Mudanya, Gemlik, İnegöl, Görükle, Gürsu, Kestel, Yenişehir, İznik, Karacabey, Mustafakemalpaşa ve Orhangazi için kısa notlar vardır.",
-      "Kurye güzergâhı o günkü siparişlere göre kurulur. Bursa içinde aynı gün teslim ederiz; 7/24 WhatsApp’tan yazabilirsiniz. Mahalle ve saati mesajda belirtin. Saat aralığı ve teslimat ücreti WhatsApp’ta kesinleşir.",
-      "Sepet, üyelik veya otomatik ödeme yoktur. Güncel durumu mesajda konuşuruz; sitede stok rakamı göstermeyiz.",
+      "Vitrinden bir ürün seçip WhatsApp’tan yazarsınız. Mahalle, alıcı adı ve kart notu mesajda yer alır. On yedi ilçe ve seçili mahalle sayfaları teslimi ayrı ayrı anlatır. Görükle, Nilüfer mahallesidir.",
+      "Kurye güzergâhı o günkü siparişlere göre kurulur. Bursa içinde aynı gün teslim ederiz. Sipariş WhatsApp ile alınır. Mahalle, alıcı ve kart notu mesajda yer alır. Teslim öncesi alıcı bilgilendirilir.",
+      "Sipariş WhatsApp ile alınır. Çiçek atölyede taze hazırlanır ve teslim öncesi alıcı bilgilendirilir.",
     ],
   },
   {
@@ -25,7 +25,7 @@ export const guides: GuideArticle[] = [
     description: "Bursa’nın Çiçekçisi’nde WhatsApp siparişinde hangi bilgilerin gerektiği.",
     body: [
       "Mesaja ürün adını veya sayfa linkini, teslim mahallesini ve kart notunu ekleyin. Fotoğrafı vitrindekiyle karşılaştırmak için ürün sayfasındaki görseli referans alın.",
-      "Ödeme ve teslim detayı yazışmada netleşir. Form veya hesap oluşturmayız. Kişisel veriyi sipariş için gerekli olduğu kadar kullanırız; ayrıntı gizlilik sayfasındadır.",
+      "Sipariş WhatsApp ile alınır. Form veya hesap oluşturmayız. Kişisel veri yalnızca hazırlık ve teslim için kullanılır; ayrıntı gizlilik sayfasındadır.",
     ],
   },
   {
@@ -53,9 +53,9 @@ export const guides: GuideArticle[] = [
     name: "Aynı gün teslim",
     path: "/rehber/ayni-gun-teslim",
     description:
-      "Bursa’da aynı gün çiçek teslimi ve 7/24 WhatsApp siparişi. Saat aralığı ve teslimat ücreti WhatsApp’ta kesinleşir.",
+      "Bursa’da aynı gün çiçek teslimi. Sipariş WhatsApp ile, 7/24 alınır.",
     body: [
-      "Bursa ili içinde aynı gün teslim ederiz. Osmangazi, Nilüfer, Yıldırım veya daha uzak ilçelerde mahalleyi ve istediğiniz saati WhatsApp’a yazmanız yeter. 7/24 açığız. Saat aralığı ve teslimat ücreti WhatsApp’ta kesinleşir.",
+      "Bursa ili içinde aynı gün teslim ederiz. İlçe ve mahalle mesajda yazılır. Sipariş WhatsApp ile alınır. Çiçek taze hazırlanır, teslim öncesi alıcı bilgilendirilir.",
       "Gece veya gündüz düşen mesajlar aynı hattadır. Teslim dakikasını yol ve alıcının kapıda olması belirler; bunu mesajda netleştiririz. Stok yoksa alternatifini söyleriz.",
       "Çelenk ve özel tasarımda ölçü ile metni baştan yazın. Hastane, site ve işyeri girişlerinde güvenlik kaydı teslimi uzatabilir; alıcı telefonu işe yarar.",
       "Karacabey, Mustafakemalpaşa, Yenişehir, İznik gibi uzun güzergâhlarda da aynı gün teslim planlarız. Adres tarifini ayrıntılı yazın ki kapıda beklemeyelim.",

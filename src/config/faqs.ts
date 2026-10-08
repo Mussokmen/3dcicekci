@@ -7,37 +7,37 @@ export const faqs: FaqItem[] = [
   {
     question: "Siparişi nasıl veririm?",
     answer:
-      "Vitrinden ürünü seçip WhatsApp’tan yazın. Üyelik veya sepet yoktur. Mahalle, saat ve kart notu yeterlidir.",
+      "Vitrinden ürünü seçip WhatsApp’tan yazın. Mahalle, alıcı adı ve kart notu mesajda yer alır. Sipariş kısa ve kişisel ilerler; teslim öncesi alıcı bilgilendirilir.",
   },
   {
     question: "Bursa’nın her yerine gidiyor musunuz?",
     answer:
-      "Bursa ili içinde teslim planlarız. Osmangazi, Nilüfer, Yıldırım, Mudanya, Gemlik, İnegöl, Görükle, Gürsu, Kestel, Yenişehir, İznik, Karacabey, Mustafakemalpaşa ve Orhangazi sayfalarında notlar vardır. O anki güzergâh ve saate göre net cevabı mesajda veririz.",
+      "Teslim Bursa ili içindedir. On yedi ilçenin ve seçili mahallelerin sayfaları menüdedir. Görükle bir ilçe değil, Nilüfer mahallesidir. Sipariş WhatsApp ile alınır.",
   },
   {
     question: "Aynı gün teslim var mı?",
     answer:
-      "Evet. Bursa ili içinde aynı gün teslim ederiz. Mahalle ve istenen saati WhatsApp’ta yazın; 7/24 açığız. Saat aralığı ve teslimat ücreti WhatsApp’ta kesinleşir.",
+      "Evet. Bursa ili içinde aynı gün teslim ederiz. Çiçek atölyede taze hazırlanır, zamanında ve dikkatli ulaştırılır. Teslim öncesi alıcı bilgilendirilir.",
   },
   {
     question: "7/24 açık mısınız?",
     answer:
-      "Evet. WhatsApp sipariş hattı 7/24 açıktır. Aynı gün teslim için mahalle, alıcı ve kart notunu mesaja eklemeniz yeter. Saat aralığı ve teslimat ücreti WhatsApp’ta kesinleşir.",
+      "Evet. WhatsApp sipariş hattı 7/24 açıktır. Mahalle, alıcı ve kart notu mesaja eklendiğinde hazırlık başlar.",
   },
   {
-    question: "Fiyat ve stok sitede neden yok?",
+    question: "Hazırlık nasıl ilerler?",
     answer:
-      "Günlük çiçek ve hazırlık değişir. Uydurma etiket koymuyoruz. Beğendiğiniz ürünü yazın, o günkü durumu konuşalım.",
+      "Aranjman kendi atölyemizde, çektiğimiz fotoğraftaki düzene göre hazırlanır. Sipariş öncesi mahalle ve kart notu netleşir. Teslim öncesi alıcı bilgilendirilir.",
   },
   {
     question: "Özel tasarım yaptırabilir miyim?",
     answer:
-      "Evet. Ölçü, renk ve duracağı yeri WhatsApp’tan yazın; vitrindeki bir ürünü referans gösterebilirsiniz. Katalog dışı düzenleri atölyede kurarız. Fiyat sitede yazmaz.",
+      "Evet. Ölçü, renk ve duracağı yeri WhatsApp’tan yazın. Vitrindeki bir ürünü referans gösterebilirsiniz. Düzen atölyede, taze çiçekle kurulur.",
   },
   {
     question: "Çelenk metnini nasıl ileteyim?",
     answer:
-      "Kurdele yazısını WhatsApp’ta karakter karakter gönderin. İsim ve unvan teslimden sonra düzeltilmez.",
+      "Kurdele yazısını WhatsApp mesajında aynen gönderin. İsim ve unvan teslimden önce okunur, metin o yazıyla işlenir.",
   },
   {
     question: "Kişisel bilgilerim ne olur?",

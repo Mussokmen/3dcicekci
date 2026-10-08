@@ -17,7 +17,7 @@ export function ContactPage() {
     <main className="mx-auto max-w-3xl px-4 py-10 md:px-6">
       <Seo
         title="İletişim"
-        description="Bursa çiçek siparişi için WhatsApp’tan yazın. 7/24 açığız. Saat aralığı ve teslimat ücreti WhatsApp’ta kesinleşir. Hizmet bölgesi Bursa ili. Form yoktur."
+        description="Bursa çiçek siparişi WhatsApp ile alınır. 7/24 açığız. Hizmet bölgesi Bursa ili. Teslim aynı gün planlanır."
         path="/iletisim"
         breadcrumbs={[
           { name: "Ana Sayfa", path: "/" },
@@ -60,14 +60,14 @@ export function ContactPage() {
         <li>Hizmet bölgesi: {site.areaServed}</li>
         <li>Çalışma: {site.hoursDisplay}</li>
         <li>
-          Açık adres: {site.streetAddress ? site.streetAddress : "henüz yayınlanmıyor (sahte pin yok)"}
+          Açık adres: {site.streetAddress ? site.streetAddress : "iletişim WhatsApp ve telefon üzerinden"}
         </li>
         <li>Site adresi: {hasCanonicalDomain() ? site.url : "kanonik domain bağlanınca güncellenir"}</li>
       </ul>
       <h2 className="mt-12 text-2xl tracking-tight text-stone-900">Google’da görünürlük</h2>
       <p className="mt-4 text-base leading-relaxed text-stone-600">
         “Bursa çiçekçi” aramalarının büyük kısmı Haritalar’da çözülür. Google İşletme profilinde hizmet
-        bölgesi Bursa ili olarak işaretlenir; cadde uydurmayız. Search Console ve ölçüm, gerçek domain
+        bölgesi Bursa ili olarak işaretlenir. Search Console ve ölçüm, gerçek domain
         bağlanınca yayınlanır.
       </p>
       {hasGoogleBusiness() ? (
@@ -83,7 +83,7 @@ export function ContactPage() {
         </p>
       ) : (
         <p className="mt-4 text-sm text-stone-500">
-          Profil linki henüz yok. Yorumlar yalnızca Google’da toplanır; sitede sahte yıldız göstermeyiz.
+          Google İşletme profili bağlandığında bu sayfadan ulaşılır. Sipariş WhatsApp ile alınır.
         </p>
       )}
       <p className="mt-4 text-sm">
