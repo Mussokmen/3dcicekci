@@ -19,10 +19,16 @@ export function OccasionIndexPage() {
         ]}
       />
       <h1 className="text-4xl tracking-tight text-stone-900">Özel günler</h1>
-      <p className="mt-4 text-base leading-relaxed text-stone-600">
-        Aşağıdaki sayfalar mevcut vitrini doğum günü, teşekkür veya çelenk gibi niyetlere bağlar. Teslim
-        Bursa ili içindedir. Sipariş WhatsApp ile alınır.
-      </p>
+      <div className="mt-4 space-y-4 text-base leading-relaxed text-stone-600">
+        <p>
+          Özel gün sayfaları, vitrindeki buket, orkide, kutu ve çelenkleri niyete göre ayırır. Yeni bir
+          katalog açılmaz; hazırlık atölyede, kendi fotoğraflarımızdaki düzene göre yapılır.
+        </p>
+        <p>
+          Doğum günü, teşekkür, hasta ziyareti, çelenk, ofis orkidesi ve hediye kutusu ayrı anlatılır.
+          Sipariş WhatsApp ile alınır. Teslim Bursa ili içinde, aynı gün ve dikkatli yapılır.
+        </p>
+      </div>
       <ul className="mt-8 space-y-4">
         {occasions.map((item) => (
           <li key={item.path}>

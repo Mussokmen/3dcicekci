@@ -8,35 +8,39 @@ export function AboutPage() {
     <main className="mx-auto max-w-3xl px-4 py-10 md:px-6">
       <Seo
         title="Hakkımızda"
-        description="Bursa'nın Çiçekçisi: atölyede hazırlanan buket, orkide ve hediye aranjmanları. Teslim Bursa ili."
+        description="Bursa'nın Çiçekçisi, Bursa'da taze çiçek hazırlayan yerel bir atölyedir. Fotoğraflar kendi çekimlerimizdir. Sipariş WhatsApp ile alınır."
         path="/hakkimizda"
         breadcrumbs={[
           { name: "Ana Sayfa", path: "/" },
           { name: "Hakkımızda", path: "/hakkimizda" },
         ]}
       />
-      <h1 className="text-4xl tracking-tight text-stone-900">Hakkımızda</h1>
+      <p className="text-[11px] tracking-[0.2em] text-stone-500 uppercase">Kurumsal</p>
+      <h1 className="mt-2 text-4xl tracking-tight text-stone-900">Hakkımızda</h1>
       <div className="mt-6 space-y-4 text-base leading-relaxed text-stone-600">
         <p>
-          {site.name}, Bursa’da taze çiçek ve sade aranjmanlarla çalışan bir vitrindir. Ürün fotoğrafları
-          kendi çekimlerimizdir. Siparişi WhatsApp üzerinden netleştiririz; sepet veya üyelik yoktur.
+          {site.name}, Bursa’da taze çiçek hazırlayan yerel bir atölyedir. Buket, orkide, kutu ve çelenk
+          burada kurulur. Ürün fotoğrafları kendi çekimlerimizdir; vitrindeki düzen teslimde esas alınır.
         </p>
         <p>
-          Atölyede gül, zambak, orkide ve kutu düzenlerini fotoğraftaki haliyle hazırlarız. Teslim planını
-          mahalle ve saatle birlikte konuşuruz. Çiçeği yola yakın kurarız; yazın bekletmeyiz.
+          Sipariş WhatsApp ile, kısa ve kişisel bir mesajla alınır. Mahalle, alıcı adı ve kart notu mesajda
+          yer alır. Hazırlık öncesi bu bilgiler netleşir. Teslim öncesi alıcı bilgilendirilir.
         </p>
         <p>
-          Hizmet bölgemiz Bursa ili genelidir. Osmangazi, Nilüfer, Yıldırım, Mudanya, Gemlik, İnegöl,
-          Görükle, Gürsu, Kestel, Yenişehir, İznik, Karacabey, Mustafakemalpaşa ve Orhangazi başta olmak
-          üzere teslim planlarız. Sipariş WhatsApp ile alınır; teslim öncesi alıcı bilgilendirilir.
+          Çiçek yola yakın tamamlanır. Yazın aranjman bekletilmez; kışın ambalaj kapıya kadar korunur.
+          Aynı gün teslim Bursa ili içindedir. Ekip yereldir; teslim zamanında ve dikkatli yapılır.
         </p>
         <p>
-          Çekimleri atölyede, gün ışığında alırız. Fotoğraftaki sap, saksı ve ambalaj teslimde referanstır;
-          mevsim farkını gizlemeyiz. Kim hazırlıyor sorusunun cevabı abartısızdır: aranjmanı burada kurar,
-          yola yakın tamamlarız. Ölçü ve renge göre özel tasarım da kurarız; tarifi WhatsApp’tan alırız.
+          Hizmet bölgesi on yedi ilçeyi kapsar. Görükle bir ilçe değil, Nilüfer mahallesidir. İlçe ve
+          mahalle sayfaları kapı tarifinin farkını anlatır. Sipariş, seçilen sayfadaki üründen başlar.
         </p>
         <p>
-          Fotoğraflar kendi atölye çekimlerimizdir. Aranjman taze çiçekle, görseldeki düzene göre hazırlanır.
+          Özel ölçüde veya renkte bir düzen istenirse tarif WhatsApp’tan alınır ve atölyede kurulur.
+          Referans, vitrindeki bir fotoğraf olabilir. Kart notu, mesajdaki metinle yazılır.
+        </p>
+        <p>
+          İletişim {site.phoneDisplay} numaralı hat ve WhatsApp üzerindedir. Hat 7/24 açıktır. Kişisel
+          bilgi yalnızca hazırlık ve teslim için kullanılır.
         </p>
       </div>
       <TrustHighlights compact />

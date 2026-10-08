@@ -26,14 +26,20 @@ export function ContactPage() {
         jsonLd={faqJsonLd()}
       />
       <h1 className="text-3xl tracking-tight text-stone-900 md:text-4xl">İletişim</h1>
-      <p className="mt-6 text-base leading-relaxed text-stone-600">
-        Sipariş ve teslim sorularınızı WhatsApp’tan iletebilirsiniz. İletişim formu yoktur; kişisel veriyi
-        sipariş için gerekli olduğu kadar kullanırız. Ayrıntı{" "}
-        <Link to="/gizlilik-politikasi" className="underline-offset-4 hover:underline">
-          gizlilik politikasında
-        </Link>
-        .
-      </p>
+      <div className="mt-6 space-y-4 text-base leading-relaxed text-stone-600">
+        <p>
+          Sipariş ve teslim için WhatsApp’tan yazın veya telefon edin. Hat 7/24 açıktır. Mesajda ürün,
+          mahalle, alıcı adı ve kart notu yer alır. Kısa bir yazışma, hazırlığı başlatır.
+        </p>
+        <p>
+          Teslim Bursa ili içindedir ve aynı gün planlanır. Çiçek atölyede taze hazırlanır; teslim öncesi
+          alıcı bilgilendirilir. İletişim formu yoktur. Kişisel verinin kullanımı{" "}
+          <Link to="/gizlilik-politikasi" className="underline-offset-4 hover:underline">
+            gizlilik politikasında
+          </Link>{" "}
+          anlatılır.
+        </p>
+      </div>
       <WhatsAppSupportCard className="mt-8" />
       <ul className="mt-8 space-y-3 text-sm text-stone-700">
         <li>
@@ -59,16 +65,13 @@ export function ContactPage() {
         </li>
         <li>Hizmet bölgesi: {site.areaServed}</li>
         <li>Çalışma: {site.hoursDisplay}</li>
-        <li>
-          Açık adres: {site.streetAddress ? site.streetAddress : "iletişim WhatsApp ve telefon üzerinden"}
-        </li>
-        <li>Site adresi: {hasCanonicalDomain() ? site.url : "kanonik domain bağlanınca güncellenir"}</li>
+        {site.streetAddress ? <li>Açık adres: {site.streetAddress}</li> : null}
+        {hasCanonicalDomain() ? <li>Site adresi: {site.url}</li> : null}
       </ul>
-      <h2 className="mt-12 text-2xl tracking-tight text-stone-900">Google’da görünürlük</h2>
+      <h2 className="mt-12 text-2xl tracking-tight text-stone-900">Sipariş nasıl başlar</h2>
       <p className="mt-4 text-base leading-relaxed text-stone-600">
-        “Bursa çiçekçi” aramalarının büyük kısmı Haritalar’da çözülür. Google İşletme profilinde hizmet
-        bölgesi Bursa ili olarak işaretlenir. Search Console ve ölçüm, gerçek domain
-        bağlanınca yayınlanır.
+        Vitrinden bir ürün seçin, WhatsApp’tan yazın. Fotoğraf kendi atölye çekimimizdir. Mahalle ve kart
+        notu mesajda netleşince hazırlık başlar. Teslim aynı gün, zamanında ve dikkatli yapılır.
       </p>
       {hasGoogleBusiness() ? (
         <p className="mt-4 text-sm">
@@ -81,11 +84,7 @@ export function ContactPage() {
             Google İşletme profili
           </a>
         </p>
-      ) : (
-        <p className="mt-4 text-sm text-stone-500">
-          Google İşletme profili bağlandığında bu sayfadan ulaşılır. Sipariş WhatsApp ile alınır.
-        </p>
-      )}
+      ) : null}
       <p className="mt-4 text-sm">
         <Link to="/bursa" className="underline-offset-4 hover:underline">
           Bursa teslimat bölgeleri

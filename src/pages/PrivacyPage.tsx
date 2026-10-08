@@ -16,8 +16,16 @@ export function PrivacyPage() {
           üyelik, sepet veya ödeme formu yoktur.
         </p>
         <p>
-          WhatsApp’ta yazdığınız ad, telefon ve teslim bilgisi yalnızca siparişi hazırlamak için kullanılır.
-          Tarayıcıda hesap veya kart verisi saklanmaz.
+          WhatsApp mesajındaki ad, telefon, mahalle ve kart notu yalnızca aranjmanı hazırlamak ve teslim
+          etmek için kullanılır. Bu bilgiler tarayıcıda hesap olarak saklanmaz.
+        </p>
+        <p>
+          Teslim öncesi alıcı, siparişin yola çıktığını bilsin diye bilgilendirilir. Bunun için mesajda
+          yazılan telefon yeterlidir. Başka bir amaçla liste oluşturulmaz.
+        </p>
+        <p>
+          Sitede pazarlama formu yoktur. Çerezlerin işleyişi çerez politikasında ayrı anlatılır. Sipariş
+          kanalı WhatsApp’tır; hat {site.phoneDisplay} numarasıdır.
         </p>
         <p>
           İletişim: {site.name}, telefon{" "}

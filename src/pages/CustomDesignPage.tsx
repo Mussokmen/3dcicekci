@@ -37,8 +37,16 @@ export function CustomDesignPage() {
           Düzen, kendi atölye çekimlerimizdeki ölçeği esas alır. Sipariş WhatsApp ile alınır.
         </p>
         <p>
-          Teslim Bursa ili içindedir. Mahalle, saat ve kart notu aynı WhatsApp yazışmasında yeter. Büyük
-          çelenk ve yoğun günlerde erken yazmak, hayır dememek için daha dürüst bir yoldur.
+          Teslim Bursa ili içindedir. Mahalle, alıcı ve kart notu aynı WhatsApp mesajında yer alır.
+          Teslim öncesi alıcı bilgilendirilir. Çiçek yola yakın, taze tamamlanır.
+        </p>
+        <p>
+          Büyük çelenk ve yoğun günlerde hazırlık erken başlar. Ölçü, renk ve kurdele metni mesajda
+          baştan yazılır. Fotoğraflar kendi atölye çekimlerimizdir; yeni düzen bu görsellerin ölçeğinden
+          yürür.
+        </p>
+        <p>
+          Sipariş kısa ve kişiseldir. Atölye Bursa’dadır. Teslim aynı gün, zamanında ve dikkatli yapılır.
         </p>
       </div>
       <CategoryLinks slugs={["buketler", "orkideler", "kutular", "celenkler"]} />
