@@ -1,7 +1,5 @@
 import { Link, Navigate, useParams } from "react-router-dom";
 import { FaqList } from "@/components/content/ContentBits";
-import { TrustHighlights } from "@/components/content/TrustHighlights";
-import { WhatsAppSupportCard } from "@/components/content/WhatsAppSupportCard";
 import { ProductGallery } from "@/components/shop/ProductGallery";
 import { ProductGrid } from "@/components/shop/ProductGrid";
 import { WhatsAppOrderButton } from "@/components/shop/WhatsAppOrderButton";
@@ -14,8 +12,6 @@ import {
   getProductOccasionLinks,
   getRelatedProducts,
   productDeliveryLinks,
-  productOrderSteps,
-  productTrustChips,
 } from "@/config/product-detail";
 import { getCategoryName, getProductBySlug } from "@/config/products";
 import { absoluteUrl, buildWhatsAppUrl, deliveryWindowNote } from "@/config/site";
@@ -84,96 +80,79 @@ export function ProductDetailPage() {
         </div>
 
         <div className="order-1 lg:sticky lg:top-24 lg:order-2 lg:self-start">
-          <p className="text-[11px] tracking-[0.16em] text-stone-500 uppercase">{categoryName}</p>
-          <h1 className="mt-3 text-3xl tracking-tight text-stone-900 md:text-4xl">{product.name}</h1>
-
-          <ul className="mt-5 flex flex-wrap gap-2">
-            {productTrustChips.map((chip) => (
-              <li
-                key={chip}
-                className="border border-stone-300 bg-white/60 px-2.5 py-1 text-[11px] tracking-wide text-stone-700"
-              >
-                {chip}
-              </li>
-            ))}
-          </ul>
-          <p className="mt-3 max-w-md text-sm leading-relaxed text-stone-600">{deliveryWindowNote}</p>
-
-          <p className="mt-5 max-w-md text-base leading-relaxed text-stone-600">{product.description}</p>
-
+          <p className="text-xs font-medium tracking-[0.18em] text-stone-500 uppercase">{categoryName}</p>
+          <h1 className="mt-2 text-3xl font-semibold tracking-tight text-stone-900 md:text-4xl">
+            {product.name}
+          </h1>
+          <p className="mt-4 max-w-prose text-base leading-relaxed text-stone-700">{product.description}</p>
           {product.price != null ? (
-            <p className="mt-6 text-lg text-stone-900">{product.price} TL</p>
+            <p className="mt-4 text-lg text-stone-900">{product.price} TL</p>
           ) : null}
 
-          <ol className="mt-8 space-y-2 border-t border-stone-200/80 pt-6">
-            {productOrderSteps.map((step, index) => (
-              <li key={step} className="flex gap-3 text-sm leading-relaxed text-stone-600">
-                <span className="w-5 shrink-0 text-stone-400">{index + 1}.</span>
-                <span>{step}</span>
-              </li>
-            ))}
-          </ol>
+          <dl className="mt-8 border-t border-stone-300 text-sm">
+            <div className="grid gap-1 border-b border-stone-200 py-3 sm:grid-cols-[7.5rem_1fr] sm:items-baseline sm:gap-6">
+              <dt className="font-medium text-stone-900">Sipariş</dt>
+              <dd className="leading-relaxed text-stone-600">
+                WhatsApp üzerinden alınır. Sepet, üyelik ve kart ödemesi yoktur.
+              </dd>
+            </div>
+            <div className="grid gap-1 border-b border-stone-200 py-3 sm:grid-cols-[7.5rem_1fr] sm:items-baseline sm:gap-6">
+              <dt className="font-medium text-stone-900">Teslim</dt>
+              <dd className="leading-relaxed text-stone-600">
+                Bursa ili içinde aynı gün teslim edilir. {deliveryWindowNote}
+              </dd>
+            </div>
+            <div className="grid gap-1 border-b border-stone-200 py-3 sm:grid-cols-[7.5rem_1fr] sm:items-baseline sm:gap-6">
+              <dt className="font-medium text-stone-900">Hazırlık</dt>
+              <dd className="leading-relaxed text-stone-600">
+                {notes[0]?.text ?? "Fotoğraftaki düzen esas alınır; teslime yakın hazırlanır."}
+                {notes[0]?.href && notes[0]?.linkLabel ? (
+                  <>
+                    {" "}
+                    <Link to={notes[0].href} className="text-stone-800 underline-offset-4 hover:underline">
+                      {notes[0].linkLabel}
+                    </Link>
+                  </>
+                ) : null}
+              </dd>
+            </div>
+          </dl>
 
-          <div className="mt-8">
-            <p className="text-[11px] tracking-[0.16em] text-stone-500 uppercase">Bu düzen için</p>
-            <ul className="mt-3 space-y-2">
-              {notes.map((note) => (
-                <li key={note.text} className="text-sm leading-relaxed text-stone-600">
-                  {note.text}
-                  {note.href && note.linkLabel ? (
-                    <>
-                      {" "}
-                      <Link to={note.href} className="text-stone-800 underline-offset-4 hover:underline">
-                        {note.linkLabel}
-                      </Link>
-                    </>
-                  ) : null}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {occasions.length > 0 ? (
-            <p className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-sm">
-              {occasions.map((item) => (
-                <Link
-                  key={item.slug}
-                  to={item.path}
-                  className="text-stone-800 underline-offset-4 hover:underline"
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </p>
-          ) : null}
-
-          <p className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-sm">
-            {productDeliveryLinks.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className="text-stone-700 underline-offset-4 hover:underline"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </p>
-
-          <div className="mt-8 flex flex-wrap items-center gap-4">
-            <WhatsAppOrderButton message={product.whatsappMessage} />
+          <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <WhatsAppOrderButton
+              message={product.whatsappMessage}
+              className="w-full rounded-full font-semibold"
+            />
             <a
               href={customHref}
               target="_blank"
               rel="noreferrer"
-              className="text-sm text-stone-700 underline-offset-4 hover:underline"
+              className="inline-flex min-h-11 w-full items-center justify-center rounded-full border border-stone-400 bg-white px-4 text-sm font-semibold text-stone-900 transition-colors hover:bg-stone-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-900"
             >
               Özel ölçü / renk yaz
             </a>
           </div>
+
+          <p className="mt-6 text-sm leading-relaxed text-stone-500">
+            {productDeliveryLinks.map((item, index) => (
+              <span key={item.path}>
+                {index > 0 ? " · " : null}
+                <Link to={item.path} className="underline-offset-4 hover:text-stone-900 hover:underline">
+                  {item.label}
+                </Link>
+              </span>
+            ))}
+            {occasions.map((item) => (
+              <span key={item.slug}>
+                {" · "}
+                <Link to={item.path} className="underline-offset-4 hover:text-stone-900 hover:underline">
+                  {item.name}
+                </Link>
+              </span>
+            ))}
+          </p>
         </div>
       </div>
-
-      <TrustHighlights className="mt-14 md:mt-16" />
 
       {related.length > 0 ? (
         <section className="mt-16 border-t border-stone-200/80 pt-12 md:mt-20">
@@ -190,9 +169,8 @@ export function ProductDetailPage() {
       ) : null}
 
       <section className="mt-16 border-t border-stone-200/80 pt-12 md:mt-20">
-        <h2 className="text-2xl tracking-tight text-stone-900">Sipariş hakkında</h2>
+        <h2 className="text-2xl font-semibold tracking-tight text-stone-900">Sipariş hakkında</h2>
         <FaqList items={productFaqs} />
-        <WhatsAppSupportCard className="mt-10" message={product.whatsappMessage} />
       </section>
 
       <section className="mt-16 border-t border-stone-200/80 pt-12 md:mt-20">
