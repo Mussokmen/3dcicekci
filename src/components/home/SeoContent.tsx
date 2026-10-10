@@ -28,7 +28,7 @@ export function SeoContent() {
             olmasına özen gösteririz.
           </p>
           <p>
-            Çelenk talepleri ayrı bir ritim ister: renk, ölçü ve metin. Kapı önü veya anma düzenlerinde
+            Çelenk talebinde renk, ölçü ve kurdele metni birlikte sorulur. Kapı önü veya anma düzenlerinde
             sade bir kompozisyon çoğu zaman daha doğru durur. Sorularınızı ürün sayfasından veya doğrudan
             WhatsApp’tan iletebilirsiniz. Bursa’da çiçekçi arıyorsanız, vitrindeki işlerimiz konuşsun
             yeter; gerisini birlikte ayarlarız.

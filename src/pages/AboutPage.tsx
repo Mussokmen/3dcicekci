@@ -27,7 +27,7 @@ export function AboutPage() {
           öncesi alıcı bilgilendirilir.
         </p>
         <p>
-          Çiçek yola yakın tamamlanır. Yazın aranjman bekletilmez; kışın ambalaj kapıya kadar korunur.
+          Çiçek atölyede taze hazırlanır ve yola yakın tamamlanır.
           Aynı gün teslim Bursa ili içindedir. Ekip yereldir; teslim zamanında ve dikkatli yapılır.
         </p>
         <p>

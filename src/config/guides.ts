@@ -13,7 +13,7 @@ export const guides: GuideArticle[] = [
     path: "/rehber/bursa-cicek-gonderimi",
     description: "Bursa içinde çiçek tesliminin WhatsApp, mahalle ve saatle nasıl planlandığı.",
     body: [
-      "Vitrinden bir ürün seçip WhatsApp’tan yazarsınız. Mahalle, alıcı adı ve kart notu mesajda yer alır. On yedi ilçede kapı tarifi değişir. Görükle, Nilüfer mahallesidir.",
+      "Vitrinden bir ürün seçip WhatsApp’tan yazarsınız. Mahalle, alıcı adı ve kart notu mesajda yer alır. On yedi ilçenin her birinde mahalle adı ayrıca yazılır. Görükle, Nilüfer mahallesidir.",
       "Kurye güzergâhı o günkü siparişlere göre kurulur. Bursa içinde aynı gün teslim ederiz. Mahalle, alıcı ve kart notu mesajda yer alır. Teslim öncesi alıcı bilgilendirilir.",
       "Çiçek atölyede taze hazırlanır ve teslim öncesi alıcı bilgilendirilir.",
     ],
@@ -57,8 +57,8 @@ export const guides: GuideArticle[] = [
     body: [
       "Bursa ili içinde aynı gün teslim ederiz. İlçe ve mahalle mesajda yazılır. Çiçek taze hazırlanır, teslim öncesi alıcı bilgilendirilir.",
       "Gece veya gündüz düşen mesajlar aynı hattadır. Çiçek atölyede taze hazırlanır. Teslim öncesi alıcı bilgilendirilir; kapıda bekleme kısalır.",
-      "Çelenk ve özel tasarımda ölçü ile metni baştan yazın. Hastane, site ve işyeri girişlerinde güvenlik kaydı teslimi uzatabilir; alıcı telefonu işe yarar.",
-      "Karacabey, Mustafakemalpaşa, Yenişehir, İznik gibi uzun güzergâhlarda da aynı gün teslim planlarız. Adres tarifini ayrıntılı yazın ki kapıda beklemeyelim.",
+      "Çelenk ve özel tasarımda ölçü ile metni baştan yazın. Hastane, site ve iş yeri adreslerinde alıcının telefonu işe yarar.",
+      "Karacabey, Mustafakemalpaşa, Yenişehir, İznik gibi uzun güzergâhlarda da aynı gün teslim planlarız. Adresi mahalle ve sokakla birlikte yazın.",
     ],
   },
   {
@@ -87,8 +87,8 @@ export const guides: GuideArticle[] = [
     path: "/rehber/site-guvenlikli-teslim",
     description: "Bursa’da site, güvenlik ve işyeri girişinde çiçek tesliminin nasıl konuşulduğu.",
     body: [
-      "Nilüfer, Ataevler ve benzeri sitelerde kurye çoğu zaman lobide karşılanır. Blok, daire ve varsa ziyaretçi kaydı için alıcı telefonu mesajda durmalıdır. Güvenlik “kime” diye sorduğunda isim uyuşmazsa teslim uzar; çiçek bekler.",
-      "İşyeri ve hastanede kat, birim ve kabul saati yoksa aranjmanı kapıda tutmayız. Pencereyi kaydırmak, sıcakta bekletmekten iyidir. Kampüs içi teslim Görükle’de çoğu zaman kapı noktasında biter.",
+      "Nilüfer’de Ataevler ve benzeri sitelerde blok, daire ve alıcının telefonu mesajda yazılır. Görevli alıcının adını sorduğunda mesajdaki isimle aynı ad geçmelidir.",
+      "İş yeri ve hastanede kat ile birim yazılır. Alıcıya önceden haber verilir. Kampüs içi teslim Görükle’de çoğu zaman kapıda biter.",
       "Çelenk gibi büyük düzenler asansör ve kapı genişliği ister. Ölçüyü baştan yazın. Form veya üyelik açılmaz; blok ve alıcıyı yazışmada iletmeniz yeter.",
     ],
   },
