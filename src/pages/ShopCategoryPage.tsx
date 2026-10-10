@@ -53,7 +53,7 @@ export function ShopCategoryPage() {
       </p>
 
       <section className="mt-10">
-        <ProductGrid products={items} />
+        <ProductGrid products={items} showOrderActions />
       </section>
     </main>
   );

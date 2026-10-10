@@ -32,6 +32,10 @@ const categoryNotes: Record<string, CategoryNote[]> = {
     { text: "Suya koyunca sapı taze kalır; vazoyu teslimde hazır bulundurmak yeter." },
     { text: "Saplı buket elde taşınır; kutu ise yolda daha düzgün kalır. Mahalleyi mesaja yazın." },
   ],
+  "karisik-buketler": [
+    { text: "Kart notunu kısa tutun; teslimde okunması kolay olur." },
+    { text: "Karışık buket elde taşınır; vazoyu teslimde hazır bulundurmak yeter." },
+  ],
   orkideler: [
     { text: "Dal sayısı fotoğraftakiyle aynı dilden teslim edilir." },
     { text: "Saksıyı bekletmemek için alıcının kapıda olması iyidir." },

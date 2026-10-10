@@ -42,7 +42,7 @@ export function ShopPage() {
         <section className="mt-10">
           <h2 className="text-xl tracking-tight text-stone-900">Öne çıkanlar</h2>
           <div className="mt-6">
-            <ProductGrid products={featured} />
+            <ProductGrid products={featured} showOrderActions />
           </div>
         </section>
       ) : null}
@@ -50,7 +50,7 @@ export function ShopPage() {
       <section className="mt-12">
         <h2 className="text-xl tracking-tight text-stone-900">Tüm ürünler</h2>
         <div className="mt-6">
-          <ProductGrid products={products} />
+          <ProductGrid products={products} showOrderActions />
         </div>
       </section>
     </main>

@@ -54,7 +54,7 @@ export const homeIntro =
   "Sevdiklerinize en güzel duyguları, özenle hazırlanmış taze çiçeklerle gönderin. Bursa’nın her köşesine sevginizi ulaştıralım.";
 
 export const shopIntro =
-  "Buket, orkide, kutu ve çelenk aranjmanları. Siparişler WhatsApp üzerinden alınır.";
+  "Buket, karışık buket, orkide, kutu ve çelenk aranjmanları. Siparişler WhatsApp üzerinden alınır.";
 
 export function absoluteUrl(path: string) {
   if (path.startsWith("http")) return path;

@@ -13,6 +13,13 @@ export const categories: Category[] = [
     showcaseProductSlug: "klasik-kirmizi-gul-buketi",
   },
   {
+    slug: "karisik-buketler",
+    name: "Karışık Buketler",
+    description:
+      "Bursa karışık buket siparişlerinde gül, zambak, kasımpatı ve mevsim çiçekleri bir araya gelir. Karışık çiçek buketi atölyede taze hazırlanır.",
+    showcaseProductSlug: "pastel-karisik-buket",
+  },
+  {
     slug: "orkideler",
     name: "Orkideler",
     description: "Saksılı orkide ve hediye orkide aranjmanları.",
