@@ -1,3 +1,5 @@
+import { niluferNeighborhoodDrafts } from "./nilufer-mahalleleri.ts";
+
 export type AreaKind = "hub" | "district" | "neighborhood";
 
 export type ServiceArea = {
@@ -10,9 +12,13 @@ export type ServiceArea = {
   parentSlug?: string;
   body: string[];
   relatedCategorySlugs: string[];
+  /** Komşu veya aynı ilçedeki ilgili mahalleler. */
+  nearbySlugs?: string[];
+  /** false ise bağlantı “yakın” diye sunulmaz. */
+  nearbyPrecise?: boolean;
 };
 
-export const serviceAreas: ServiceArea[] = [
+const baseServiceAreas: ServiceArea[] = [
   {
     slug: "bursa",
     name: "Bursa Çiçek Gönderimi",
@@ -56,7 +62,7 @@ export const serviceAreas: ServiceArea[] = [
     relatedCategorySlugs: ["buketler", "orkideler", "kutular"],
     body: [
       "Nilüfer, site blokları, plaza katları ve yeni konut dokusuyla teslim tarifinin net yazıldığı bir ilçedir. Çiçek siparişi WhatsApp üzerinden alınır; blok, daire ve alıcı adı mesajda durur.",
-      "Ataevler, Balat, Beşevler, Görükle, İhsaniye, Özlüce, FSM, Çamlıca, Odunluk ve Ertuğrul aynı ilçenin içinde ayrı kapı düzenlerine sahiptir. Görükle bir ilçe değil, Nilüfer mahallesidir. Her biri için ayrı sayfa vardır; metinler kopya değildir.",
+      "Sayfanın altındaki ızgara Nilüfer mahallelerini tek tek açar. Doğudaki apartman kuşağı, Görükle’deki üniversite çevresi, Çalı hattındaki karma doku ve Uluabat ile kuzeybatıdaki eski köy mahalleleri aynı ilçe sınırındadır. Görükle ilçe değil mahalledir. FSM, Fatih Sultan Mehmet bulvarı için tutulan ek bir sayfadır; resmi mahalle listesinin yerine geçmez.",
       "Orkide ve hediye kutusu, ofis masası ile ev holünde sık seçilir. Aranjman atölyede, kendi fotoğraflarımızdaki saksı ve ambalaja göre hazırlanır. Taze çiçek yola yakın tamamlanır.",
       "Site girişinde güvenlik kaydı yaygındır. Teslim öncesi alıcı bilgilendirilir; böylece kurye lobide bekletilmez. Kart notu aynı mesajda yazılır.",
       "Nilüfer çiçekçisi araması, aynı gün teslim ve dikkatli kapı teslimi ister. Ekip Bursa’dadır. Büyük düzenlerde ölçü mesajda baştan belirtilir; hazırlık buna göre ilerler.",
@@ -319,7 +325,7 @@ export const serviceAreas: ServiceArea[] = [
   },
   {
     slug: "cekirge",
-    name: "Çekirge Çiçekçilik",
+    name: "Çekirge",
     shortName: "Çekirge",
     path: "/bursa/cekirge",
     kind: "neighborhood",
@@ -336,7 +342,7 @@ export const serviceAreas: ServiceArea[] = [
   },
   {
     slug: "heykel",
-    name: "Heykel Çiçekçilik",
+    name: "Heykel",
     shortName: "Heykel",
     path: "/bursa/heykel",
     kind: "neighborhood",
@@ -353,7 +359,7 @@ export const serviceAreas: ServiceArea[] = [
   },
   {
     slug: "demirtas",
-    name: "Demirtaş Çiçekçilik",
+    name: "Demirtaş",
     shortName: "Demirtaş",
     path: "/bursa/demirtas",
     kind: "neighborhood",
@@ -370,7 +376,7 @@ export const serviceAreas: ServiceArea[] = [
   },
   {
     slug: "soganli",
-    name: "Soğanlı Çiçekçilik",
+    name: "Soğanlı",
     shortName: "Soğanlı",
     path: "/bursa/soganli",
     kind: "neighborhood",
@@ -387,7 +393,7 @@ export const serviceAreas: ServiceArea[] = [
   },
   {
     slug: "hamitler",
-    name: "Hamitler Çiçekçilik",
+    name: "Hamitler",
     shortName: "Hamitler",
     path: "/bursa/hamitler",
     kind: "neighborhood",
@@ -404,7 +410,7 @@ export const serviceAreas: ServiceArea[] = [
   },
   {
     slug: "ihsaniye",
-    name: "İhsaniye Çiçekçilik",
+    name: "İhsaniye",
     shortName: "İhsaniye",
     path: "/bursa/ihsaniye",
     kind: "neighborhood",
@@ -421,7 +427,7 @@ export const serviceAreas: ServiceArea[] = [
   },
   {
     slug: "ozluce",
-    name: "Özlüce Çiçekçilik",
+    name: "Özlüce",
     shortName: "Özlüce",
     path: "/bursa/ozluce",
     kind: "neighborhood",
@@ -438,7 +444,7 @@ export const serviceAreas: ServiceArea[] = [
   },
   {
     slug: "fsm",
-    name: "FSM Çiçekçilik",
+    name: "FSM",
     shortName: "FSM",
     path: "/bursa/fsm",
     kind: "neighborhood",
@@ -455,7 +461,7 @@ export const serviceAreas: ServiceArea[] = [
   },
   {
     slug: "camlica",
-    name: "Çamlıca Çiçekçilik",
+    name: "Çamlıca",
     shortName: "Çamlıca",
     path: "/bursa/camlica",
     kind: "neighborhood",
@@ -472,7 +478,7 @@ export const serviceAreas: ServiceArea[] = [
   },
   {
     slug: "odunluk",
-    name: "Odunluk Çiçekçilik",
+    name: "Odunluk",
     shortName: "Odunluk",
     path: "/bursa/odunluk",
     kind: "neighborhood",
@@ -489,7 +495,7 @@ export const serviceAreas: ServiceArea[] = [
   },
   {
     slug: "ertugrul",
-    name: "Ertuğrul Çiçekçilik",
+    name: "Ertuğrul",
     shortName: "Ertuğrul",
     path: "/bursa/ertugrul",
     kind: "neighborhood",
@@ -506,7 +512,7 @@ export const serviceAreas: ServiceArea[] = [
   },
   {
     slug: "gorukle",
-    name: "Görükle Çiçekçilik",
+    name: "Görükle",
     shortName: "Görükle",
     path: "/bursa/gorukle",
     kind: "neighborhood",
@@ -523,7 +529,7 @@ export const serviceAreas: ServiceArea[] = [
   },
   {
     slug: "ataevler",
-    name: "Ataevler Çiçekçilik",
+    name: "Ataevler",
     shortName: "Ataevler",
     path: "/bursa/ataevler",
     kind: "neighborhood",
@@ -540,7 +546,7 @@ export const serviceAreas: ServiceArea[] = [
   },
   {
     slug: "balat",
-    name: "Balat Çiçekçilik",
+    name: "Balat",
     shortName: "Balat",
     path: "/bursa/balat",
     kind: "neighborhood",
@@ -557,7 +563,7 @@ export const serviceAreas: ServiceArea[] = [
   },
   {
     slug: "besevler",
-    name: "Beşevler Çiçekçilik",
+    name: "Beşevler",
     shortName: "Beşevler",
     path: "/bursa/besevler",
     kind: "neighborhood",
@@ -574,7 +580,7 @@ export const serviceAreas: ServiceArea[] = [
   },
   {
     slug: "erikli",
-    name: "Erikli Çiçekçilik",
+    name: "Erikli",
     shortName: "Erikli",
     path: "/bursa/erikli",
     kind: "neighborhood",
@@ -591,7 +597,7 @@ export const serviceAreas: ServiceArea[] = [
   },
   {
     slug: "millet",
-    name: "Millet Çiçekçilik",
+    name: "Millet",
     shortName: "Millet",
     path: "/bursa/millet",
     kind: "neighborhood",
@@ -608,7 +614,7 @@ export const serviceAreas: ServiceArea[] = [
   },
   {
     slug: "arabayatagi",
-    name: "Arabayatağı Çiçekçilik",
+    name: "Arabayatağı",
     shortName: "Arabayatağı",
     path: "/bursa/arabayatagi",
     kind: "neighborhood",
@@ -625,7 +631,7 @@ export const serviceAreas: ServiceArea[] = [
   },
   {
     slug: "esenevler",
-    name: "Esenevler Çiçekçilik",
+    name: "Esenevler",
     shortName: "Esenevler",
     path: "/bursa/esenevler",
     kind: "neighborhood",
@@ -642,6 +648,65 @@ export const serviceAreas: ServiceArea[] = [
   },
 ];
 
+const legacyNearby: Record<string, string[]> = {
+  ihsaniye: ["balat", "kultur", "besevler", "konak"],
+  ataevler: ["besevler", "ozluce", "camlica", "balat"],
+  besevler: ["ataevler", "balat", "gorukle", "ihsaniye"],
+  camlica: ["ozluce", "ertugrul", "ataevler", "alaaddinbey"],
+  balat: ["ihsaniye", "besevler", "ataevler", "kultur"],
+  odunluk: ["ozluce", "ihsaniye", "fsm", "kultur"],
+  ozluce: ["camlica", "ertugrul", "ataevler", "odunluk"],
+  ertugrul: ["ozluce", "camlica", "alaaddinbey", "fethiye"],
+  gorukle: ["balkan", "kizilcikli", "besevler", "dumlupinar"],
+  fsm: ["odunluk", "ihsaniye", "ozluce", "kultur"],
+};
+
+function dativePlace(name: string) {
+  const vowels = "aeıioöuü";
+  const lower = name.toLocaleLowerCase("tr");
+  let vowel = "e";
+  for (let index = lower.length - 1; index >= 0; index -= 1) {
+    if (vowels.includes(lower[index] ?? "")) {
+      vowel = lower[index] ?? "e";
+      break;
+    }
+  }
+  const front = "eiöü".includes(vowel);
+  const endsWithVowel = vowels.includes(lower[lower.length - 1] ?? "");
+  const suffix = endsWithVowel ? (front ? "ye" : "ya") : front ? "e" : "a";
+  return `${name}’${suffix}`;
+}
+
+function neighborhoodTitle(shortName: string) {
+  if (shortName === "FSM") return "FSM’ye Çiçek Gönderimi";
+  return `${dativePlace(shortName)} Çiçek Gönderimi`;
+}
+
+const draftedNeighborhoods: ServiceArea[] = niluferNeighborhoodDrafts.map((draft) => ({
+  slug: draft.slug,
+  shortName: draft.shortName,
+  name: draft.shortName,
+  path: `/bursa/${draft.slug}`,
+  kind: "neighborhood",
+  parentSlug: "nilufer",
+  description: draft.description,
+  body: draft.body,
+  relatedCategorySlugs: draft.relatedCategorySlugs,
+  nearbySlugs: draft.nearbySlugs,
+  nearbyPrecise: draft.precise,
+}));
+
+export const serviceAreas: ServiceArea[] = [...baseServiceAreas, ...draftedNeighborhoods].map(
+  (area) => {
+    if (area.kind !== "neighborhood") return area;
+    return {
+      ...area,
+      name: neighborhoodTitle(area.shortName),
+      nearbySlugs: area.nearbySlugs ?? legacyNearby[area.slug],
+    };
+  },
+);
+
 export function getServiceAreaBySlug(slug: string) {
   return serviceAreas.find((area) => area.slug === slug);
 }
@@ -655,7 +720,10 @@ export function getNeighborhoods() {
 }
 
 export function getNeighborhoodsByParent(parentSlug: string) {
-  return serviceAreas.filter((area) => area.parentSlug === parentSlug);
+  return serviceAreas
+    .filter((area) => area.parentSlug === parentSlug)
+    .slice()
+    .sort((a, b) => a.shortName.localeCompare(b.shortName, "tr"));
 }
 
 export function getHubArea() {

@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 import { BrandLogo } from "@/components/layout/BrandLogo";
-import { getDistrictAreas, getHubArea, getNeighborhoods } from "@/config/areas";
+import { getDistrictAreas, getHubArea } from "@/config/areas";
 import { categories } from "@/config/categories";
 import { buildWhatsAppUrl, generalWhatsAppMessage, site } from "@/config/site";
 
 export function SiteFooter() {
   const hub = getHubArea();
   const districts = getDistrictAreas();
-  const neighborhoods = getNeighborhoods();
 
   return (
     <footer className="border-t border-stone-200/80 bg-[#f3eee7]">
@@ -77,13 +76,6 @@ export function SiteFooter() {
               </li>
             ) : null}
             {districts.map((area) => (
-              <li key={area.path}>
-                <Link to={area.path} className="hover:text-stone-900">
-                  {area.shortName}
-                </Link>
-              </li>
-            ))}
-            {neighborhoods.map((area) => (
               <li key={area.path}>
                 <Link to={area.path} className="hover:text-stone-900">
                   {area.shortName}
