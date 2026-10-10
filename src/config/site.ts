@@ -2,11 +2,8 @@ import { getDistrictAreas, getNeighborhoodsByParent } from "./areas.ts";
 
 export const site = {
   name: "Bursa'nın Çiçekçisi",
-  /**
-   * PLACEHOLDER — gerçek kanonik adres bağlanınca güncellenir.
-   * Search Console ve sitemap bu değeri kullanır.
-   */
-  url: "https://mussokmen.github.io/3dcicekci",
+  /** Search Console, sitemap ve kanonik adres bu değeri kullanır. */
+  url: "https://bursacicekcisi.com",
   defaultTitle: "Bursa'nın Çiçekçisi | Bursa Çiçek Siparişi",
   defaultDescription:
     "Bursa çiçekçi vitrini. Buket, orkide, kutu ve çelenk atölyede taze hazırlanır; Bursa içinde aynı gün teslim edilir.",
@@ -87,9 +84,11 @@ export function floristJsonLd() {
   const data: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Florist",
+    "@id": `${site.url}/#florist`,
     name: site.name,
     url: site.url,
     image: absoluteUrl(site.ogImagePath),
+    logo: absoluteUrl("/logo.png"),
     areaServed: [
       { "@type": "City", name: "Bursa" },
       { "@type": "AdministrativeArea", name: "Bursa ili" },
