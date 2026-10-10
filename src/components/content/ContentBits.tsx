@@ -35,6 +35,7 @@ export function WhatsAppCta({ href, label = "WhatsApp’tan Sipariş Ver" }: Wha
 export function CategoryLinks({ slugs }: { slugs: string[] }) {
   const labels: Record<string, string> = {
     buketler: "Buketler",
+    "karisik-buketler": "Karışık Buketler",
     orkideler: "Orkideler",
     kutular: "Kutular",
     celenkler: "Çelenkler",

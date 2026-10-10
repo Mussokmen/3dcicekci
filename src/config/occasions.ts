@@ -13,7 +13,7 @@ export const occasions: Occasion[] = [
     name: "Bursa Doğum Günü Çiçeği",
     path: "/ozel-gunler/dogum-gunu",
     description: "Bursa’da doğum günü için buket ve hediye kutusu. Sipariş WhatsApp’tan.",
-    categorySlugs: ["buketler", "kutular"],
+    categorySlugs: ["buketler", "karisik-buketler", "kutular"],
     body: [
       "Doğum gününde renk ve ölçü, alıcının evine veya ofisine göre seçilir. Vitrindeki buket ve kutulardan biri yazılır; düzen fotoğraftaki gibi, atölyede taze hazırlanır.",
       "Kart notu kısa tutulur ve ilettiğiniz cümleyle yazılır. Teslim Bursa içinde aynı gün planlanır; alıcı teslim öncesi bilgilendirilir.",
@@ -25,7 +25,7 @@ export const occasions: Occasion[] = [
     name: "Teşekkür Buketi",
     path: "/ozel-gunler/tesekkur",
     description: "Bursa’da teşekkür ve ziyaret için sade buketler.",
-    categorySlugs: ["buketler"],
+    categorySlugs: ["buketler", "karisik-buketler"],
     body: [
       "Teşekkür düzeninde abartısız bir buket çoğu zaman daha doğru durur. Mevsim çiçeği veya sade gül, işyeri masasına da ev holüne de uyar.",
       "Alıcı teslim öncesi bilgilendirilir. Ürünü seçip mahalle ve kart notunu yazmanız yeter.",
@@ -36,7 +36,7 @@ export const occasions: Occasion[] = [
     name: "Hasta Ziyareti Çiçeği",
     path: "/ozel-gunler/hasta-ziyareti",
     description: "Hastane ve ev ziyareti için orkide ve hafif buketler, Bursa teslimi.",
-    categorySlugs: ["orkideler", "buketler"],
+    categorySlugs: ["orkideler", "buketler", "karisik-buketler"],
     body: [
       "Hastane odasında ağır kokulu veya çok büyük aranjman rahatsız edebilir. Saksılı orkide veya küçük buket sık tercih edilir. Hastane giriş kuralları varsa teslim noktasını mesajda belirtin.",
       "Osmangazi ve Nilüfer’deki sağlık kuruluşlarına teslimde alıcının adı ve bölüm yazılır.",
