@@ -16,8 +16,8 @@ export function CookiesPage() {
           olan teknik kayıt dışında pazarlama çerezi tutulmaz.
         </p>
         <p>
-          Sepet çerezi yoktur; sipariş sitede bir sepete yazılmaz. Sipariş WhatsApp ile, kısa bir mesajla
-          alınır. İzleme veya reklam profili oluşturulmaz.
+          Sepet çerezi tutulmaz; sipariş sitede bir sepete yazılmaz. Kısa yazışma WhatsApp’tan yürür.
+          İzleme veya reklam profili oluşturulmaz.
         </p>
         <p>
           Çerez tercihleri tarayıcının kendi ayarlarından yönetilir. Ayarın değişmesi, vitrinin

@@ -11,7 +11,7 @@ export function BursaServiceAreas() {
         <h2 className="text-3xl tracking-tight text-stone-900">Bursa’nın her yerine çiçek</h2>
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-stone-600">
           Bursa’nın on yedi ilçesine aynı gün teslim planlarız. Görükle bir ilçe değil, Nilüfer
-          mahallesidir. Sipariş WhatsApp ile alınır; mahalle ve kart notu mesajda yazılır.
+          mahallesidir. Mahalle ve kart notu mesajda yazılır.
         </p>
         <p className="mt-3 text-sm text-stone-600">
           <Link to="/rehber/bursa-cicek-gonderimi" className="underline-offset-4 hover:underline">

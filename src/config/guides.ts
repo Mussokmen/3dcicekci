@@ -13,9 +13,9 @@ export const guides: GuideArticle[] = [
     path: "/rehber/bursa-cicek-gonderimi",
     description: "Bursa içinde çiçek tesliminin WhatsApp, mahalle ve saatle nasıl planlandığı.",
     body: [
-      "Vitrinden bir ürün seçip WhatsApp’tan yazarsınız. Mahalle, alıcı adı ve kart notu mesajda yer alır. On yedi ilçe ve seçili mahalle sayfaları teslimi ayrı ayrı anlatır. Görükle, Nilüfer mahallesidir.",
-      "Kurye güzergâhı o günkü siparişlere göre kurulur. Bursa içinde aynı gün teslim ederiz. Sipariş WhatsApp ile alınır. Mahalle, alıcı ve kart notu mesajda yer alır. Teslim öncesi alıcı bilgilendirilir.",
-      "Sipariş WhatsApp ile alınır. Çiçek atölyede taze hazırlanır ve teslim öncesi alıcı bilgilendirilir.",
+      "Vitrinden bir ürün seçip WhatsApp’tan yazarsınız. Mahalle, alıcı adı ve kart notu mesajda yer alır. On yedi ilçede kapı tarifi değişir. Görükle, Nilüfer mahallesidir.",
+      "Kurye güzergâhı o günkü siparişlere göre kurulur. Bursa içinde aynı gün teslim ederiz. Mahalle, alıcı ve kart notu mesajda yer alır. Teslim öncesi alıcı bilgilendirilir.",
+      "Çiçek atölyede taze hazırlanır ve teslim öncesi alıcı bilgilendirilir.",
     ],
   },
   {
@@ -24,8 +24,8 @@ export const guides: GuideArticle[] = [
     path: "/rehber/whatsapp-siparis",
     description: "Bursa’nın Çiçekçisi’nde WhatsApp siparişinde hangi bilgilerin gerektiği.",
     body: [
-      "Mesaja ürün adını veya sayfa linkini, teslim mahallesini ve kart notunu ekleyin. Fotoğrafı vitrindekiyle karşılaştırmak için ürün sayfasındaki görseli referans alın.",
-      "Sipariş WhatsApp ile alınır. Form veya hesap oluşturmayız. Kişisel veri yalnızca hazırlık ve teslim için kullanılır; ayrıntı gizlilik sayfasındadır.",
+      "Mesaja ürün adını, teslim mahallesini ve kart notunu ekleyin. Fotoğrafı vitrindekiyle karşılaştırmak için ürün görselini referans alın.",
+      "Ürün adı, mahalle ve kart notu mesajda yeter. Form veya hesap açılmaz. Kişisel veri yalnızca hazırlık ve teslim için kullanılır; ayrıntı gizlilik politikasındadır.",
     ],
   },
   {
@@ -53,10 +53,9 @@ export const guides: GuideArticle[] = [
     slug: "ayni-gun-teslim",
     name: "Aynı gün teslim",
     path: "/rehber/ayni-gun-teslim",
-    description:
-      "Bursa’da aynı gün çiçek teslimi. Sipariş WhatsApp ile, 7/24 alınır.",
+    description: "Bursa’da aynı gün çiçek teslimi. Hat 7/24 açıktır.",
     body: [
-      "Bursa ili içinde aynı gün teslim ederiz. İlçe ve mahalle mesajda yazılır. Sipariş WhatsApp ile alınır. Çiçek taze hazırlanır, teslim öncesi alıcı bilgilendirilir.",
+      "Bursa ili içinde aynı gün teslim ederiz. İlçe ve mahalle mesajda yazılır. Çiçek taze hazırlanır, teslim öncesi alıcı bilgilendirilir.",
       "Gece veya gündüz düşen mesajlar aynı hattadır. Çiçek atölyede taze hazırlanır. Teslim öncesi alıcı bilgilendirilir; kapıda bekleme kısalır.",
       "Çelenk ve özel tasarımda ölçü ile metni baştan yazın. Hastane, site ve işyeri girişlerinde güvenlik kaydı teslimi uzatabilir; alıcı telefonu işe yarar.",
       "Karacabey, Mustafakemalpaşa, Yenişehir, İznik gibi uzun güzergâhlarda da aynı gün teslim planlarız. Adres tarifini ayrıntılı yazın ki kapıda beklemeyelim.",
@@ -79,7 +78,7 @@ export const guides: GuideArticle[] = [
     description: "Gül, zambak ve kır buketi arasında Bursa teslimi için sade bir seçim rehberi.",
     body: [
       "Kırmızı gül klasik kutlama dilidir. Zambak kokuludur; kapalı ofiste rahatsız edebilir. Kır buketi rengi dağıtır, teşekkür ve doğum gününde sakin durur.",
-      "Fotoğraftaki sap ve ambalaj teslimde referanstır. Görseller kendi atölye çekimlerimizdir. Sipariş WhatsApp ile alınır; kart notu mesajdaki metinle yazılır.",
+      "Fotoğraftaki sap ve ambalaj teslimde referanstır. Görseller kendi atölye çekimlerimizdir. Kart notu ilettiğiniz cümleyle yazılır.",
     ],
   },
   {
@@ -90,7 +89,7 @@ export const guides: GuideArticle[] = [
     body: [
       "Nilüfer, Ataevler ve benzeri sitelerde kurye çoğu zaman lobide karşılanır. Blok, daire ve varsa ziyaretçi kaydı için alıcı telefonu mesajda durmalıdır. Güvenlik “kime” diye sorduğunda isim uyuşmazsa teslim uzar; çiçek bekler.",
       "İşyeri ve hastanede kat, birim ve kabul saati yoksa aranjmanı kapıda tutmayız. Pencereyi kaydırmak, sıcakta bekletmekten iyidir. Kampüs içi teslim Görükle’de çoğu zaman kapı noktasında biter.",
-      "Çelenk gibi büyük düzenler asansör ve kapı genişliği ister. Ölçüyü baştan yazın. Form veya üyelik yoktur; bu bilgileri yalnızca o teslim için WhatsApp’ta isteriz.",
+      "Çelenk gibi büyük düzenler asansör ve kapı genişliği ister. Ölçüyü baştan yazın. Form veya üyelik açılmaz; blok ve alıcıyı yazışmada iletmeniz yeter.",
     ],
   },
 ];

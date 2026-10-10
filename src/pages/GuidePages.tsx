@@ -22,8 +22,8 @@ export function GuideIndexPage() {
           çıkar: taze hazırlık, aynı gün teslim, kart notu ve WhatsApp ile kısa sipariş.
         </p>
         <p>
-          Her başlık ayrı bir konuyu tutar. Gönderim, orkide, çelenk, kart notu ve site girişi birbirinin
-          tekrarı değildir. Sipariş, vitrindeki üründen başlar.
+          Gönderim, orkide, çelenk, kart notu ve site girişi ayrı ayrı anlatılır. Sipariş, vitrindeki
+          üründen başlar.
         </p>
       </div>
       <ul className="mt-8 space-y-4">
