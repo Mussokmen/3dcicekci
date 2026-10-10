@@ -17,7 +17,7 @@ export function BursaIndexPage() {
       <div className="max-w-3xl">
       <Seo
         title="Bursa Çiçek Gönderimi"
-        description="Bursa’nın on yedi ilçesine buket, orkide, kutu ve çelenk. Sipariş WhatsApp ile alınır; teslim aynı gün planlanır."
+        description="Bursa’nın on yedi ilçesine buket, orkide, kutu ve çelenk. Teslim aynı gün planlanır."
         path="/bursa"
         breadcrumbs={[
           { name: "Ana Sayfa", path: "/" },
@@ -31,9 +31,8 @@ export function BursaIndexPage() {
       </h1>
       <div className="mt-6 space-y-4 text-base leading-relaxed text-stone-600">
         <p>
-          Bursa’nın Çiçekçisi, il genelinde taze çiçek hazırlayan yerel bir atölyedir. Çiçek siparişi
-          WhatsApp ile alınır. Buket, orkide, kutu ve çelenk, kendi atölyemizde çekilmiş fotoğraflardaki
-          düzene göre özenle hazırlanır.
+          Bursa’nın Çiçekçisi, il genelinde taze çiçek hazırlayan yerel bir atölyedir. Buket, orkide, kutu
+          ve çelenk, kendi atölyemizde çekilmiş fotoğraflardaki düzene göre özenle hazırlanır.
         </p>
         <p>
           Aynı gün teslim Bursa’nın on yedi ilçesini kapsar: Osmangazi, Nilüfer, Yıldırım, Mudanya, Gemlik,
@@ -42,16 +41,16 @@ export function BursaIndexPage() {
         </p>
         <p>
           Mesajda ürün, mahalle, alıcı adı ve kart notu yer alır. Teslim öncesi alıcı bilgilendirilir.
-          Çiçek yola yakın tamamlanır; ambalaj kapıya kadar korunur. Kart notu, mesajdaki metinle yazılır.
+          Çiçek yola yakın tamamlanır; ambalaj kapıya kadar korunur. Kart notu, ilettiğiniz cümleyle yazılır.
         </p>
         <p>
-          İlçe sayfaları yolun ve kapının farkını anlatır. Nilüfer’de site bloğu, Osmangazi’de işyeri ve
-          hastane girişi, Yıldırım’da mahalle sokağı, sahil ilçelerinde bina tarifi, güney ilçelerinde köy
-          ve mevki ayrı yazılır. Mahalle sayfaları bu ilçelerin içindeki sık kapıları ayrıca tarif eder.
+          İlçelerde yol ve kapı değişir. Nilüfer’de site bloğu, Osmangazi’de işyeri ve hastane girişi,
+          Yıldırım’da mahalle sokağı, sahil ilçelerinde bina tarifi, güney ilçelerinde köy ve mevki ayrı
+          yazılır. Mahalle kapıları bu ilçelerin içinde ayrıca tarif edilir.
         </p>
         <p>
           Hazırlık atölyede, taze çiçekle yapılır. Sipariş hattı 7/24 açıktır. Kişisel bilgi yalnızca
-          hazırlık ve teslim için kullanılır; ayrıntı gizlilik sayfasındadır.
+          hazırlık ve teslim için kullanılır; ayrıntı gizlilik politikasındadır.
         </p>
       </div>
 

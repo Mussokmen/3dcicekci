@@ -23,7 +23,7 @@ const items = [
   },
   {
     title: "WhatsApp sipariş",
-    text: "Sepet veya üyelik yoktur. Ürünü seçip yazmanız yeter.",
+    text: "Sepet veya üyelik açılmaz. Ürünü seçip yazmanız yeter.",
     icon: WhatsAppOrderIcon,
   },
 ] as const;

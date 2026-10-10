@@ -16,7 +16,7 @@ export const occasions: Occasion[] = [
     categorySlugs: ["buketler", "kutular"],
     body: [
       "Doğum gününde renk ve ölçü, alıcının evine veya ofisine göre seçilir. Vitrindeki buket ve kutulardan biri yazılır; düzen fotoğraftaki gibi, atölyede taze hazırlanır.",
-      "Kart notu kısa tutulur ve mesajdaki metinle yazılır. Sipariş WhatsApp ile alınır. Teslim Bursa içinde aynı gün planlanır; alıcı teslim öncesi bilgilendirilir.",
+      "Kart notu kısa tutulur ve ilettiğiniz cümleyle yazılır. Teslim Bursa içinde aynı gün planlanır; alıcı teslim öncesi bilgilendirilir.",
       "Hazırlık özenlidir. Ambalaj kapıya kadar korunur. Fotoğraflar kendi atölye çekimlerimizdir.",
     ],
   },
@@ -28,7 +28,7 @@ export const occasions: Occasion[] = [
     categorySlugs: ["buketler"],
     body: [
       "Teşekkür düzeninde abartısız bir buket çoğu zaman daha doğru durur. Mevsim çiçeği veya sade gül, işyeri masasına da ev holüne de uyar.",
-      "Sipariş WhatsApp ile alınır. Alıcı teslim öncesi bilgilendirilir. Ürünü seçip mahalle ve kart notunu yazmanız yeter.",
+      "Alıcı teslim öncesi bilgilendirilir. Ürünü seçip mahalle ve kart notunu yazmanız yeter.",
     ],
   },
   {

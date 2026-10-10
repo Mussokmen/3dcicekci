@@ -17,7 +17,7 @@ export function ContactPage() {
     <main className="mx-auto max-w-3xl px-4 py-10 md:px-6">
       <Seo
         title="İletişim"
-        description="Bursa çiçek siparişi WhatsApp ile alınır. 7/24 açığız. Hizmet bölgesi Bursa ili. Teslim aynı gün planlanır."
+        description="Bursa çiçek siparişi ve teslimi için 7/24 açık hat. Hizmet bölgesi Bursa ili. Teslim aynı gün planlanır."
         path="/iletisim"
         breadcrumbs={[
           { name: "Ana Sayfa", path: "/" },
@@ -33,7 +33,7 @@ export function ContactPage() {
         </p>
         <p>
           Teslim Bursa ili içindedir ve aynı gün planlanır. Çiçek atölyede taze hazırlanır; teslim öncesi
-          alıcı bilgilendirilir. İletişim formu yoktur. Kişisel verinin kullanımı{" "}
+          alıcı bilgilendirilir. İletişim formu kullanılmaz. Kişisel verinin kullanımı{" "}
           <Link to="/gizlilik-politikasi" className="underline-offset-4 hover:underline">
             gizlilik politikasında
           </Link>{" "}

@@ -21,12 +21,12 @@ export function OccasionIndexPage() {
       <h1 className="text-4xl tracking-tight text-stone-900">Özel günler</h1>
       <div className="mt-4 space-y-4 text-base leading-relaxed text-stone-600">
         <p>
-          Özel gün sayfaları, vitrindeki buket, orkide, kutu ve çelenkleri niyete göre ayırır. Yeni bir
-          katalog açılmaz; hazırlık atölyede, kendi fotoğraflarımızdaki düzene göre yapılır.
+          Buket, orkide, kutu ve çelenk niyete göre ayrılır. Hazırlık atölyede, kendi fotoğraflarımızdaki
+          düzene göre yapılır.
         </p>
         <p>
           Doğum günü, teşekkür, hasta ziyareti, çelenk, ofis orkidesi ve hediye kutusu ayrı anlatılır.
-          Sipariş WhatsApp ile alınır. Teslim Bursa ili içinde, aynı gün ve dikkatli yapılır.
+          Teslim Bursa ili içinde, aynı gün ve dikkatli yapılır.
         </p>
       </div>
       <ul className="mt-8 space-y-4">

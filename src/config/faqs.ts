@@ -12,7 +12,7 @@ export const faqs: FaqItem[] = [
   {
     question: "Bursa’nın her yerine gidiyor musunuz?",
     answer:
-      "Teslim Bursa ili içindedir. On yedi ilçenin ve seçili mahallelerin sayfaları menüdedir. Görükle bir ilçe değil, Nilüfer mahallesidir. Sipariş WhatsApp ile alınır.",
+      "Teslim Bursa ili içindedir. On yedi ilçe menüdedir. Görükle bir ilçe değil, Nilüfer mahallesidir.",
   },
   {
     question: "Aynı gün teslim var mı?",
@@ -42,7 +42,7 @@ export const faqs: FaqItem[] = [
   {
     question: "Kişisel bilgilerim ne olur?",
     answer:
-      "Sipariş ve teslim için gerekli iletişim bilgisi kullanılır. Ayrıntı gizlilik politikası sayfasındadır. İletişim formu yoktur.",
+      "Sipariş ve teslim için gerekli iletişim bilgisi kullanılır. Ayrıntı gizlilik politikasında anlatılır. İletişim formu kullanılmaz.",
   },
 ];
 

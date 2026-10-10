@@ -93,7 +93,7 @@ export function ProductDetailPage() {
             <div className="grid gap-1 border-b border-stone-200 py-3 sm:grid-cols-[7.5rem_1fr] sm:items-baseline sm:gap-6">
               <dt className="font-medium text-stone-900">Sipariş</dt>
               <dd className="leading-relaxed text-stone-600">
-                WhatsApp ile, kısa ve kişisel bir mesajla alınır. Mahalle, alıcı ve kart notu yazılır.
+                Mahalle, alıcı ve kart notu mesajda netleşir. Hazırlık bu bilgilerle başlar.
               </dd>
             </div>
             <div className="grid gap-1 border-b border-stone-200 py-3 sm:grid-cols-[7.5rem_1fr] sm:items-baseline sm:gap-6">

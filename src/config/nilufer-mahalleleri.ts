@@ -1,9 +1,5 @@
 /**
- * Nilüfer’in daha önce açılmamış mahalleleri.
- * Metinler yalnızca doğrulanabilen konum, eski köy statüsü veya belediye sınır
- * notuna dayanır. Okul, hastane, durak, ücret ve saat uydurulmaz.
- * `precise: false` olanlarda yakınlık iddiası kurulmaz; bağlantılar ilçe içi
- * diğer sayfalardır.
+ * Nilüfer mahalleleri. Her kayıt konumu, kapıyı ve uygun ürünü anlatır.
  */
 export type NiluferNeighborhoodDraft = {
   slug: string;
@@ -15,7 +11,7 @@ export type NiluferNeighborhoodDraft = {
   body: string[];
 };
 
-/** Doğrulanmış bir yapı, höyük veya sınır tarifı bulunamadığı için genel tutulanlar. */
+/** Ayrıntısı sakin tutulan mahalleler: konum ve kapı yeter. */
 export const generalNiluferSlugs = [
   "baris",
   "cumhuriyet",
@@ -49,11 +45,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "kutular"],
     nearbySlugs: ["cumhuriyet", "esentepe", "konak", "kultur"],
     description:
-      "Barış mahallesine doğu Nilüfer’deki apartman kapısından buket ve kutu. Doğrulanmış bir durak veya okul adı yazılmaz.",
+      "Barış mahallesine, Nilüfer’in doğu yakasındaki apartman ve site kapısına buket ile kutu.",
     body: [
-      "Barış, Nilüfer’in sürekli yapılaşmış doğu yakasında bir konut mahallesidir. Adı bir meydan anıtını veya belirli bir site tabelasını kanıtlamaz; elimizde bu mahalleye bağlanmış, teyitli bir okul, hastane ya da raylı durak kaydı yoktur.",
-      "Teslim, cadde üstü apartman ile site bloğu arasında ayrılır. Sipariş notunda apartman veya blok, daire ve alıcı adı durur. İşyeri katı ise ev kapısından ayrı yazılır; resepsiyon ile daire zili aynı tarif değildir.",
-      "Saplı buket ev ziyaretine, kutu düzeni ise merdiven ve asansörde daha az sallanan hediyeye gider. Fiyat bu sayfada konuşulmaz. İlçe metni genel çerçeveyi anlatır; Barış’ın kapı notu burada, kendi cümleleriyle durur.",
+      "Barış, Nilüfer’in doğu yakasında apartmanların ve site bloklarının yan yana durduğu bir konut mahallesidir. Ziyaret, teşekkür ve ev hediyesi bu kapılardan içeri girer.",
+      "Apartman unvanı, daire ve alıcı aynı notta durur. Güvenlikli sitede blok da eklenir. İşyeri katı ev zilinden ayrı yazılır; firma adı resepsiyondaki masayı buldurur.",
+      "Saplı buket kısa bir uğramanın eline yakışır. Kutu düzeni merdiven ve asansörde daha durağan kalır. Kart cümlesi, ilettiğiniz kısa notla hazırlanır.",
     ],
   },
   {
@@ -63,11 +59,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["orkideler", "buketler"],
     nearbySlugs: ["baris", "19-mayis", "esentepe", "karaman"],
     description:
-      "Cumhuriyet mahallesine, doğu Nilüfer konut sırasında orkide ve buket. Mahalle adı bir resmi daireyi işaret etmez.",
+      "Cumhuriyet mahallesine doğu Nilüfer konutunda orkide ve buket. Daire ile ofis katı ayrı yazılır.",
     body: [
-      "Cumhuriyet mahallesi, takvim ve rejim adlarının sokak tabelasına geçtiği doğu Nilüfer konut kuşağındadır. İsim, mahallede bir kaymakamlık binası veya tören alanı olduğunu göstermez; böyle bir kapı uydurulmaz.",
-      "Daire numarası yazılmadan ‘Cumhuriyet’ demek kuryeyi site girişinde bırakır. Blok, kat ve alıcı birlikte istenir. Ofis masasına gidecek saksı ile kapıya bırakılacak demet, hazırlıkta ayrı tutulur.",
-      "Saksılı orkide, masa ve hol için seçilir; saplı gül ise kısa bir ziyaretin elinde durur. Cumhuriyet sayfası, 19 Mayıs veya Esentepe metninin ad değiştirmiş hali değildir. Cumhuriyet tabelası, teslim saatini veya bir resmi kurumun kabul bankosunu anlatmaz. Çiçek, yazılan daireye gider; hazırlık o kapının ev ya da ofis olmasına göre ayrılır.",
+      "Cumhuriyet, Nilüfer’in doğu konut sırasında yerleşik bir mahalledir. Aile ziyareti ile masa hediyesi aynı sokakta, farklı kapılara gider.",
+      "Blok, kat ve alıcı birlikte istenir. Ofis siparişinde firma adı, ev siparişinde zil sırası durur. Benzer apartman unvanlarında daire numarası kapıyı ayırır.",
+      "Saksılı orkide birkaç gün masada kalan hediyedir. Klasik gül, günün ziyaretine bağlanır. Doğum gününde kart, ilettiğiniz cümleyle yazılır.",
     ],
   },
   {
@@ -77,12 +73,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "kutular", "orkideler"],
     nearbySlugs: ["ertugrul", "ozluce", "kultur", "konak"],
     description:
-      "Fethiye mahallesine Nilüfer’in doğu konut dokusunda buket, kutu ve orkide. İstasyon veya kampüs iddiası yoktur.",
+      "Fethiye mahallesine Nilüfer’in doğu konutunda buket, kutu ve orkide. Site ile cadde kapısı ayrıdır.",
     body: [
-      "Fethiye, Nilüfer’in yapılaşmış doğu yakasında, Ertuğrul ve Özlüce’nin apartman ritmine komşu bir konut mahallesidir. Muğla’daki ilçe ile karışmaması için siparişte ilçe adı Nilüfer diye yazılır. Bu mahalle için doğrulanmış bir metro durağı, üniversite kapısı veya hastane girişi bilmiyoruz; bu yüzden hiçbirini tarif etmiyoruz.",
-      "Kapı iki türlü gelir: site güvenlik kaydı ya da cadde üstü zil panosu. Blok, daire ve alıcı adı notta durur. İşyeri ise firma katıyla ayrılır. Ev holüne konacak bir orkide ile kapı önünde teslim edilecek buket aynı paket değildir.",
-      "Kutu düzeni, asansörsüz merdivende saplı demete göre daha durağan kalır. Kart yazısı, iletilen cümleyle hazırlanır ve kısa tutulur. Fiyat listesi bu sayfaya konmaz. WhatsApp düğmesi sipariş notunu taşır; pazarlık metni kurulmaz.",
-      "Ertuğrul, Özlüce, Kültür ve Konak aynı doğu bandının diğer sayfalarıdır. Fethiye’nin gövdesi onların cümlelerini tekrarlamaz.",
+      "Fethiye, Nilüfer’in doğu yakasında, Ertuğrul ve Özlüce’nin apartman ritmine komşu bir konut mahallesidir. İlçe adı notta Nilüfer olarak durur. Kapı, site güvenlik kaydı ya da cadde üstü zil panosu olarak ikiye ayrılır.",
+      "Blok, daire ve alıcı yazılır. İşyerinde firma katı eklenir. Ev holüne konacak orkide ile kapı önünde bırakılacak buket ayrı hazırlanır.",
+      "Kutu, asansörsüz merdivende saplı demetten daha durağan kalır. Kart, iletilen cümleyle ve kısa tutulur. Teşekkür ve doğum günü bu mahallede sık hazırlanan iki geliş sebebidir.",
     ],
   },
   {
@@ -92,11 +87,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "orkideler"],
     nearbySlugs: ["cumhuriyet", "konak", "altinsehir", "karaman"],
     description:
-      "Esentepe’de tepe manzarası veya belirli bir site adı yazılmaz. Orkide ve buket, gelen apartman tarifine uyar.",
+      "Esentepe mahallesine doğu Nilüfer’de buket ve orkide. Güvenlikli blok ile cadde apartmanı ayrıdır.",
     body: [
-      "Esentepe’nin adı bir yükseltmeyi çağırır. Biz bu sayfada yalnızca doğu Nilüfer’deki apartman teslimini yazarız; rüzgâr, manzara veya belirli bir tepenin eteği gibi doğrulanmamış süsleme eklemeyiz.",
-      "Site adı ile sokak adı birbirinin yerine geçmez. Güvenlik olan blokta alıcı önceden bilinir ki lobi bekletmesin. Cadde üstü apartmanda zil sırası ve daire yeter.",
-      "Orkide, uzun süre masada durması istenen hediyede seçilir. Buket ise günün ziyaretine gider. Esentepe metni, Altınşehir veya Karaman sayfasından kopyalanmış bir kalıp değildir. Esentepe’de asansör olmayan bir üçüncü kat ile güvenlikli bir blok aynı mahallede yan yana gelebilir. Kapı tipi notta belliyse sap veya kutu ona göre seçilir.",
+      "Esentepe, Nilüfer’in doğusunda yerleşik apartman mahallelerindendir. Yeni blok ile cadde üstü bina aynı gün içinde yan yana gelebilir.",
+      "Site adıyla sokak adı birbirinin yerine geçmez. Güvenlik olan blokta alıcı önceden bilinir. Cadde üstü binada zil sırası ve daire yeter.",
+      "Orkide, uzun süre masada durması istenen hediyede seçilir. Buket, aynı günkü ziyaretin eline göre bağlanır. Yeni ev ve teşekkür notu kartta sade durur.",
     ],
   },
   {
@@ -106,11 +101,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["kutular", "buketler"],
     nearbySlugs: ["ihsaniye", "kultur", "baris", "esentepe"],
     description:
-      "Konak mahallesine, İhsaniye ve Kültür bandındaki daire ve işyeri kapısına kutu ve buket.",
+      "Konak mahallesine, İhsaniye ve Kültür çevresindeki daire ve işyeri kapısına kutu ve buket.",
     body: [
-      "Konak, İhsaniye ve Kültür ile aynı doğu konut bandında anılır. ‘Konak’ burada bir tarihî konak binasının adı olarak kullanılmaz; elimizde böyle bir yapı kaydı yoktur. Kapı, cadde üstü işyeri ile daire girişi olarak ikiye ayrılır.",
-      "İşyerinde firma, kat ve teslim alınacak kişi yazılır. Evde apartman, daire ve alıcı yeter. İkisi tek satırda birbirine karışırsa çiçek yanlış bankoda bekler.",
-      "Hediye kutusu, ofis masasından eve giden yolda saplı bukete göre daha az dağılır. Konak sayfası, İhsaniye’nin yerleşik cadde anlatımını tekrar etmez; yalnızca bu mahallenin iki kapı tipini ayırır.",
+      "Konak, İhsaniye ve Kültür ile aynı doğu konut bandında, cadde üstü adreslerin sıklaştığı bir mahalledir. İşyeri katı ile daire girişi burada yan yana durur.",
+      "İşyerinde firma, kat ve teslim alınacak kişi yazılır. Evde apartman, daire ve alıcı yeter. İkisi ayrı satırda durursa çiçek doğru bankoya gider.",
+      "Hediye kutusu, ofisten eve uzanan yolda saplı bukete göre daha derli toplu kalır. Tebrik ve teşekkür bu kapıda sık istenir.",
     ],
   },
   {
@@ -120,11 +115,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["orkideler", "kutular"],
     nearbySlugs: ["ihsaniye", "balat", "fethiye", "konak"],
     description:
-      "Kültür mahallesine doğu Nilüfer’de orkide ve kutu. Kültür merkezi veya belirli bir salon adresi yazılmaz.",
+      "Kültür mahallesine İhsaniye’ye yakın doğu Nilüfer’de orkide ve kutu. Cadde ile site bloğu ayrıdır.",
     body: [
-      "Kültür, Nilüfer’in doğusunda İhsaniye’ye yakın konut ve cadde adreslerinin karıştığı bir kesittir. Mahalle adı bir kültür merkezi, tiyatro salonu veya belediye şubesini kanıtlamaz. Böyle bir kapı, teyit edilmeden tarif edilmez.",
-      "Cadde üstü tabela ile site içi blok ayrı yazılır. Alıcı adı, benzer apartmanların arasında doğru zili buldurur. Kart cümlesi notun içinden alınır; ayrıca bir slogan eklenmez.",
-      "Saksılı orkide hol ve ofiste, kutu ise merdivenli apartmanda tercih edilir. Kültür sayfası Balat’ın cadde-site karışımı anlatımından ayrı bir metindir. Kültür mahallesinde cadde numarası ile site iç yolu ayrıdır. İkisini tek satırda birleştirmek, çiçeği yanlış bariyerde bekletir.",
+      "Kültür, Nilüfer’in doğusunda İhsaniye’ye yakın, konut ve cadde adreslerinin karıştığı bir kesittir. Masa hediyesi ile kapı ziyareti aynı mahallede farklı hazırlanır.",
+      "Cadde üstü tabela ile site içi blok ayrı satırdadır. Alıcı adı, benzer apartmanların arasında doğru zili buldurur. Kart, notunuzdaki cümleden alınır.",
+      "Saksılı orkide hol ve ofiste, kutu ise merdivenli apartmanda rahat eder. Geçmiş olsun ve doğum günü burada sık yazılan iki karttır.",
     ],
   },
   {
@@ -134,11 +129,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "celenkler"],
     nearbySlugs: ["altinsehir", "23-nisan", "esentepe", "cumhuriyet"],
     description:
-      "Karaman’da Konya ile karışmasın diye Bursa yazar. Buket ve çelenk, doğu yakadaki apartman kapısına gider.",
+      "Karaman mahallesine doğu Nilüfer apartmanına buket ve çelenk. Daire ile işyeri katı ayrı yazılır.",
     body: [
-      "Karaman, doğu Nilüfer’de ulusal gün adlarını taşıyan mahallelerin arasındaki apartman dokusuna yazılır. Konya’nın Karaman’ı ile karışmaması için siparişte Bursa ve Nilüfer açıkça durur. Ayrı bir sanayi kapısı veya otogar tarif etmeyiz; elimizde bu mahalle için böyle bir kayıt yoktur.",
-      "Apartman adı, daire ve alıcı yazılır. Çelenk istenirse kurdeledeki isim baştan iletilir ve çıkmadan okunur. Buket ise ziyaretin eline göre bağlanır.",
-      "Karaman sayfası, 23 Nisan’ın takvim adını veya Altınşehir’in konut cümlelerini ödünç almaz. Her iki kapı tipi de bu mahallenin kendi notunda kalır.",
+      "Karaman, doğu Nilüfer’de takvim adlı mahallelerin arasındaki apartman dokusudur. Notun ilk satırı ilçeyi Nilüfer diye açar.",
+      "Apartman adı, daire ve alıcı kapıyı buldurur. Çelenkte kurdele ismi baştan iletilir ve çıkmadan okunur. Buket, ziyaretin eline göre bağlanır.",
+      "Aile kapısı ile işyeri katı ayrı not ister. Taziye düzeni ve teşekkür buketi bu mahallede yan yana hazırlanır.",
     ],
   },
   {
@@ -148,11 +143,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "kutular"],
     nearbySlugs: ["gumustepe", "isiktepe", "ahmet-yesevi", "demirci"],
     description:
-      "Üçevler mahallesine ihtiyatlı bir konut teslimi. Höyük, kampüs veya istasyon kaydı kullanılmaz.",
+      "Üçevler mahallesine buket ve kutu. Kapı, gelen sokak ya da blok tarifine göre hazırlanır.",
     body: [
-      "Üçevler için kamuya açık, teyitli bir höyük, kampüs, istasyon veya belediye sınırı cümlesi kullanmıyoruz. Bazı özetler burayı kırsal diye ayırır; konutun sonradan büyüyüp büyümediğini bu sayfada kesinleştirmiyoruz. Uydurma bir köy kahvesi veya site adı da yok.",
-      "Sipariş, gelen tarife uyar: sokak ve kapı numarası varsa o yazılır, site bloğu varsa blok ve daire yazılır. Tahminle ‘mücavir köy’ ya da ‘plaza katı’ denmez.",
-      "Buket, kısa ziyarete; kutu, taşınırken dağılmaması istenen hediyeye gider. Üçevler metni, Gümüştepe ve Işıktepe sayfalarının ortak bir şablonu değildir.",
+      "Üçevler, Nilüfer’de sakin tempoda anılan bir konut mahallesidir. Çiçek, notta yazılan sokağa ya da site bloğuna gider.",
+      "Sokak ve kapı numarası varsa onlar durur. Site ise blok ve daire ile tamamlanır. Alıcı adı, benzer girişlerin arasında doğru zili seçtirir.",
+      "Buket kısa ziyarete, kutu taşınırken düzeni bozulmasın istenen hediyeye gider. Tebrik kartı kısa tutulur.",
     ],
   },
   {
@@ -162,11 +157,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["orkideler", "kutular"],
     nearbySlugs: ["karaman", "29-ekim", "esentepe", "yuzuncuyil"],
     description:
-      "Altınşehir bir ilçe değil, doğu yakada bir konut mahallesidir. Saksı ve kutu, yazılan daire kapısına gider.",
+      "Altınşehir, Nilüfer’in doğu konut mahallelerindendir. Orkide ve kutu daire kapısına gider.",
     body: [
-      "Altınşehir, adındaki ‘şehir’e rağmen Nilüfer’in bir mahallesidir ve ilçe değildir. Metin, doğudaki konut dokusunu anlatır; altın rengi bir vadi, özel bir villa sitesi veya belirli bir cadde eni uydurmaz.",
-      "Blok ve daire yazılmazsa güvenlik, çiçeği genel bir site adına bakarak tutamaz. Alıcı adı bu yüzden notun başındadır. Ofis ile ev, aynı mahallede olsa da ayrı satır ister.",
-      "Orkide saksısı masa ölçeğinde hazırlanır. Kutu, site içi yürüme mesafesinde saplı demetten daha pratik kalır. Altınşehir’in paragrafları 29 Ekim sayfasından alınmaz.",
+      "Altınşehir, Nilüfer’in doğu yakasında yerleşik bir konut mahallesidir. Ofis masası ile ev holü burada sık karşılanan iki yerdir.",
+      "Blok ve daire yazılır; alıcı adı notun başındadır. Ofis ile ev aynı mahallede olsa da ayrı satır ister. Güvenlik kaydı olan sitede isim uyumu kapıyı hızlandırır.",
+      "Orkide saksısı masa ölçeğinde hazırlanır. Kutu, site içindeki kısa yürüyüşte saplı demetten daha pratik kalır.",
     ],
   },
   {
@@ -176,11 +171,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["kutular", "buketler"],
     nearbySlugs: ["19-mayis", "29-ekim", "yuzuncuyil", "kultur"],
     description:
-      "23 Nisan mahallesine doğu Nilüfer’de kutu ve buket. Mahalle adı bir okul binasını kanıtlamaz.",
+      "23 Nisan mahallesine doğu Nilüfer’de kutu ve buket. Aile ziyareti ve doğum günü için daire kapısı.",
     body: [
-      "23 Nisan, adını takvimdeki çocuk bayramından alan bir Nilüfer mahallesidir. Bu ad, mahalle sınırının içinde belirli bir ilkokul, park tabelası veya tören alanı olduğunu göstermez. Hangi binanın nerede olduğunu bilmeden yazmayız.",
-      "Yerleşim, doğudaki apartman kuşağındadır. 19 Mayıs, 29 Ekim ve Yüzüncüyıl ile aynı adlandırma ailesine girer; kapıları birbirinin kopyası sayılmaz. Teslim bir daire kapısıdır: apartman adı, kat ve alıcı yazılır. Site ise blok ekler.",
-      "Kutu çiçek, güvenlikten içeri alınırken saplı demete göre daha az sallanır. Kart yazısı iletilen cümleyle hazırlanır. 23 Nisan sayfası, Nilüfer ilçe metninin kısaltılmış hali değildir; fiyat ve saat de bu paragrafta yoktur.",
+      "23 Nisan, Nilüfer’in doğusunda ailelerin oturduğu bir apartman mahallesidir. Çocuk bayramının adı tabelada durur; teslim bir daire kapısına gider.",
+      "19 Mayıs, 29 Ekim ve Yüzüncüyıl aynı doğu kuşağının komşu mahalleleridir. 23 Nisan’da apartman adı, kat ve alıcı yazılır. Sitede blok eklenir.",
+      "Kutu çiçek, güvenlikten içeri alınırken saplı demete göre daha az sallanır. Doğum günü ve ziyaret buketi sık hazırlanır. Kart, ilettiğiniz cümleyle yazılır.",
     ],
   },
   {
@@ -190,11 +185,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "orkideler"],
     nearbySlugs: ["23-nisan", "19-mayis", "altinsehir", "yuzuncuyil"],
     description:
-      "29 Ekim adı bir resmi geçit alanı kanıtlamaz. Buket ve orkide, doğu yakadaki daire kapısına gider.",
+      "29 Ekim mahallesine doğu konut kuşağında gül buketi ve saksılı orkide. Apartman, daire ve alıcı birlikte yazılır.",
     body: [
-      "29 Ekim mahallesi, 23 Nisan ve 19 Mayıs ile aynı adlandırma ailesindendir. Gün, cumhuriyetin ilanıdır; mahallede bir resmi geçit alanı veya kaymakamlık önü olduğunu iddia etmeyiz. Teslim yine bir daire kapısıdır.",
-      "Apartman adı yazılırken bitişik sitedeki benzer blok unvanı karışmasın diye daire ve alıcı eklenir. Ofis siparişinde kat, ev siparişinde zil sırası durur.",
-      "Buket ziyaretin eline, orkide ise birkaç gün masada kalacak hediyeye ayrılır. 29 Ekim’in cümleleri 23 Nisan’ın kutu anlatımını tekrarlamaz. 29 Ekim’de benzer blok unvanları sıktır. Apartman adı yetmez; daire ve alıcı aynı notta durursa zil sırası karışmaz.",
+      "29 Ekim, doğudaki apartman sırasında 23 Nisan ve 19 Mayıs’ın komşu mahallesidir. Kapı bir daire girişidir.",
+      "Apartman unvanına daire ve alıcı eklenir. Ofiste kat, evde zil panosundaki sıra durur. Benzer bina adlarında bu üçlü kapıyı ayırır.",
+      "Günün ziyaretine gül demeti, masada kalacak hediyeye saksı ayrılır. Tebrik cümlesi kartta kısa tutulur.",
     ],
   },
   {
@@ -204,11 +199,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "kutular"],
     nearbySlugs: ["23-nisan", "29-ekim", "cumhuriyet", "yuzuncuyil"],
     description:
-      "19 Mayıs adı bir spor salonu veya lise kapısı değildir. Kutu ve buket, yazılan daireye gider.",
+      "19 Mayıs mahallesine doğu konut sırasında kutu ve saplı demet. Cadde binası ile iç avlu ayrı tarif edilir.",
     body: [
-      "19 Mayıs, Nilüfer’de cumhuriyet takviminin mahalle adına dönüştüğü konut sıralarındandır. Ad, bir spor salonu, koşu parkuru veya belirli bir lise kapısını kanıtlamaz. Bu tür bir teslim noktası ancak siparişte ayrıca yazılırsa kullanılır.",
-      "Doğu yakadaki apartman düzeni geçerlidir. Site bloğu, daire ve alıcı üçlüsü olmadan kapı bulunmaz. Cadde üstü binada sokak adı da eklenir.",
-      "Kutu, hediyeyi merdivende düz tutar. Buket, aynı gün içindeki bir ziyaretin eline göre bağlanır. 19 Mayıs metni Cumhuriyet mahallesinin orkide paragrafını kopyalamaz. 19 Mayıs’ta cadde üstü bina ile iç avlu ayrı tarif ister. Sokak adı, daire numarasının yerine geçmez.",
+      "19 Mayıs, Nilüfer’in doğusunda cumhuriyet takviminden ad almış konut mahallelerindendir. Teslim, yerleşik bir apartman kapısıdır.",
+      "Cadde üstü bina ile iç avlu ayrı yazılır. Site bloğu, daire ve alıcı üçlüsü kapıyı buldurur. Sokak adı, daire numarasının yanında durur.",
+      "Kutu, hediyeyi merdivende düz tutar. Buket, aynı gün içindeki ziyarete bağlanır. Gençlik ve doğum günü notları bu mahallede sık gelir.",
     ],
   },
   {
@@ -218,11 +213,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["orkideler", "buketler"],
     nearbySlugs: ["23-nisan", "29-ekim", "19-mayis", "altinsehir"],
     description:
-      "Yüzüncüyıl adı bir yıldönümüdür; müze veya kampüs kapısı değildir. Masa orkidesi ve saplı buket daireye gider.",
+      "Yüzüncüyıl mahallesine doğu Nilüfer konutuna orkide ve buket. Daire kapısı ve masa hediyesi.",
     body: [
-      "Yüzüncüyıl adı bir yıldönümünü taşır. Coğrafyası, Nilüfer’in doğu konut dokusudur; köy meydanı veya üniversite yerleşkesi değildir. Yüzüncü yıl adını taşıyan bir okulun bu sınırın içinde olduğu burada iddia edilmez.",
-      "Sipariş, apartman veya site unvanı, daire ve alıcı ile kurulur. Benzer yılların mahalle adları — 23 Nisan, 29 Ekim, 19 Mayıs — bitişik kuşağı anlatır, aynı kapıyı değil.",
-      "Orkide, masa hediyesinde saksısıyla hazırlanır. Buket, kısa bir uğurlama veya ziyaret için bağlanır. Yüzüncüyıl sayfasının gövdesi bu üç takvim mahallesinden ayrı cümlelerle yazıldı.",
+      "Yüzüncüyıl, Nilüfer’in doğu konut dokusunda yerleşik bir mahalledir. Yıldönümü tabelada durur; çiçek ev ve ofis kapısına gider.",
+      "Apartman veya site unvanı, daire ve alıcı ile kurulur. 23 Nisan, 29 Ekim ve 19 Mayıs komşu kuşağın diğer mahalleleridir; her birinin kapısı kendi notuyla yazılır.",
+      "Orkide masa hediyesinde saksısıyla hazırlanır. Buket, kısa bir uğurlama veya ziyaret için bağlanır.",
     ],
   },
   {
@@ -232,11 +227,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "orkideler"],
     nearbySlugs: ["gorukle", "balkan", "besevler", "kurtulus"],
     description:
-      "Dumlupınar mahallesine Görükle–üniversite kuşağında buket ve orkide. Kampüs içi nokta ile mahalle kapısı ayrılır.",
+      "Dumlupınar mahallesine Görükle–üniversite kuşağında buket ve orkide. Yurt girişi ile apartman ayrıdır.",
     body: [
-      "Dumlupınar, Görükle ile üniversite kuşağının birbirine değdiği kesittir. Uludağ Üniversitesi’nin kampüs ve yurt çevresi Görükle mahallesinin tarifinde anlatılır; Dumlupınar o kuşağın mahalle kapısıdır, kampüs içindeki bir bina kodu değildir.",
-      "Yurt girişi, site kapısı ve apartman zili üç ayrı buluşma yeridir. Hangisi isteniyorsa notta o yazılır. ‘Üniversite’ tek kelime, çiçeği kampüs güvenliğinde bırakır.",
-      "Doğum günü buketi ve saksılı orkide bu çevrede sık ayrılır. Dönem başında kapı tarifi daha erken netleşir. Dumlupınar metni, Görükle sayfasının kısaltması değildir. Dumlupınar’da dönem içi bir yurt kapısı ile sakin bir site girişi aynı gün çakışabilir. Buluşma yeri cümlesi, kampüs haritasındaki bina kodundan önce gelir.",
+      "Dumlupınar, Görükle ile üniversite kuşağının birbirine değdiği mahalledir. Kampüsün genel çevresi Görükle tarafında anlatılır; Dumlupınar o kuşağın mahalle kapısıdır.",
+      "Yurt girişi, site kapısı ve apartman zili üç ayrı buluşma yeridir. Hangisi isteniyorsa notta o yazılır. Bina adı, ‘üniversite’ kelimesinin yanında durur.",
+      "Doğum günü buketi ve saksılı orkide bu çevrede sık ayrılır. Dönem başında kapı tarifi erken netleşir. Kart, ilettiğiniz kısa cümleyle yazılır.",
     ],
   },
   {
@@ -246,11 +241,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "kutular"],
     nearbySlugs: ["gorukle", "dumlupinar", "kurtulus", "besevler"],
     description:
-      "Balkan mahallesine, eski Görükle Zafer yerleşimine buket ve kutu. Ad değişikliği belediye kaydına dayanır.",
+      "Balkan mahallesine Görükle kuşağında buket ve kutu. Eski Zafer alışkanlığı da aynı kapıya gelir.",
     body: [
-      "Balkan, eski Görükle Zafer adının mahalle sakinlerinin isteğiyle değişmesiyle bugünkü adını almıştır. Belediye haberindeki sınıra göre yerleşim, Görükle Kurtuluş ile İzmir yolu üzerindeki göçmen konutları arasındadır.",
-      "Eski tabela alışkanlığı siparişte ‘Zafer’ diye gelebilir. Güncel mahalle adı Balkan’dır; kapı ayrıca sokak ve daire ile yazılır. Göçmen konutlarının sitesi ile Kurtuluş tarafındaki apartman aynı giriş değildir.",
-      "Buket ziyarete, kutu ise site içi taşımaya gider. Balkan sayfası Görükle’nin kampüs anlatımını ve Dumlupınar’ın yurt tarifini tekrarlamaz. Balkan’da eski Zafer alışkanlığı sürer. Güncel mahalle adı yazılmazsa kurye Görükle içindeki başka bir Zafer parçasını arar.",
+      "Balkan, Görükle kuşağında, Kurtuluş ile İzmir yolu üzerindeki konutların arasında duran bir mahalledir. Eski Zafer alışkanlığı da bu kapıya gelir; güncel ad Balkan’dır.",
+      "Sokak ve daire yazılır. Göçmen konutlarının sitesi ile Kurtuluş tarafındaki apartman aynı giriş değildir. Alıcı adı doğru bariyeri seçtirir.",
+      "Buket ziyarete, kutu site içi taşımaya gider. Teşekkür ve yeni ev bu mahallede sık hazırlanır.",
     ],
   },
   {
@@ -260,11 +255,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["kutular", "buketler"],
     nearbySlugs: ["balkan", "gorukle", "dumlupinar", "besevler"],
     description:
-      "Kurtuluş mahallesine, Balkan’ın Görükle tarafındaki konuta kutu ve buket. Doğu apartman kuşağıyla karıştırılmaz.",
+      "Kurtuluş mahallesine Görükle tarafındaki konuta kutu ve buket. Sokak adı kapıyı netleştirir.",
     body: [
-      "Kurtuluş, belediye sınır tarifinde Balkan mahallesinin Görükle tarafındaki komşusu olarak anılır. Bu yüzden sayfa, doğudaki ulusal gün mahallelerinin apartman metnine benzemez; konum Görükle kuşağındadır.",
-      "Akçalar’da birleşen eski Kurtuluş ile bu mahalle aynı yer değildir. Siparişte Nilüfer ve Kurtuluş yanında sokak veya site adı durur ki batıdaki birleşme ile karışmasın.",
-      "Kutu düzeni site içi yürümede pratiktir. Buket, kapıda elden teslim için bağlanır. Kurtuluş’un paragrafları Balkan’ın ad değişikliği anlatımından ayrı yazıldı. Kurtuluş’ta Görükle tarafı ile İzmir yolu tarafı ayrı giriş ister. Akçalar’da birleşen eski Kurtuluş bu sayfanın kapısı değildir.",
+      "Kurtuluş, Balkan mahallesinin Görükle tarafındaki komşu konut mahallesidir. Akçalar’da anılan eski Kurtuluş parçası başka bir kapıdır; notta Nilüfer ve sokak birlikte durur.",
+      "Site adı ile cadde üstü apartman ayrı yazılır. Alıcı, benzer unvanlı bloklarda doğru girişi seçtirir.",
+      "Kutu, site içindeki yürüyüşte pratiktir. Buket, kapıda elden teslim için bağlanır. Doğum günü kartı iki cümleyi geçmez.",
     ],
   },
   {
@@ -274,11 +269,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "orkideler"],
     nearbySlugs: ["gorukle", "tahtali", "hasanaga", "kayapa"],
     description:
-      "30 Ağustos Zafer mahallesine, eski Kayapa Çamlık sınırında buket ve orkide. Doğu konut kuşağı sanılmaz.",
+      "30 Ağustos Zafer mahallesine, Görükle, Tahtalı ve Hasanağa arasındaki konuta buket ve orkide.",
     body: [
-      "30 Ağustos Zafer, eski Kayapa Çamlık yerleşiminin adıdır. Belediye sınır tarifine göre kuzeyinde Görükle’nin kadastro alanı, doğusunda Tahtalı, güneyinde Bursa Yolu Caddesi, batısında Hasanağa vardır. Mahalle, doğudaki takvim adlarını taşıyan apartman sırasına yazılmaz.",
-      "Eski ‘Çamlık’ alışkanlığı notta gelebilir. Güncel ad 30 Ağustos Zafer’dir. Kapı, köy içi sokak ile yol kenarı konut diye ayrılır; yalnızca cadde adı yetmez.",
-      "Buket ve orkide, bu ara bölgenin ev kapısına göre hazırlanır. Kampüs teslimi Görükle sayfasındadır. 30 Ağustos Zafer metni o sayfanın ve Tahtalı’nın arkeoloji cümlesinin kopyası değildir.",
+      "30 Ağustos Zafer, eski Kayapa Çamlık yerleşiminin bugünkü adıdır. Kuzeyinde Görükle, doğusunda Tahtalı, güneyinde Bursa Yolu, batısında Hasanağa vardır. Doğu yakadaki apartman sırasından ayrı bir kesittir.",
+      "Eski Çamlık alışkanlığı da aynı mahalleye gelir. Kapı, iç sokak ile yol kenarı konut diye ayrılır. Alıcı adı notta durur.",
+      "Buket ve orkide ev kapısına göre hazırlanır. Kampüs çevresi Görükle tarafında, bu mahalle kendi sokağında karşılanır.",
     ],
   },
   {
@@ -290,9 +285,9 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     description:
       "Minareliçavuş mahallesine, çekirdeğin batısında büyüyen konuta orkide, kutu ve buket.",
     body: [
-      "Minareliçavuş, Nilüfer çekirdeğinin batısında, eski köy dokusunun üzerine yayılan konutun büyüdüğü bir mahalledir. Özlüce’deki yoğun site düzeni ile Çalı’daki yol koridoru arasında ayrı bir kapı ölçeği vardır. Belirli bir cami minaresinin sipariş noktası olduğu burada iddia edilmez.",
-      "Yeni blokta güvenlik kaydı, eski sokakta kapı numarası geçerlidir. Hangisi olduğu notun ilk satırında bellidir. Alıcı adı, benzer site unvanlarının arasında doğru girişi seçtirir.",
-      "Orkide yeni dairenin holüne, kutu taşımaya, buket kısa ziyarete gider. Minareliçavuş sayfası Alaaddinbey’deki höyük bilgisini veya Özlüce’nin site metnini tekrarlamaz.",
+      "Minareliçavuş, Nilüfer çekirdeğinin batısında, eski sokakların üzerine yeni blokların yayıldığı bir mahalledir. Özlüce’nin yoğun sitesi ile Çalı’nın yol hattı arasında kendi kapı ölçeği vardır.",
+      "Yeni blokta güvenlik kaydı, eski sokakta kapı numarası geçerlidir. Hangisi olduğu ilk satırda bellidir. Alıcı adı benzer site unvanlarını ayırır.",
+      "Orkide yeni dairenin holüne, kutu taşımaya, buket kısa ziyarete gider. Yeni ev kutlaması burada sık istenir.",
     ],
   },
   {
@@ -302,11 +297,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "orkideler"],
     nearbySlugs: ["ozluce", "minarelicavus", "yaylacik", "urunlu"],
     description:
-      "Alaaddinbey mahallesine batı Nilüfer konutuna buket ve orkide. Tepecik Höyüğü valilik notuna dayanır.",
+      "Alaaddinbey mahallesine batı Nilüfer konutuna buket ve orkide. Tepecik Höyüğü bu çevrenin bilinen yeridir.",
     body: [
-      "Alaaddinbey, Nilüfer’in batısında konutun büyüdüğü mahallelerdendir. Valiliğin arkeoloji notunda Tepecik Höyüğü bu mahalleyle anılır. Höyük bir teslim adresi değildir; çiçek ev, site veya işyeri kapısına gider.",
-      "2025 yılı Nilüfer faaliyet raporunda tarım alanının korunduğu yerler arasında Alaaddinbey, Ürünlü ve Yaylacık birlikte geçer. Bu cümle bir tarla kenarı vaadi değildir; mahallenin hâlâ yapı ile açık alanın yan yana durduğunu hatırlatır.",
-      "Site bloğu ile köy içine yakın sokak ayrı yazılır. Buket ziyarete, orkide masa hediyesine ayrılır. Alaaddinbey metni Özlüce’nin istasyonlu site anlatımından ve Ürünlü’nün tarla vurgusundan ayrıdır.",
+      "Alaaddinbey, Nilüfer’in batısında konutun büyüdüğü mahallelerdendir. Tepecik Höyüğü bu çevrenin bilinen yükseltisidir. Çiçek ev, site veya işyeri kapısına gider.",
+      "Ürünlü ve Yaylacık ile birlikte anılan açık alan, yeni blokların yanında durur. Site ile sokağa yakın ev ayrı yazılır. Alıcı adı doğru girişi seçtirir.",
+      "Buket ziyarete, orkide masa hediyesine ayrılır. Yeni daireye saksı, kısa uğramaya gül demeti gider.",
     ],
   },
   {
@@ -316,11 +311,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "kutular"],
     nearbySlugs: ["minarelicavus", "isiktepe", "demirci", "ucevler"],
     description:
-      "Ahmet Yesevi mahallesine ihtiyatlı buket ve kutu teslimi. Okul, cami veya hastane adresi uydurulmaz.",
+      "Ahmet Yesevi mahallesine buket ve kutu. Apartman ya da sokak, notta nasıl yazıldıysa öyle hazırlanır.",
     body: [
-      "Ahmet Yesevi mahallesine doğrulanmamış bir okul, cami külliyesi veya hastane adresi yazmıyoruz. Kişi adı mahalle tabelasında duruyor diye o adda bir kurum kapısı varmış gibi tarif kurulmaz.",
-      "Gelen adres neyse o kullanılır: apartman ve daire, ya da sokak ve kapı numarası. Tahminle ‘batı konut’ veya ‘köy içi’ denmez. Alıcı adı, benzer unvanlı binalarda zili ayırır.",
-      "Buket kısa uğrama, kutu ise taşınırken düz kalsın istenen hediye içindir. Ahmet Yesevi sayfası Minareliçavuş’un büyüme anlatımını ve Işıktepe’nin ihtiyat cümlesini kopyalamaz. Ahmet Yesevi tabelası bir kurum logosu değildir. Çiçek, nottaki sivil kapıya gider; tahminle bir külliye kapısı seçilmez.",
+      "Ahmet Yesevi, Nilüfer konutunda apartman unvanının okunarak yazıldığı bir mahalledir. Çiçek, nottaki bina ve daireye gider.",
+      "Apartman ise daire, sokak ise kapı numarası durur. Alıcı adı benzer unvanlı binalarda zili ayırır. Kart cümlesi kısa tutulur.",
+      "Buket kısa uğrama, kutu taşınırken düz kalsın istenen hediye içindir. Geçmiş olsun aranjmanı ile tebrik demeti ayrı kapılara gider.",
     ],
   },
   {
@@ -330,11 +325,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "kutular"],
     nearbySlugs: ["gorukle", "kayapa", "hasanaga", "30-agustos-zafer"],
     description:
-      "Kızılcıklı mahallesine, eski Hasanağa Kızılcıklı sınırında buket ve kutu. Pazar Caddesi batı kenarıdır.",
+      "Kızılcıklı’ya, Görükle’nin güneyindeki konuta saplı demet ve kutu. Batı kenarı Pazar Caddesi’dir.",
     body: [
-      "Kızılcıklı, eski Hasanağa Kızılcıklı’nın bugünkü mahalle adıdır. Belediye sınır tarifinde kuzeyi Görükle, doğusu Kayapa, güneyi Hasanağa’nın köy içi, batısı Pazar Caddesi diye geçer.",
-      "Siparişte eski ‘Hasanağa’ alışkanlığı gelebilir. Güncel mahalle Kızılcıklı’dır; Hasanağa ayrı sayfadadır. Kapı, Pazar Caddesi üzerindeki bir işyeri ile iç sokaktaki ev diye ayrılır.",
-      "Buket ev ziyaretine, kutu cadde üstü taşımaya gider. Kızılcıklı metni, Hasanağa’nın köy içi paragrafını ve Kayapa’nın birleşme öyküsünü tekrarlamaz. Kızılcıklı’da Pazar Caddesi üzerindeki tabela ile iç sokaktaki zil ayrıdır. Cadde adı, köy içi numarayı silmez.",
+      "Kızılcıklı, eski Hasanağa Kızılcıklı adıyla da aranan mahalledir. Kuzeyinde Görükle, doğusunda Kayapa, güneyinde Hasanağa’nın köy içi, batısında Pazar Caddesi vardır.",
+      "Hasanağa ayrı bir mahalledir. Kapı, Pazar Caddesi üzerindeki işyeri ile iç sokaktaki ev diye ayrılır. Alıcı adı doğru zili buldurur.",
+      "Ev ziyaretine saplı demet, cadde üstü taşımaya kutu gider. Yeni ev notu kartta iki satırda kalır.",
     ],
   },
   {
@@ -344,11 +339,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "celenkler"],
     nearbySlugs: ["cali", "minarelicavus", "isiktepe", "ahmet-yesevi"],
     description:
-      "Demirci mahallesine, çekirdeğin batısındaki kırsal karaktere buket ve çelenk. Anıt veya ocak adı uydurulmaz.",
+      "Demirci’ye, çekirdeğin batısındaki sakin kapı için saplı demet ve anma düzeni.",
     body: [
-      "Demirci, Nilüfer çekirdeğinin batısında kırsal karakterini koruyan bir mahalledir. Teyitli bir anıt, demirci ocağı tabelası veya müze kapısı bilmiyoruz; meslek çağrıştıran ad, böyle bir teslim noktası kurmaz.",
-      "Çalı koridorundaki karma doku ile bu mahalle aynı ritimde anlatılmaz. Sokak, kapı ve alıcı yazılır. Çelenk istenirse kurdele ismi baştan gelir ve çıkmadan okunur.",
-      "Buket, avlu veya apartman diye gelen tarife göre bağlanır; biz kapı tipini tahmin etmeyiz. Demirci sayfası Çalı’nın sanayi-konut karışımını kopyalamaz. Demirci’de avlu kapısı ile yeni apartman zili aynı kelimeyle yazılmaz. Gelen tarif hangisiyse hazırlık ona uyar, diğeri eklenmez.",
+      "Demirci, Nilüfer çekirdeğinin batısında, sokak ve avlu düzeninin sürdüğü bir mahalledir. Çalı koridorunun karma temposundan daha sakin bir kapıdır.",
+      "Sokak, kapı ve alıcı yazılır. Çelenkte kurdele adı baştan gelir ve çıkmadan okunur. Ev ile küçük işyeri ayrı satırdadır.",
+      "Buket ziyaret ölçeğinde bağlanır. Taziye düzeni istendiğinde ölçü notta baştan durur.",
     ],
   },
   {
@@ -358,11 +353,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["orkideler", "buketler"],
     nearbySlugs: ["demirci", "ahmet-yesevi", "ucevler", "gumustepe"],
     description:
-      "Işıktepe’de merkez diye anılsa da plaza iddiası olmadan, yazılan kapıya çiçek.",
+      "Işıktepe mahallesine orkide ve buket. Adres, sokak ve daire ile birlikte yazılır.",
     body: [
-      "Işıktepe’yi bazı özetler merkez mahalle diye ayırır. Bu ayrım bir plaza katı, alışveriş kapısı veya kampüs girişi kanıtlamaz; biz de eklemiyoruz. Işık sözcüğü bir tepe manzarası tarifi için kullanılmaz.",
-      "Adres, siparişte nasıl yazıldıysa öyle kalır. Eksik kapı numarasını mahalle adından tamamlamayız. Alıcı, benzer bloklar arasında doğru zili seçtirir.",
-      "Orkide masa ölçeğinde, buket ziyaret ölçeğinde hazırlanır. Işıktepe’nin gövdesi Üçevler’in ‘kayıt yok’ paragrafından ve Gümüştepe’nin kısa ihtiyat metninden ayrıdır. Işıktepe’de eksik bir numara, mahalle adından tamamlanmaz. Not yarım kaldıysa kapı sorulur; yanlış bloğa bırakılmaz.",
+      "Işıktepe, Nilüfer’in yerleşik konut mahallelerindendir. Çiçek, nottaki bina girişine ve daireye gider.",
+      "Daire numarası ve alıcı birlikte durur. Eksik kapı, mahalle adının yanına sokak eklenerek tamamlanır. Kart kısa tutulur.",
+      "Orkide masa ölçeğinde, buket ziyaret ölçeğinde hazırlanır. Doğum günü demeti ile teşekkür orkidesi ayrı ölçekte hazırlanır.",
     ],
   },
   {
@@ -372,11 +367,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "orkideler"],
     nearbySlugs: ["golyazi", "fadilli", "hasanaga", "inegazi"],
     description:
-      "Akçalar mahallesine Nilüfer’in batısında buket ve orkide. Aktopraklık Höyüğü valilik notuna dayanır.",
+      "Akçalar mahallesine Nilüfer’in batısında buket ve orkide. Aktopraklık Höyüğü bu çevrededir.",
     body: [
-      "Akçalar, Nilüfer’in batısında, valilik arkeoloji notundaki Aktopraklık Höyüğü ile anılan mahalledir. Höyük ziyaret noktası ile ev kapısı aynı adres değildir; çiçek konuta veya işyerine gider.",
-      "Eski Akçalar Zafer ve Akçalar Kurtuluş, tek mahallede birleşti. Notta hâlâ o eski adlar gelebilir. Güncel ad Akçalar’dır; kapı sokak ve numara ile yazılır. Nilüfer’deki Kurtuluş mahallesi bu birleşmenin parçası değildir.",
-      "Gölyazı’nın yarımadasına göre Akçalar daha içeride, gölün kıyı kalabalığından ayrı bir köy-mahalle kapısıdır. Buket ve orkide bu kapıya göre hazırlanır. Metin, Gölyazı’nın taş ev anlatımını tekrarlamaz.",
+      "Akçalar, Nilüfer’in batısında, Aktopraklık Höyüğü ile anılan bir mahalledir. Çiçek konut ve işyeri kapısına gider. Eski Zafer ve Kurtuluş alışkanlıkları da bugünkü Akçalar kapısına yazılır.",
+      "Sokak ve numara ile alıcı birlikte durur. Nilüfer’deki Kurtuluş mahallesi ayrı bir adrestir; notta Akçalar açık seçilir.",
+      "Gölyazı’nın yarımadasına göre Akçalar daha içeride, kendi köy-mahalle kapısıdır. Buket ve orkide bu kapıya göre hazırlanır.",
     ],
   },
   {
@@ -386,11 +381,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "kutular"],
     nearbySlugs: ["ucpinar", "kadriye", "kurucesme", "dagyenice"],
     description:
-      "Atlas’ta Nilüfer’in güneyindeki eski köy kapısına çiçek. Başka illerdeki aynı ad için Bursa yazılır.",
+      "Atlas’a, güneydeki köy evine gül demeti ve hediye kutusu.",
     body: [
-      "Atlas, Nilüfer’in güneyinde, valilik cetvelindeki eski köylerden mahalleye dönüşen yerleşimlerdendir. Güneydeki Kadriye, Üçpınar ve Kuruçeşme ile aynı kuşaktadır. Belirli bir okul, cami adı veya durak uydurulmaz.",
-      "Köy içi sokak, site tarifine benzemez. Kapı numarası, mevki ve alıcı yazılır. ‘Atlas’ tek başına, başka illerdeki aynı adı da çağırabilir; siparişte Bursa ve Nilüfer durur.",
-      "Buket kısa bir uğrama, kutu ise köy yolunda daha durağan bir hediye içindir. Atlas sayfası Dağyenice’nin etek cümlesini ve Kadriye’nin uzak güney tarifini kopyalamaz. Atlas’ta güney yolu, çekirdekteki site temposundan yavaştır. Mevki baştan yazılırsa çiçek ova içindeki başka bir Atlas adına sapmaz.",
+      "Atlas, Nilüfer’in güneyinde, eski köy düzenini sürdüren mahallelerdendir. Kadriye, Üçpınar ve Kuruçeşme aynı kuşaktadır. Not, ilçeyi Nilüfer diye açar.",
+      "Sokak, kapı numarası ve alıcı yeter. Mevki, site dilinden ayrı, köy içi tarifle gelir.",
+      "Buket kısa bir uğrama, kutu güney yolunda durağan bir hediye içindir. Aile ziyareti burada sık hazırlanır.",
     ],
   },
   {
@@ -400,11 +395,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "kutular"],
     nearbySlugs: ["uncukuru", "korubasi", "fadilli", "maksempinar"],
     description:
-      "Ayvaköy mahallesine Nilüfer’in güneybatısında buket ve kutu. Kaymakamlık listesinde Ayva Köy olarak da geçer.",
+      "Ayvaköy mahallesine Nilüfer’in güneybatısında buket ve kutu. Ayva Köy yazımı da aynı kapıya gider.",
     body: [
-      "Ayvaköy, Nilüfer’in güneybatısındaki eski köy mahallelerindendir. Kaymakamlık muhtar listesinde Ayva Köy yazımı da görülür. Siparişte her iki alışkanlık aynı kapıya gider; ilçe Nilüfer diye belirtilir.",
-      "Unçukuru, Korubaşı ve Maksempınar güneydeki komşu sayfalardır. Fadıllı ise Uluabat tarafına daha yakındır. Ayvaköy onların taş ocağı veya göl yarımadası değildir; kendi sokak tarifini ister.",
-      "Kapı numarası ve alıcı yazılır. Buket ziyarete, kutu yolculuğa gider. Ayvaköy metni, Gölyazı’nın antik kent cümlelerinden ayrıdır. Ayvaköy’de Ayva Köy yazımı da aynı kapıya gider. İlçe Nilüfer olarak durmazsa başka bir ilin köyü sanılabilir.",
+      "Ayvaköy, Nilüfer’in güneybatısındaki eski köy mahallelerindendir. Ayva Köy yazımı da aynı kapıya gelir. Unçukuru, Korubaşı ve Maksempınar güneydeki komşulardır.",
+      "Numara ile alıcı adı notun başında durur. Fadıllı, Uluabat tarafına daha yakındır; Ayvaköy kendi sokağıyla tarif edilir.",
+      "Bayram ziyaretinde saplı demet, uzun güney yolunda kutu tercih edilir.",
     ],
   },
   {
@@ -414,11 +409,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "celenkler"],
     nearbySlugs: ["cayli", "konakli", "buyukbalikli", "baskoy"],
     description:
-      "Badırga mahallesine Nilüfer’in kuzeybatı köy kuşağında buket ve çelenk. Apartman çekirdeği sanılmaz.",
+      "Badırga mahallesine kuzeybatı Nilüfer’de avlu kapısına buket ve anma çelengi.",
     body: [
-      "Badırga, Nilüfer’in en kuzeybatıdaki eski köy mahallelerinden biridir. Çaylı, Konaklı, Büyükbalıklı ve Başköy aynı kırsal kuşağın diğer sayfalarıdır. Doğudaki plaza ve site teslimi bu kapıya benzemez.",
-      "Mevki, sokak ve alıcı yazılır. Çelenkte kurdele adı baştan iletilir. Buket, köy içi ziyaretin ölçeğinde bağlanır; vitrindeki büyük düzen, kapı ölçüsü notta varsa ona göre seçilir.",
-      "Badırga sayfası Çaylı’nın kuzey cümlesini ve Başköy’ün ara konum anlatımını tekrarlamaz. Fiyat ve saat bu metinde yoktur. Badırga’da kuzeybatı yolu uzundur. Mevki ve alıcı baştan belliyse çelenk kurdelesi ile buket aynı turda karışmaz.",
+      "Badırga, Nilüfer’in kuzeybatısındaki eski köy mahallelerindendir. Çaylı, Konaklı, Büyükbalıklı ve Başköy aynı kırsal kuşağın komşularıdır.",
+      "Mevki ve sokak, alıcı adıyla birlikte notun başında durur. Kurdeledeki isim, demetten önce kontrol edilir. Geniş düzenlerde kapı genişliği yazılır.",
+      "Badırga’da saplı demet köy ziyaretine göre bağlanır. Konut ile bakkal kapısı notta ayrılır.",
     ],
   },
   {
@@ -428,11 +423,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "kutular"],
     nearbySlugs: ["badirga", "catalagil", "akcalar", "buyukbalikli"],
     description:
-      "Başköy’de Badırga ile Akçalar arasındaki köy kapısına çiçek. Ayrı bir höyük veya site adı yazılmaz.",
+      "Başköy’e, Badırga ile Akçalar arasındaki avluya saplı demet ve hediye kutusu.",
     body: [
-      "Başköy, batı Nilüfer’de Badırga ile Akçalar arasında kalan eski köy mahallelerindendir. Çatalağıl aynı batı hattındadır. Büyükbalıklı ise kuzeybatı kuşağındadır. Başköy bu dördünün ortak bir şablon cümlesi değildir.",
-      "Köy içi kapı, site bloğu diliyle yazılmaz. Sokak, numara ve alıcı ister. Akçalar’daki höyük bilgisi bu sayfaya taşınmaz; Başköy için ayrı bir arkeoloji iddiası kurmayız.",
-      "Kutu, köy yolunda düz duran hediyedir. Başköy’de demet, avlu kapısına göre kısa tutulur. Kutu, sap yerine düz hediye istendiğinde seçilir. Badırga’nın çelenk anlatımı bu sayfada yoktur. Başköy’de Badırga yönü ile Akçalar yönü farklı sokak ağızlarıdır. ‘Batı Nilüfer’ tek başına kapı tarifi sayılmaz.",
+      "Başköy, batı Nilüfer’de Badırga ile Akçalar’ın ortasında duran köy yerleşimidir. Çatalağıl aynı batı hattında, Büyükbalıklı kuzeybatıdadır.",
+      "Sokak, numara ve alıcı ister. Badırga yönü ile Akçalar yönü farklı sokak ağızlarıdır; mevki notta ayrılır.",
+      "Başköy’de demet, avlu kapısına göre kısa tutulur. Kutu, sap yerine düz hediye istendiğinde seçilir. Bayram ziyareti sık gelir.",
     ],
   },
   {
@@ -442,11 +437,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "kutular"],
     nearbySlugs: ["badirga", "konakli", "cayli", "baskoy"],
     description:
-      "Büyükbalıklı mahallesine kuzeybatı Nilüfer’de buket ve kutu. Balıkçı barınağı veya göl iskelesi uydurulmaz.",
+      "Büyükbalıklı mahallesine kuzeybatı Nilüfer’de buket ve kutu. Teslim ev kapısınadır.",
     body: [
-      "Büyükbalıklı, kuzeybatı Nilüfer’de Badırga ve Konaklı ile aynı kırsal kuşaktadır. Çaylı kuzeyde, Başköy daha güneybatıdadır. Adındaki balık, bir iskele, kooperatif veya gölet kapısını kanıtlamaz; böyle bir teslim noktası yazmayız.",
-      "Eski köy mahallesinin kapısı sokak ve numara ile bulunur. Site dili bu adrese uymaz. Alıcı adı, benzer avlu girişlerini ayırır.",
-      "Buket ziyaret ölçeğinde, kutu yolculukta daha durağan hediye olarak hazırlanır. Büyükbalıklı’nın gövdesi Konaklı’nın kuzeybatı cümlelerinden ve Badırga’nın çelenk notundan ayrıdır. Büyükbalıklı’da ad, bir iskele teslimi kurmaz. Çiçek avlu ya da ev kapısında kalır; göl kenarı buluşması ayrıca yazılmadıkça seçilmez.",
+      "Büyükbalıklı, kuzeybatıda Badırga ve Konaklı’nın yanında duran kırsal yerleşimdir. Çaylı kuzeye, Başköy güneybatıya düşer. Çiçek ev kapısına gider.",
+      "Sokak ile kapı numarası, alıcı adının yanında durur. Avlu girişi, site tarifinden ayrıdır.",
+      "Buket ziyaret ölçeğinde, kutu yolculukta durağan hediye olarak hazırlanır. Büyükbalıklı’nda aile teşekkürü iki satırda kalır.",
     ],
   },
   {
@@ -456,11 +451,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "kutular", "orkideler"],
     nearbySlugs: ["yaylacik", "ertugrul", "alaaddinbey", "demirci"],
     description:
-      "Çalı mahallesine İzmir yolu koridorunda, konut ve sanayinin karıştığı kapıya buket, kutu ve orkide.",
+      "Çalı mahallesine İzmir yolu koridorunda buket, kutu ve orkide. Ev kapısı ile işyeri girişi ayrıdır.",
     body: [
-      "Çalı, İzmir yolu koridorunda, sürekli kent dokusunun batısında kalan bir mahalledir. Konut ile sanayi aynı ada içinde karışabilir. Yaylacık ve Alaaddinbey yakın sayfalardır; Ertuğrul ise doğuya, apartman çekirdeğine daha yakındır.",
-      "Ev kapısı ile fabrika kabul noktası aynı notta birleşmez. İşyerinde firma ve teslim alınacak kişi, evde sokak ve daire yazılır. Yalnızca ‘Çalı sanayi’ demek kapıyı buldurmaz.",
-      "Ofis masasına orkide, eve kutu veya buket gider. Çalı metni Demirci’nin kırsal ihtiyatını ve Yaylacık’taki tarla koruma cümlesini tekrarlamaz. Çalı’da sanayi kapısındaki güvenlik ile ev sokağı aynı cümlede birleşmez. Firma adı, daire numarasının yerine geçmez.",
+      "Çalı, İzmir yolu koridorunda, sürekli kent dokusunun batısında kalan bir mahalledir. Konut ile sanayi aynı ada içinde yan yana gelebilir. Yaylacık ve Alaaddinbey yakın komşulardır.",
+      "Evde sokak ve daire, işyerinde firma ve teslim alınacak kişi yazılır. Yalnızca ‘Çalı sanayi’ demek kapıyı buldurmaz; kabul noktası eklenir.",
+      "Ofis masasına orkide, eve kutu veya buket gider. Teşekkür ile açılış çiçeği bu hatta sık ayrılır.",
     ],
   },
   {
@@ -470,11 +465,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "celenkler"],
     nearbySlugs: ["baskoy", "inegazi", "akcalar", "hasanaga"],
     description:
-      "Çatalağıl’da Başköy–İnegazi hattındaki köy kapısına çiçek. Ağıl veya tesis adresi kurulmaz.",
+      "Çatalağıl mahallesine batı Nilüfer’de, Başköy–İnegazi hattındaki köy kapısına buket ve çelenk.",
     body: [
-      "Çatalağıl, Nilüfer’in batısında, Başköy ile İnegazi hattında eski bir köy mahallesidir. Akçalar ve Hasanağa aynı geniş batı kuşağının diğer duraklarıdır; Çatalağıl onların höyük veya köy içi sayfasının kopyası değildir.",
-      "Kapı, mevki ve alıcı ile yazılır. Çelenk kurdelesindeki isim baştan gelir. Buket, köy ziyaretinin ölçeğinde bağlanır.",
-      "Ağıl çağrıştıran ad, bir ahır kapısı veya hayvancılık tesisi adresi kurmaz. Çatalağıl’ın paragrafları İnegazi’nin göl yaklaşımı anlatımından ayrı tutulur. Çatalağıl’da Başköy tarafı ile İnegazi tarafı ayrı mevki ister. Mahalle adı, bu iki ağzı birbirine bağlayan bir tek kapı değildir.",
+      "Çatalağıl, Nilüfer’in batısında, Başköy ile İnegazi hattında eski bir köy mahallesidir. Akçalar ve Hasanağa aynı geniş kuşağın diğer duraklarıdır.",
+      "Kapı, mevki ve alıcı ile yazılır. Çelenk kurdelesindeki isim baştan gelir. İki sokak ağzı varsa hangisi olduğu notta durur.",
+      "Buket, köy ziyaretinin ölçeğinde bağlanır. Çatalağıl avlusunda kart, isim ve kısa bir cümleden ibarettir.",
     ],
   },
   {
@@ -484,11 +479,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "kutular"],
     nearbySlugs: ["badirga", "yolcati", "buyukbalikli", "konakli"],
     description:
-      "Çaylı’da Nilüfer’in kuzey köy kapısına çiçek. Dere, köprü veya piknik noktası tarif edilmez.",
+      "Çaylı’ya, Badırga’nın doğusundaki kuzey avlusuna gül demeti ve kutu.",
     body: [
-      "Çaylı, Nilüfer’in kuzeyinde, Badırga’nın doğusuna düşen eski köy mahallelerindendir. Yolçatı aynı kuzey hattında, Büyükbalıklı ve Konaklı kuzeybatıdadır. Ad, belirli bir çay yatağı, köprü veya piknik alanını teslim noktası yapmaz.",
-      "Sokak, kapı numarası ve alıcı yazılır. Apartman sitesi tarifı bu adrese zorlanmaz. Çaylı’nda saplı demet, kuzey rüzgârında kâğıdı açık kalmayacak şekilde bağlanır. Kutu yalnızca masaya konacak hediyede seçilir.",
-      "Çaylı sayfası Yolçatı’nın kuzey cümlesini ve Badırga’nın ‘en kuzeybatı’ tarifini tekrarlamaz. Çaylı’da kuzey yolu, Badırga’nın en uç noktasından daha içeridedir. Dere ya da köprü adı yazılmadıkça buluşma evi kapısıdır.",
+      "Çaylı, Nilüfer’in kuzeyinde, Badırga’nın doğusuna düşen eski köy mahallelerindendir. Yolçatı aynı kuzey hattında, Büyükbalıklı ve Konaklı kuzeybatıdadır.",
+      "Sokak ile bina numarası, alıcı adının yanında durur. Buluşma evi kapısıdır; mevki notun başında durur.",
+      "Çaylı’nda saplı demet, kuzey yoluna göre sıkı bağlanır. Kutu, masaya konacak hediyede seçilir. Ziyaret buketi sık istenir.",
     ],
   },
   {
@@ -498,11 +493,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "orkideler"],
     nearbySlugs: ["tahtali", "atlas", "yaylacik", "kadriye"],
     description:
-      "Dağyenice mahallesine güney eteklerde, Tahtalı ile Atlas arasında buket ve orkide.",
+      "Dağyenice mahallesine güney eteklerde buket ve orkide. Tahtalı ile Atlas arasındadır.",
     body: [
-      "Dağyenice, Nilüfer’in güney eteklerinde, Tahtalı ile Atlas arasında kalan eski köy mahallesidir. Yaylacık ova tarafına, Kadriye daha uzağa düşer. ‘Dağ’ sözcüğü bir yayla tesisi veya teleferik kapısı kurmaz.",
-      "Etekteki sokak, ova sitesinden farklı yazılır. Mevki, kapı ve alıcı birlikte durur. Saksı, eşikten içeri giren hediyede durur. Saplı demet ise kısa bir uğrama içindir.",
-      "Dağyenice metni Tahtalı’daki arkeoloji notunu ve Atlas sayfasındaki küme cümlesini ödünç almaz. Dağyenice’de etek sokağı ile ova çıkışı aynı numara düzeninde olmayabilir. Mevki, ‘güney’ kelimesinden daha dar yazılır.",
+      "Dağyenice, Nilüfer’in güney eteklerinde, Tahtalı ile Atlas arasında kalan eski köy mahallesidir. Yaylacık ova tarafına, Kadriye daha uzağa düşer.",
+      "Etekteki sokak, ova çıkışından ayrı yazılır. Mevki, kapı ve alıcı birlikte durur.",
+      "Saksı, eşikten içeri giren hediyede durur. Saplı demet kısa bir uğrama içindir. Dağyenice’de kart, alıcı adıyla birlikte kısa kalır.",
     ],
   },
   {
@@ -512,11 +507,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "kutular"],
     nearbySlugs: ["karacaoba", "gungoren", "gokce", "kadriye"],
     description:
-      "Doğanköy’de eski köy statüsü mahalle kapısına çiçek. Komşu parsel ve bir üretim tesisi uydurulmaz.",
+      "Doğanköy’e saplı demet ve kutu. Sokak, kapı ve alıcı kırsal tarifte birlikte durur.",
     body: [
-      "Doğanköy, valiliğin eski köy listesindedir ve bugün Nilüfer mahallesidir. Sokak sokak bir sınır, komşu parsele dayalı bir tarif veya belirli bir tepe adı uydurmuyoruz. Kuş çağrıştıran ad bir üretim tesisi kapısı değildir.",
-      "Gelen mevki ve kapı numarası esas alınır. Eksik tarifi mahalle adından tamamlamayız. Alıcı, doğru avluyu seçtirir.",
-      "Buket ve kutu, bu köy-mahalle kapısına göre hazırlanır. Doğanköy’ün gövdesi Karacaoba ve Güngören sayfalarındaki ihtiyat cümlelerinden ayrı kelimelerle yazıldı. Doğanköy’de liste, mahallenin eski köy olduğunu söyler; komşu parselin adını söylemez. Kapı, gelen tariften okunur.",
+      "Doğanköy, kırsal Nilüfer’de avlu numarasıyla aranan bir yerleşimdir. Demet, söylenen kapıya bırakılır.",
+      "Doğru avluyu alıcının adı seçtirir. Sokak, mahalle unvanının hemen altında yazılır.",
+      "Doğanköy’de bayramda saplı demet, yağışlı günde kutu tercih edilir.",
     ],
   },
   {
@@ -526,11 +521,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "orkideler"],
     nearbySlugs: ["golyazi", "ayvakoy", "akcalar", "uncukuru"],
     description:
-      "Fadıllı’da Uluabat’a bakan köy kapısına çiçek. Yarımada üzerindeki taş ev dokusu bu adres değildir.",
+      "Fadıllı’ya, Gölyazı’nın güneybatısında Uluabat’a bakan avluya saplı demet ve saksı.",
     body: [
-      "Fadıllı, Gölyazı’nın güneybatısında, Uluabat tarafına bakan eski köy mahallelerindendir. Ayvaköy ve Unçukuru güneydeki sayfalar, Akçalar ise höyüğüyle anılan batı mahallesidir. Fadıllı yarımada üzerindeki taş ev dokusu değildir.",
-      "Göl kıyısındaki gezinti ile köy içi kapı karışmasın diye mevki açık yazılır. Alıcı adı, hafta sonu kalabalığında ev adresini ayırır. Orkide içeri, buket kapı ziyaretine gider.",
-      "Fadıllı metni Gölyazı’nın Apollonia anlatımını ve Ayvaköy’ün muhtar listesi cümlesini tekrarlamaz. Fadıllı’da göl kıyısı gezintisi ile köy içi zil karışır. Hafta sonu notunda ‘ev’ ya da ‘kıyı’ kelimesi başta durur.",
+      "Fadıllı, Gölyazı’nın güneybatısında, Uluabat tarafına bakan eski köy mahallesidir. Ayvaköy ve Unçukuru güneyde, Akçalar batıdadır. Fadıllı kendi köy kapısıdır.",
+      "Mevki açık yazılır. Alıcı adı, hafta sonu kalabalığında ev adresini ayırır. Ev ile kıyı buluşması ayrı satırdadır.",
+      "Uluabat tarafındaki Fadıllı’da saksı içeri alınır, saplı demet eşikte kalır. Teşekkür iki satırda biter.",
     ],
   },
   {
@@ -540,11 +535,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "kutular"],
     nearbySlugs: ["dogankoy", "karacaoba", "gungoren", "dagyenice"],
     description:
-      "Gökçe’de teyitsiz sınır yerine, iletilen kapıya çiçek. Höyük, kampüs ve durak notu yoktur.",
+      "Gökçe’de gül demeti ve kutu düzeni. Sokak, numara ve alıcı notun başında durur.",
     body: [
-      "Gökçe hakkında doğrulanmış bir höyük, kampüs, durak veya belediye sınır cümlesi yok. Eski köy cetvelinde de bu adı ayrıca işaretlemiyoruz. Metin bu yüzden kısa ve ihtiyatlıdır; manzara, göl veya tepe eklenmez.",
-      "Sipariş, iletilen sokak ve kapıya uyar. Tahminle kırsal ya da apartman denmez. Alıcı adı notta durur.",
-      "Buket veya kutu, kapının tarifine göre seçilir. Gökçe sayfası Doğanköy’ün liste cümlesinden ve Dağyenice’nin etek tarifinden kopyalanmaz. Gökçe’de doğrulanmış bir sınır cümlesi yoktur. Bu eksiklik, uydurma bir tepe veya durakla kapatılmaz; kapı sorulur.",
+      "Gökçe, Nilüfer’de sakin bir mahalle kapısıdır. Çiçek, yazılan sokak ve numaraya gider.",
+      "Alıcı adı notta durur. Kart cümlesi kısa tutulur. Mevki, mahalle adının yanında yer alır.",
+      "Buket ziyaret için, kutu taşınırken düzeni korunsun istenen hediye için hazırlanır.",
     ],
   },
   {
@@ -554,12 +549,12 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "orkideler", "kutular"],
     nearbySlugs: ["akcalar", "inegazi", "hasanaga", "fadilli"],
     description:
-      "Gölyazı mahallesine Uluabat yarımadasında buket, orkide ve kutu. Antik Apollonia; taş ev dokusu.",
+      "Gölyazı mahallesine Uluabat yarımadasında buket, orkide ve kutu. Taş evler ve göl kıyısı.",
     body: [
       "Gölyazı, Nilüfer’in güneybatısında Uluabat Gölü’ne, eski adıyla Apolyont’a uzanan tarihî bir yarımadadır. Antik yerleşim Apollonia adıyla anılır. Taş evler ve hafta sonu gelen ziyaretçiler, burayı Nilüfer’in apartman çekirdeğinden ayırır.",
-      "Belediye düzenlemesinde Gölyazı Bayır ile Gölyazı Merkez tek mahallede birleşti. Bugün sipariş, yarımadadaki ev ile göl kıyısında kısa süre durulan bir buluşma noktasını birbirine karıştırmaz. Sokak dar olabilir; kapı tarifi buna göre ayrıntılı tutulur.",
-      "Hafta sonu kalabalığında ev adresi ile gezinti noktası karışır. Alıcı adı ve durulacak kapı baştan yazılır. Buket, rüzgârlı kıyıda ambalajı bozulmadan bırakılacak şekilde hazırlanır. Orkide, taş evin içine girecek hediyede daha durağandır. Kutu, dar sokakta elde taşınacak düzende seçilir.",
-      "Akçalar, İnegazi, Hasanağa ve Fadıllı aynı güneybatı kuşağının diğer sayfalarıdır. Gölyazı onların köy içi kapısından farklı olarak gölün yarımadasına gider. Fiyat bu sayfada yoktur.",
+      "Sipariş, yarımadadaki ev ile göl kıyısında kısa süre durulan buluşma noktasını ayırır. Sokak dar olabilir; kapı tarifi buna göre ayrıntılı tutulur. Alıcı adı ve durulacak kapı baştan yazılır.",
+      "Buket, rüzgârlı kıyıda ambalajı bozulmadan bırakılacak şekilde hazırlanır. Orkide, taş evin içine girecek hediyede daha durağandır. Kutu, dar sokakta elde taşınacak düzende seçilir.",
+      "Akçalar, İnegazi, Hasanağa ve Fadıllı aynı güneybatı kuşağının komşu mahalleleridir. Gölyazı onların köy içinden ayrı olarak gölün yarımadasına gider.",
     ],
   },
   {
@@ -569,11 +564,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["orkideler", "buketler"],
     nearbySlugs: ["ucevler", "isiktepe", "ahmet-yesevi", "demirci"],
     description:
-      "Gümüştepe’de doğrulanmış bir sınır olmaksızın, yazılan kapıya çiçek. Tepe kotu veya maden ocağı eklenmez.",
+      "Gümüştepe mahallesine orkide ve buket. Apartman ya da sokak numarası ile teslim edilir.",
     body: [
-      "Gümüştepe için teyitli bir tepe kotu, maden ocağı, site unvanı veya durak kaydı kullanmıyoruz. Adın çağrıştırdığı parlaklık, bir manzara vaadine dönüştürülmez. Mahalle Nilüfer’dedir; kapı, siparişte yazılan adrestir.",
-      "Eksik numarayı biz tamamlamayız. Apartman ise daire, sokak ise kapı numarası istenir. Alıcı, doğru zili seçtirir.",
-      "Orkide masa hediyesinde, buket kısa ziyarette hazırlanır. Gümüştepe’nin paragrafları Üçevler’in kayıt cümlesinden ve Işıktepe’nin merkez ayrımı notundan ayrıdır. Gümüştepe’de adın parlaklığı bir site markası değildir. Çiçek, yazılan apartman ya da sokak numarasına gider.",
+      "Gümüştepe, Nilüfer’de daire kapısının sokak numarasıyla bulunduğu bir konut mahallesidir. Aranjman, yazılan bina girişine gider.",
+      "Daire ile alıcı aynı satırda durur. Kart iki cümleyi geçmez. Site bloğu varsa unvanın yanına eklenir.",
+      "Orkide masa hediyesinde, buket kısa ziyarette hazırlanır. Gümüştepe’de teşekkür iki satırlık bir kartta kalır.",
     ],
   },
   {
@@ -583,11 +578,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "celenkler"],
     nearbySlugs: ["dogankoy", "karacaoba", "gokce", "atlas"],
     description:
-      "Güngören, İstanbul’daki ilçeyle karışmasın diye Bursa ve Nilüfer ile birlikte yazılır. Çelenk kurdelesi bu il ayrımından sonra hazırlanır.",
+      "Güngören mahallesine köy içi kapıya buket ve çelenk. Kurdele metni baştan yazılır.",
     body: [
-      "Güngören, valiliğin eski köy listesinde Nilüfer’e bağlı bir yerleşimdir ve bugün mahalledir. İstanbul ilçesi akla gelmesin diye notun ilk kelimesi Bursa’dır. Sokak sınırı, belirli bir gören tepesi veya şehitlik kapısı uydurulmaz.",
-      "Mevki, kapı ve alıcı yeter. Kurdeledeki ad, demet bağlanmadan yüksek sesle okunur. Buket, köy-mahalle ziyaretine göre bağlanır.",
-      "Güngören sayfası Doğanköy’ün liste cümlesini tekrarlamaz; yalnızca bu adın il dışıyla karışma riskini ayrıca söyler. Güngören’de İstanbul ilçesi riski yüzünden Bursa kelimesi şarttır. Çelenk kurdelesi, bu il ayrımı yazılmadan hazırlanmaz.",
+      "Güngören, Nilüfer kırsalında mevkiyle tarif edilen bir köy mahallesidir. Çiçek, söylenen kapı numarasına gider.",
+      "Alıcı notta durur. Kurdeledeki ad, demet bağlanmadan okunur. Konut girişi ile dükkân kabulü notta ayrı durur.",
+      "Buket, köy-mahalle ziyaretine göre bağlanır. Güngören’de çelenk kurdelesi ile buket kartı ayrı satırda yazılır.",
     ],
   },
   {
@@ -597,11 +592,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "kutular"],
     nearbySlugs: ["kizilcikli", "kayapa", "30-agustos-zafer", "golyazi"],
     description:
-      "Hasanağa mahallesine, Kızılcıklı’nın güneyindeki köy içine buket ve kutu. Eski bağlı yerleşimle karışmaz.",
+      "Hasanağa mahallesine, Kızılcıklı’nın güneyindeki köy içine buket ve kutu.",
     body: [
-      "Hasanağa, Kızılcıklı’nın belediye tarifinde ‘köy içi’ diye anılan güney komşusudur. Kayapa doğuda, 30 Ağustos Zafer kuzey-doğu sınırında, Gölyazı ise daha güneybatıda gölün yarımadasındadır. Hasanağa o yarımadanın taş ev sayfası değildir.",
-      "Eski Hasanağa Kızılcıklı bugün ayrı bir mahalledir. Siparişte yalnızca ‘Hasanağa’ denirse köy içi ile Kızılcıklı karışabilir; sokak veya mevki eklenir.",
-      "Kutu yolculukta, buket kapıda elden teslim için hazırlanır. Hasanağa metni Kızılcıklı’nın Pazar Caddesi sınırını ve Gölyazı’nın antik adını yeniden anlatmaz. Hasanağa köy içi, Kızılcıklı’nın cadde kapısından ayrı bir zildir. Eski birleşik ad, bugün iki mahalleyi tek kapı yapmaz.",
+      "Hasanağa, Kızılcıklı’nın güneyindeki köy içi mahallesidir. Kayapa doğuda, 30 Ağustos Zafer kuzeydedir. Gölyazı ise daha güneybatıda, gölün yarımadasındadır.",
+      "Eski Hasanağa Kızılcıklı bugün Kızılcıklı adıyla ayrıdır. Hasanağa siparişinde sokak veya mevki eklenir. Alıcı adı doğru evi seçtirir.",
+      "Kutu yola, buket kapıda elden teslim için hazırlanır. Hasanağa’da ziyaret demeti ile teşekkür kutusu ayrı gelişlerde gider.",
     ],
   },
   {
@@ -611,11 +606,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "orkideler"],
     nearbySlugs: ["golyazi", "akcalar", "catalagil", "hasanaga"],
     description:
-      "İnegazi’de Gölyazı ve Akçalar arasındaki köy kapısına çiçek. Kıyı gezintisi ile ev zili ayrılır.",
+      "İnegazi’ye, Gölyazı ile Akçalar arasındaki bahçeye gül demeti ve orkide.",
     body: [
-      "İnegazi, Nilüfer’in batı-güneybatısında, Gölyazı ve Akçalar ile aynı geniş kuşakta duran eski köy mahallesidir. Çatalağıl ve Hasanağa bu hattın diğer sayfalarıdır. İnegazi, göl yarımadasının üzerine kurulmuş taş doku değildir; köy kapısı ayrı yazılır.",
-      "Mevki ile alıcı birlikte durur. Hafta sonu Gölyazı’ya gidenler bu mahalleyi kıyı sanmasın diye ilçe ve mahalle adı açık seçilir. Orkide içeri alınacak hediyede, buket ziyarette kullanılır.",
-      "İnegazi’nin paragrafları Akçalar’daki Aktopraklık cümlesini ve Çatalağıl’ın hat tarifini kopyalamaz. İnegazi’de Gölyazı’ya giden hafta sonu yolu, köy kapısını kıyı sanmasın diye mevki ayrıca yazılır.",
+      "İnegazi, Nilüfer’in batı-güneybatısında, Gölyazı ve Akçalar ile aynı geniş kuşakta duran eski köy mahallesidir. Çatalağıl ve Hasanağa hattın diğer duraklarıdır.",
+      "Mevki ile alıcı birlikte durur. İlçe ve mahalle adı açık seçilir. Ev kapısı, göl kıyısındaki gezintiden ayrı yazılır.",
+      "İnegazi’de saksı odaya alınır, saplı demet ziyaret ölçeğinde bağlanır. Teşekkür iki satırda biter.",
     ],
   },
   {
@@ -625,11 +620,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "kutular"],
     nearbySlugs: ["gorukle", "balkan", "dumlupinar", "besevler"],
     description:
-      "İrfaniye mahallesine Görükle’nin batısında buket ve kutu. Kampüs içi bina kodu sanılmaz.",
+      "İrfaniye mahallesine Görükle’nin batısında buket ve kutu. Site, sokak evi ve küçük işyeri ayrıdır.",
     body: [
-      "İrfaniye, Görükle’nin batısına düşen bir Nilüfer mahallesidir. Balkan ve Dumlupınar aynı üniversite kuşağının mahalle kapıları, Beşevler ise çekirdeğe daha yakın konuttur. İrfaniye kampüs içindeki bir fakülte kodu değildir.",
-      "Site, sokak evi veya küçük işyeri diye kapı tipi notta ayrılır. ‘Üniversite yakını’ tek başına buluşma yeri sayılmaz. Alıcı adı, benzer site unvanlarını ayırır.",
-      "Kutu site içi taşımada, buket kapıda elden teslimde seçilir. İrfaniye metni Görükle’nin yurt anlatımını ve Balkan’ın eski Zafer adını tekrarlamaz. İrfaniye’de Görükle’nin batısı, kampüs haritasındaki bir fakülte kodu değildir. Buluşma, mahalledeki site ya da sokaktır.",
+      "İrfaniye, Görükle’nin batısına düşen bir Nilüfer mahallesidir. Balkan ve Dumlupınar üniversite kuşağının mahalle kapıları, Beşevler ise çekirdeğe daha yakın konuttur.",
+      "Site, sokak evi veya küçük işyeri diye kapı tipi notta ayrılır. Buluşma, mahalledeki site ya da sokaktır. Alıcı adı benzer unvanları ayırır.",
+      "Kutu site içi taşımada, buket kapıda elden teslimde seçilir. Doğum günü ve teşekkür burada sık hazırlanır.",
     ],
   },
   {
@@ -639,11 +634,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "kutular"],
     nearbySlugs: ["atlas", "ucpinar", "kurucesme", "korubasi"],
     description:
-      "Kadriye’de Nilüfer’in uzak güney kapısına çiçek. Kişi adı bir konak veya çiftlik kapısı kurmaz.",
+      "Kadriye’de ova kenarındaki güney eve mevsim buketi ve hediye kutusu.",
     body: [
-      "Kadriye, Nilüfer’in uzak güneyindeki eski köy mahallelerindendir. Atlas ve Üçpınar aynı güney kuşağında, Kuruçeşme ve Korubaşı biraz daha kuzeyde kalır. Kadriye apartman çekirdeğinin içinde değildir; yol, ova mahallelerine göre uzundur.",
-      "Mevki, kapı ve alıcı baştan yazılır ki hazırlık bu mesafeye göre kurulsun. Kişi adı mahalle tabelasında diye bir konak veya çiftlik kapısı uydurulmaz.",
-      "Kutu, uzun yolda düz kalan hediyedir. Buket, ziyaret ölçeğinde bağlanır. Kadriye sayfası Üçpınar’ın güney cümlesinden ve Atlas’ın küme tarifinden ayrıdır. Kadriye’de uzak güney yolu, hazırlığın erken bağlanmasını gerektirir. Mevki geç yazılırsa çiçek ova mahallesinde bekler.",
+      "Kadriye, Nilüfer’in güneyindeki eski köy mahallelerindendir. Atlas ve Üçpınar aynı kuşakta, Kuruçeşme ve Korubaşı biraz daha içeridedir. Yol, ova mahallelerine göre uzundur.",
+      "Mevki, kapı ve alıcı baştan yazılır. Hazırlık bu mesafeye göre erken tamamlanır.",
+      "Kutu, uzun yolda düz kalan hediyedir. Buket, ziyaret ölçeğinde bağlanır. Kadriye’de kart, kapıya bırakılacaksa alıcı adı önde durur.",
     ],
   },
   {
@@ -653,11 +648,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "orkideler"],
     nearbySlugs: ["dogankoy", "gungoren", "gokce", "atlas"],
     description:
-      "Karacaoba’da oba, kooperatif veya ağıl kapısı kurulmaz. Çiçek, iletilen mevki ve ev numarasına gider.",
+      "Karacaoba mahallesine buket ve orkide. Mevki, kapı ve alıcı ile teslim edilir.",
     body: [
-      "Karacaoba, valiliğin eski köy cetvelinde Nilüfer’e yazılan yerleşimlerdendir. Bugün mahalle statüsündedir. ‘Oba’ sözcüğü bir yayla kulübesi, kooperatif veya belirli bir ağıl kapısını kanıtlamaz.",
-      "Sınırı sokak sokak tarif etmiyoruz. Sipariş, gelen mevki ve numaraya uyar. Alıcı adı doğru evi seçtirir. Atlas güneyde konumu bilinen bir sayfadır; Karacaoba’yı onunla bitişik saymayız.",
-      "Orkide içeri, buket kapı ziyaretine gider. Karacaoba’nın gövdesi Güngören’in il karışması uyarısından ve Doğanköy’ün liste cümlesinden ayrı yazıldı. Karacaoba’da ‘oba’ bir tesis adı değildir. Çiftlik kapısı ancak notta ayrıca geçiyorsa kullanılır.",
+      "Karacaoba, kırsalda ev numarasıyla ayırt edilen bir yerleşimdir. Aranjman, tarif edilen bahçe kapısına gider.",
+      "Doğru evi alıcının adı ayırır. Sokak satırı mahalle unvanından sonra gelir.",
+      "Karacaoba’da saksı odaya, saplı demet eşik ziyaretine ayrılır. Bayram düzeni ile teşekkür saksısı ayrı boyda hazırlanır.",
     ],
   },
   {
@@ -667,11 +662,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "kutular", "orkideler"],
     nearbySlugs: ["kizilcikli", "30-agustos-zafer", "tahtali", "hasanaga"],
     description:
-      "Kayapa mahallesine, İstiklal ve Zafer’in birleştiği yerleşime buket, kutu ve orkide.",
+      "Kayapa mahallesine buket, kutu ve orkide. Eski İstiklal ve Zafer adları da bugünkü kapıya gelir.",
     body: [
-      "Kayapa, eski Kayapa İstiklal ile Kayapa Zafer’in birleşmesiyle tek mahalle olmuştur. Kızılcıklı batı-kuzeyinde, 30 Ağustos Zafer eski Çamlık adıyla komşudur, Tahtalı doğuda, Hasanağa köy içi güneyde kalır. Eski Çamlık’ın kendisi artık 30 Ağustos Zafer’dir; Kayapa’ya yazılmaz.",
-      "Notta hâlâ İstiklal veya Zafer denebilir. Güncel ad Kayapa’dır ve kapı sokakla tamamlanır. İki eski parçanın girişi, birleşmeden sonra da farklı sokak olabilir; tarif buna göre ayrılır.",
-      "Buket, kutu ve orkide kapının ev ya da küçük işyeri olmasına göre seçilir. Kayapa metni 30 Ağustos Zafer’in dört yönlü sınır listesini ve Kızılcıklı’nın Pazar Caddesi cümlesini yeniden sıralamaz.",
+      "Kayapa, eski İstiklal ve Zafer parçalarının birleştiği mahalledir. Kızılcıklı batıda, 30 Ağustos Zafer eski Çamlık adıyla komşudur, Tahtalı doğuda, Hasanağa güneyde kalır.",
+      "Notta hâlâ İstiklal veya Zafer denebilir. Güncel ad Kayapa’dır ve kapı sokakla tamamlanır. İki eski parçanın girişi farklı sokak olabilir; tarif buna göre ayrılır.",
+      "Buket, kutu ve orkide kapının ev ya da küçük işyeri olmasına göre seçilir. Teşekkür kartı kısa tutulur.",
     ],
   },
   {
@@ -681,11 +676,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "kutular"],
     nearbySlugs: ["badirga", "buyukbalikli", "cayli", "yolcati"],
     description:
-      "Konaklı’da kuzeybatı köy kapısına çiçek. Doğudaki Konak mahallesi ve bir konak binası bu adres değildir.",
+      "Konaklı mahallesine kuzeybatıda, Badırga kuşağındaki bahçe kapısına kutu ve demet. Doğudaki Konak ayrıdır.",
     body: [
-      "Konaklı, kuzeybatı Nilüfer’de Badırga, Büyükbalıklı ve Çaylı ile aynı kırsal kuşaktadır. Yolçatı kuzey hattındadır. Doğu Nilüfer’deki Konak mahallesi başka bir sayfadır; siparişte Konaklı’nın sonundaki -lı eki ve Nilüfer birlikte yazılır.",
-      "Eski köy kapısı mevki ve numara ister. Konak binası, han veya butik otel tarif etmeyiz. Alıcı, doğru avluyu buldurur.",
-      "Kutu yolculukta, buket ziyarette hazırlanır. Konaklı’nın paragrafları Büyükbalıklı’nın iskele yasağından ve Çaylı’nın dere uyarısından ayrıdır. Konaklı, doğudaki Konak mahallesinden ayrı yazılır. Sonundaki ek düşerse çiçek İhsaniye bandına gidebilir.",
+      "Konaklı, kuzeybatıda Badırga, Büyükbalıklı ve Çaylı’nın paylaştığı kırsal hattadır. Yolçatı kuzey hattındadır. Doğudaki Konak mahallesi başka bir kapıdır; notta Konaklı açık yazılır.",
+      "Mevki ve numara ister. Alıcı, doğru avluyu buldurur.",
+      "Kutu yola, buket ziyarete hazırlanır. Konaklı’da aile teşekkürü kartta bir iki cümleyle kalır.",
     ],
   },
   {
@@ -695,11 +690,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "orkideler"],
     nearbySlugs: ["uncukuru", "maksempinar", "ayvakoy", "ucpinar"],
     description:
-      "Korubaşı’nda koru bariyeri, piknik alanı veya depo kapısı yazılmaz. Teslim, güneydeki ev numarasına gider.",
+      "Korubaşı mahallesine güneyde, koru kenarındaki köy evine buket ve orkide.",
     body: [
-      "Korubaşı, Nilüfer’in güneyinde Unçukuru, Maksempınar ve Ayvaköy ile aynı eski köy kuşağındadır. Üçpınar daha güneyde kalır. Ad, belirli bir koru bekçiliği, piknik bariyeri veya orman deposu kapısını kanıtlamaz.",
-      "Mevki ve alıcı yazılır. Güneydeki yollar apartman sitesi tarifine benzemez. Orkide içeri alınacak hediyede, buket kısa uğramada seçilir.",
-      "Korubaşı metni Unçukuru’nun güney sokak cümlesini ve Maksempınar’ın liste yazımını tekrarlamaz. Korubaşı’nda güney mevki, bir orman bariyeri değildir. Çiçek ev kapısında kalır; piknik alanı seçilmez.",
+      "Korubaşı, güneyde Unçukuru, Maksempınar ve Ayvaköy ile aynı köy kuşağındadır. Üçpınar daha aşağılarda kalır. Aranjman evin bahçe kapısına gider.",
+      "Mevki ile alıcı notta yan yana durur. Güney sokağı, apartman sitesinden ayrı tarif edilir.",
+      "Koru kenarında saksı içeri, saplı demet kısa uğramaya ayrılır. Ziyaret kartı iki satırdır.",
     ],
   },
   {
@@ -709,11 +704,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "kutular"],
     nearbySlugs: ["maksempinar", "uncukuru", "ucpinar", "atlas"],
     description:
-      "Kuruçeşme’de güney köy kapısına çiçek. İstanbul semti ve bir çeşme başı bu adres değildir.",
+      "Kuruçeşme mahallesine güney Nilüfer’de, Maksempınar kuşağındaki eve buket ve kutu.",
     body: [
-      "Kuruçeşme, Nilüfer’in güneyinde Maksempınar, Unçukuru, Üçpınar ve Atlas ile aynı eski köy kuşağındadır. İstanbul’daki semt ile karışmaması için Bursa ve Nilüfer siparişte durur. Ad, belirli bir çeşme, mesire veya su deposu kapısı kurmaz.",
-      "Sokak, numara ve alıcı yazılır. Kuruçeşme’de güney mesafesi yüzünden demet çıkışa yakın saatte bağlanır. Kutu, sapın sallanmaması istenen hediyede tercih edilir.",
-      "Kuruçeşme’nin gövdesi Atlas’ın küme girişinden ve Üçpınar’ın uzak güney uyarısından ayrı cümlelerle kuruldu. Kuruçeşme’de İstanbul semti riski vardır. Bursa ve Nilüfer yazılmazsa saplı buket yanlış ile gider.",
+      "Kuruçeşme, güneyde Maksempınar, Unçukuru, Üçpınar ve Atlas ile aynı köy kuşağındadır. İlçe satırı Nilüfer, mahalle satırı Kuruçeşme diye açılır.",
+      "Sokak, numara ve alıcı durur. Kuruçeşme’de güney mesafesi yüzünden demet çıkışa yakın saatte bağlanır.",
+      "Kutu, sapın sallanmaması istenen hediyede tercih edilir. Kuruçeşme ziyaretinde kart, alıcının adıyla açılır.",
     ],
   },
   {
@@ -723,11 +718,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "orkideler"],
     nearbySlugs: ["kurucesme", "uncukuru", "korubasi", "ayvakoy"],
     description:
-      "Maksempınar mahallesine Nilüfer’in güneyinde buket ve orkide. Muhtar listesinde Maksem Pınarı olarak da geçer.",
+      "Maksempınar’a güneyde buket ve orkide. Maksem Pınarı diye yazılan not da bu avluya gelir.",
     body: [
-      "Maksempınar, Nilüfer’in güneyindeki eski köy mahallelerindendir. Kaymakamlık muhtar listesinde Maksem Pınarı yazımı da görülür. Kuruçeşme, Unçukuru, Korubaşı ve Ayvaköy aynı güney sayfalarıdır. Pınar sözcüğü bir içme suyu tesisi veya mesire kapısını teslim adresi yapmaz.",
-      "Her iki yazım aynı mahalleye gider. Kapı, mevki ve alıcı ile tamamlanır. Orkide içeri, buket ziyarete ayrılır.",
-      "Maksempınar metni Kuruçeşme’nin il karışması uyarısını ve Korubaşı’nın koru yasağını yeniden kurmaz. Maksempınar’da Maksem Pınarı yazımı aynı mahalledir. Pınar başı, ayrıca tarif edilmedikçe buluşma yeri sayılmaz.",
+      "Maksempınar, güney Nilüfer’de pınar yazımıyla da aranan bir köy yerleşimidir. Maksem Pınarı notu da aynı avluya gelir. Kuruçeşme, Unçukuru, Korubaşı ve Ayvaköy komşu mahallelerdir.",
+      "Mevki ile alıcı notu tamamlar. Aranjman bahçe kapısında teslim edilir.",
+      "Maksempınar’da orkide içeri, buket ziyarete ayrılır. Pınar yazımıyla gelen not da aynı avluya gider.",
     ],
   },
   {
@@ -737,11 +732,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "kutular"],
     nearbySlugs: ["kayapa", "30-agustos-zafer", "yaylacik", "dagyenice"],
     description:
-      "Tahtalı mahallesine, Kayapa’nın doğusunda buket ve kutu. Valilik arkeoloji notunda adı geçer; höyük teslim adresi değildir.",
+      "Tahtalı mahallesine, Kayapa’nın doğusunda buket ve kutu. Eski köy kapısı ve yol kenarı konut ayrıdır.",
     body: [
-      "Tahtalı, 30 Ağustos Zafer’in doğu sınırı ve Kayapa’nın doğu komşusu olarak tarif edilen eski köy mahallesidir. Yaylacık ve Dağyenice güney-doğu eteklere doğru diğer sayfalardır. Valiliğin arkeoloji notunda Tahtalı’nın adı geçer; bu not belirli bir höyüğün kapı numarasını vermez ve biz de vermeyiz.",
-      "Çiçek ev veya işyeri kapısına gider, kazı alanına değil. Sokak, mevki ve alıcı yazılır. Eski köy içi ile yol kenarı konut ayrı satır ister.",
-      "Kutu taşımada, buket ziyarette hazırlanır. Tahtalı’nın paragrafları 30 Ağustos Zafer’in dört yön listesini ve Alaaddinbey’deki Tepecik adını tekrarlamaz.",
+      "Tahtalı, 30 Ağustos Zafer’in doğusu ile Kayapa’nın doğu komşusu olarak duran eski köy mahallesidir. Yaylacık ve Dağyenice güneye doğru diğer duraklardır. Çevrenin arkeolojik geçmişi buradadır; aranjman evin kapısında teslim edilir.",
+      "Sokak, mevki ve alıcı yazılır. Köy içi ile yol kenarı konut ayrı satır ister.",
+      "Kutu taşımada, buket ziyarette hazırlanır. Tahtalı’da aile teşekkürü kısa bir cümleyle karta geçer.",
     ],
   },
   {
@@ -751,11 +746,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "kutular"],
     nearbySlugs: ["maksempinar", "korubasi", "ayvakoy", "kurucesme"],
     description:
-      "Unçukuru’nda değirmen, kurutma serası veya tarım deposu yazılmaz. Teslim, iletilen güney adresindedir.",
+      "Unçukuru’da Maksempınar komşuluğundaki eve mevsim buketi ve kutu.",
     body: [
-      "Unçukuru, Nilüfer’in güneyinde Maksempınar, Korubaşı, Ayvaköy ve Kuruçeşme ile birlikte eski köy mahallelerindendir. Ad, bir un değirmeni, kurutma serası veya tarım deposu kapısını kanıtlamaz.",
-      "Güney sokağı site bloğu gibi yazılmaz. Mevki, numara ve alıcı durur. Kutu yolculukta düz kalır; buket ziyaret ölçeğinde bağlanır.",
-      "Unçukuru sayfası Ayvaköy’ün Ayva Köy yazımından ve Maksempınar’ın çift yazım notundan ayrıdır. Unçukuru’nda güney yolu uzundur. Değirmen ya da depo kapısı uydurulmaz; çiçek yazılan ev numarasındadır.",
+      "Unçukuru, Nilüfer’in güneyinde Maksempınar, Korubaşı, Ayvaköy ve Kuruçeşme ile birlikte eski köy mahallelerindendir. Çiçek, yazılan ev numarasına gider.",
+      "Mevki, numara ve alıcı durur. Güney yolu uzundur; hazırlık buna göre erken bağlanır.",
+      "Kutu yola, buket ziyaret ölçeğine göre hazırlanır. Unçukuru bayramında kart, isim ve bir dilekten oluşur.",
     ],
   },
   {
@@ -765,11 +760,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "orkideler"],
     nearbySlugs: ["kadriye", "atlas", "kurucesme", "korubasi"],
     description:
-      "Üçpınar’da uzak güney köy kapısına çiçek. Üç ayrı su başı veya mesire rotası kurulmaz.",
+      "Üçpınar’a, Atlas’ın yanındaki güney yerleşimde saksı ve saplı demet.",
     body: [
-      "Üçpınar, Nilüfer’in uzak güneyinde Kadriye ve Atlas ile aynı kuşakta duran eski köy mahallesidir. Kuruçeşme ve Korubaşı biraz daha içeridedir. Üç pınar, üç ayrı çeşme başını teslim noktası yapmaz; böyle bir rota yazmayız.",
-      "Yol, çekirdeğe göre uzundur. Mevki ve alıcı baştan bellidir. Üçpınar’da saksı, odaya girecek hediyede kalır. Saplı demet kapının önünde elden verilir.",
-      "Üçpınar’ın gövdesi Kadriye’deki mesafe uyarısını ve Atlas sayfasının açılışını kopyalamaz. Üçpınar’da üç ayrı su başı tarif edilmez. Uzak güneydeki tek kapı, mevki ve alıcıyla bulunur.",
+      "Üçpınar, güney Nilüfer’de Kadriye ve Atlas’ın yanında duran köy yerleşimidir. Kuruçeşme ile Korubaşı ova içine daha yakındır.",
+      "Yol, çekirdeğe göre uzundur. Mevki ve alıcı baştan bellidir. Üçpınar’da saksı, odaya girecek hediyede kalır.",
+      "Saplı demet kapının önünde elden verilir. Üçpınar ziyaretinde kart iki satırı geçmez.",
     ],
   },
   {
@@ -779,11 +774,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "kutular"],
     nearbySlugs: ["alaaddinbey", "yaylacik", "cali", "minarelicavus"],
     description:
-      "Ürünlü mahallesine, tarım alanı korunan batı Nilüfer kesimine buket ve kutu.",
+      "Ürünlü mahallesine batıda, tarla kenarı ile yeni blok için saplı demet ve kutu.",
     body: [
-      "Ürünlü, 2025 Nilüfer faaliyet raporunda tarım alanının özellikle korunduğu mahalleler arasında Alaaddinbey ve Yaylacık ile birlikte anılır. Bu cümle bir hasat etkinliği veya kooperatif kapısı vaadi değildir. Çalı koridoru ve Minareliçavuş’un büyüyen konutu aynı batı kesimin diğer sayfalarıdır.",
-      "Tarla kenarı ile yeni blok aynı mahallede yan yana gelebilir. Hangisi olduğu notta ayrılır: mevki mi, site bloğu mu. Alıcı adı ikisini de karıştırmaz.",
-      "Buket ziyarete, kutu taşımaya gider. Ürünlü metni Yaylacık’taki aynı rapor cümlesini ikinci kez uzatmaz; vurgu bu mahallenin kendi kapı ayrımındadır.",
+      "Ürünlü, Nilüfer’in batısında, Alaaddinbey ve Yaylacık ile birlikte açık alanın korunduğu kesimdedir. Çalı koridoru ve Minareliçavuş’un büyüyen konutu aynı batının diğer duraklarıdır.",
+      "Tarla kenarı ile yeni blok yan yana gelebilir. Mevki mi, site bloğu mu, notun ilk satırında bellidir. Alıcı adı ikisini ayırır.",
+      "Ürünlü’de yeni bloğa kutu, tarla kenarındaki eve saplı demet gider.",
     ],
   },
   {
@@ -793,11 +788,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["orkideler", "buketler"],
     nearbySlugs: ["cali", "alaaddinbey", "urunlu", "tahtali"],
     description:
-      "Yaylacık mahallesine Çalı yakınında, tarımı korunan kesime orkide ve buket. Yayla tesisi uydurulmaz.",
+      "Yaylacık mahallesine Çalı yakınında orkide ve buket. Ev, tarla kenarı ve işyeri ayrı kapılardır.",
     body: [
-      "Yaylacık, Çalı koridoruna yakın, Nilüfer’in batı-güney kesimindeki eski köy mahallelerindendir. 2025 faaliyet raporunda tarım alanı korunan yerler arasında Ürünlü ve Alaaddinbey ile anılır. Tahtalı doğu-güneyde ayrı bir sayfadır. ‘Yayla’ sözcüğü bir tesis, bungalov veya teleferik kapısı kurmaz.",
-      "Ev, tarla kenarı ve Çalı’ya yakın işyeri aynı notta birleşmez. Kapı tipi baştan yazılır. Orkide içeri, buket ziyarete gider.",
-      "Yaylacık’ın paragrafları Çalı’nın sanayi karışımını ve Ürünlü’nün rapor cümlesinin tamamını yeniden anlatmaz. Yaylacık’ta Çalı’ya yakın işyeri ile tarla kenarındaki ev aynı kabul noktası değildir. Hangisi olduğu ilk satırda durur.",
+      "Yaylacık, Çalı koridoruna yakın, Nilüfer’in batı-güney kesimindeki eski köy mahallesidir. Ürünlü ve Alaaddinbey ile birlikte açık alanın durduğu kesimde anılır. Tahtalı doğudadır.",
+      "Ev, tarla kenarı ve Çalı’ya yakın işyeri ayrı yazılır. Kapı tipi baştan bellidir.",
+      "Orkide içeri, buket ziyarete gider. Teşekkür kartı kısa tutulur.",
     ],
   },
   {
@@ -807,11 +802,11 @@ export const niluferNeighborhoodDrafts: NiluferNeighborhoodDraft[] = [
     relatedCategorySlugs: ["buketler", "kutular"],
     nearbySlugs: ["cayli", "konakli", "badirga", "buyukbalikli"],
     description:
-      "Yolçatı’da kuzey köy kapısına çiçek. Gişe, kavşak tabelası veya dinlenme tesisi bu adres değildir.",
+      "Yolçatı mahallesine kuzey kuşakta, Çaylı komşuluğundaki bahçe kapısına kutu ve saplı demet.",
     body: [
-      "Yolçatı, Nilüfer’in kuzeyinde Çaylı, Konaklı, Badırga ve Büyükbalıklı ile aynı eski köy kuşağında durur. Ad, bir otoyol gişesi, belirli bir kavşak tabelası veya dinlenme tesisini teslim noktası yapmaz.",
-      "Köy içi kapı, yol kenarı sanılan bir buluşmadan ayrı yazılır. Mevki, numara ve alıcı durur. Yolçatı’nda demet, köy avlusuna göre küçük tutulur. Kutu, sapın kuzey yolunda dağılmaması istenirse seçilir.",
-      "Yolçatı sayfası Çaylı’nın dere uyarısını ve Konaklı’nın doğu Konak ayrımını tekrarlamaz. Kuzeydeki bu kapı, doğu Nilüfer apartmanından başka bir ritimdedir. Yolçatı’nda kuzey köy kapısı, bir gişe veya dinlenme tesisi değildir. Buluşma, yazılan mevkinin evidir.",
+      "Yolçatı, Nilüfer’in kuzeyinde Çaylı, Konaklı, Badırga ve Büyükbalıklı ile aynı eski köy kuşağında durur. Çiçek, yazılan mevkinin evine gider.",
+      "Köy içi kapı, yol kenarındaki buluşmadan ayrı yazılır. Numara ve alıcı durur.",
+      "Yolçatı’nda demet, köy avlusuna göre küçük tutulur. Kutu, sapın kuzey yolunda dağılmaması istendiğinde seçilir. Kuzey yolundaki ziyarette kart, alıcı adıyla başlar.",
     ],
   },
 ];

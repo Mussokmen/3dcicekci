@@ -9,7 +9,7 @@ export const productTrustChips = [
 ] as const;
 
 export const productOrderSteps = [
-  "Bu ürünü seçtiniz; sepet veya üyelik yoktur.",
+  "Bu ürünü seçtiniz; sepet veya üyelik açılmaz.",
   "Mahalle, istenen saat ve varsa kart notunu yazın.",
   "Teslimi WhatsApp’ta netleştiririz.",
 ] as const;

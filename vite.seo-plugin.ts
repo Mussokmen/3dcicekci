@@ -93,15 +93,15 @@ function collectRoutes(root: string): RouteMeta[] {
   const cookieSummary =
     "Vitrin, tarayıcının temel işleyişiyle açılır. Pazarlama çerezi, sepet çerezi veya izleme kaydı tutulmaz. Çerez tercihleri tarayıcı ayarından yönetilir.";
   const aboutSummary =
-    "Bursa'nın Çiçekçisi, Bursa'da taze çiçek hazırlayan yerel bir atölyedir. Fotoğraflar kendi çekimlerimizdir. Sipariş WhatsApp ile alınır; teslim aynı gün ve dikkatli yapılır.";
+    "Bursa'nın Çiçekçisi, Bursa'da taze çiçek hazırlayan yerel bir atölyedir. Fotoğraflar kendi çekimlerimizdir. Teslim aynı gün ve dikkatli yapılır.";
   const contactSummary =
     "Sipariş ve teslim için WhatsApp ile yazın veya telefon edin. Hat 7/24 açıktır. Hizmet bölgesi Bursa ili. Teslim aynı gün planlanır.";
   const bursaSummary =
-    "Bursa’nın on yedi ilçesine buket, orkide, kutu ve çelenk. Sipariş WhatsApp ile alınır; teslim aynı gün planlanır. Görükle, Nilüfer mahallesidir.";
+    "Bursa’nın on yedi ilçesine buket, orkide, kutu ve çelenk. Teslim aynı gün planlanır. Görükle, Nilüfer mahallesidir.";
   const customSummary =
-    "Ölçü ve renge göre buket, kutu, orkide ve çelenk atölyede hazırlanır. Sipariş WhatsApp ile alınır. Teslim Bursa ili içindedir.";
+    "Ölçü ve renge göre buket, kutu, orkide ve çelenk atölyede hazırlanır. Teslim Bursa ili içindedir.";
   const occasionSummary =
-    "Doğum günü, teşekkür, hasta ziyareti, çelenk ve ofis orkidesi için Bursa teslimi. Sipariş WhatsApp ile alınır; çiçek atölyede taze hazırlanır.";
+    "Doğum günü, teşekkür, hasta ziyareti, çelenk ve ofis orkidesi için Bursa teslimi. Çiçek atölyede taze hazırlanır.";
   const guideSummary =
     "Bursa çiçek gönderimi, WhatsApp siparişi, orkide, çelenk, kart notu ve aynı gün teslim üzerine atölye notları.";
 

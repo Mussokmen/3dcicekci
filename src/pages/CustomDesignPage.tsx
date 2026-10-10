@@ -34,7 +34,7 @@ export function CustomDesignPage() {
         <p>
           Referans olarak vitrindeki bir fotoğrafı gönderebilir veya “daha alçak, daha açık pembe, kartlı”
           gibi net bir cümle yazabilirsiniz. Mevsim nedeniyle çiçek cinsi değişebilir; bunu baştan söyleriz.
-          Düzen, kendi atölye çekimlerimizdeki ölçeği esas alır. Sipariş WhatsApp ile alınır.
+          Düzen, kendi atölye çekimlerimizdeki ölçeği esas alır. Ölçü ve renk notu kısa tutulur.
         </p>
         <p>
           Teslim Bursa ili içindedir. Mahalle, alıcı ve kart notu aynı WhatsApp mesajında yer alır.
