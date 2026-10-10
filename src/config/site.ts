@@ -1,3 +1,5 @@
+import { getDistrictAreas, getNeighborhoodsByParent } from "./areas.ts";
+
 export const site = {
   name: "Bursa'nın Çiçekçisi",
   /**
@@ -91,24 +93,9 @@ export function floristJsonLd() {
     areaServed: [
       { "@type": "City", name: "Bursa" },
       { "@type": "AdministrativeArea", name: "Bursa ili" },
-      ...[
-        "Osmangazi",
-        "Nilüfer",
-        "Yıldırım",
-        "Mudanya",
-        "Gemlik",
-        "Görükle",
-        "İnegöl",
-        "Gürsu",
-        "Kestel",
-        "Yenişehir",
-        "İznik",
-        "Karacabey",
-        "Mustafakemalpaşa",
-        "Orhangazi",
-      ].map((name) => ({
+      ...[...getDistrictAreas(), ...getNeighborhoodsByParent("nilufer")].map((area) => ({
         "@type": "AdministrativeArea",
-        name,
+        name: area.shortName,
       })),
     ],
     address: {

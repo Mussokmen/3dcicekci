@@ -13,7 +13,8 @@ export function BursaIndexPage() {
   const districts = getDistrictAreas();
 
   return (
-    <main className="mx-auto max-w-3xl px-4 py-10 md:px-6">
+    <main className="mx-auto max-w-6xl px-4 py-10 md:px-6">
+      <div className="max-w-3xl">
       <Seo
         title="Bursa Çiçek Gönderimi"
         description="Bursa’nın on yedi ilçesine buket, orkide, kutu ve çelenk. Sipariş WhatsApp ile alınır; teslim aynı gün planlanır."
@@ -55,6 +56,7 @@ export function BursaIndexPage() {
       </div>
 
       <CategoryLinks slugs={["buketler", "orkideler", "kutular", "celenkler"]} />
+      </div>
 
       <h2 className="mt-12 text-2xl tracking-tight text-stone-900">İlçeler</h2>
       <ul className="mt-4 grid gap-3 sm:grid-cols-2">
@@ -80,10 +82,23 @@ export function BursaIndexPage() {
         return (
           <section key={parent}>
             <h2 className="mt-12 text-2xl tracking-tight text-stone-900">{title}</h2>
-            <ul className="mt-4 grid gap-2 text-sm sm:grid-cols-2">
+            <ul
+              className={
+                parent === "nilufer"
+                  ? "mt-4 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4"
+                  : "mt-4 grid gap-2 text-sm sm:grid-cols-2"
+              }
+            >
               {items.map((item) => (
                 <li key={item.path}>
-                  <Link to={item.path} className="underline-offset-4 hover:underline">
+                  <Link
+                    to={item.path}
+                    className={
+                      parent === "nilufer"
+                        ? "block break-words rounded-xl bg-white/70 px-3 py-2 text-sm text-stone-800 hover:bg-white"
+                        : "underline-offset-4 hover:underline"
+                    }
+                  >
                     {item.shortName}
                   </Link>
                 </li>
@@ -123,9 +138,13 @@ export function BursaAreaPage() {
 
   const parent = area.parentSlug ? getServiceAreaBySlug(area.parentSlug) : undefined;
   const children = getNeighborhoodsByParent(area.slug);
+  const nearby = (area.nearbySlugs ?? [])
+    .map((slug) => getServiceAreaBySlug(slug))
+    .filter((item): item is NonNullable<typeof item> => Boolean(item));
+  const wide = children.length > 12;
 
   return (
-    <main className="mx-auto max-w-3xl px-4 py-10 md:px-6">
+    <main className={`mx-auto px-4 py-10 md:px-6 ${wide ? "max-w-6xl" : "max-w-3xl"}`}>
       <Seo
         title={area.name}
         description={area.description}
@@ -133,6 +152,7 @@ export function BursaAreaPage() {
         breadcrumbs={[
           { name: "Ana Sayfa", path: "/" },
           { name: "Bursa Teslimatı", path: "/bursa" },
+          ...(parent ? [{ name: parent.shortName, path: parent.path }] : []),
           { name: area.shortName, path: area.path },
         ]}
       />
@@ -151,20 +171,61 @@ export function BursaAreaPage() {
         <span className="px-2">/</span>
         {area.shortName}
       </p>
-      <h1 className="mt-4 text-4xl tracking-tight text-stone-900">{area.name}</h1>
+      <div className={wide ? "max-w-3xl" : undefined}>
+      <h1 className="mt-4 text-4xl tracking-tight break-words text-stone-900">{area.name}</h1>
       <div className="mt-6 space-y-4 text-base leading-relaxed text-stone-600">
-        {area.body.map((paragraph) => (
-          <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+        {area.body.map((paragraph, index) => (
+          <p key={`${area.slug}-${index}`}>{paragraph}</p>
         ))}
       </div>
       <CategoryLinks slugs={area.relatedCategorySlugs} />
+      {parent && area.kind === "neighborhood" ? (
+        <p className="mt-6 text-sm text-stone-600">
+          <Link to={parent.path} className="underline-offset-4 hover:underline">
+            {parent.shortName} çiçek gönderimi
+          </Link>
+        </p>
+      ) : null}
+      {nearby.length > 0 ? (
+        <>
+          <h2 className="mt-10 text-xl tracking-tight text-stone-900">
+            {area.nearbyPrecise === false ? "Nilüfer’den diğer mahalleler" : "Yakın mahalleler"}
+          </h2>
+          <ul className="mt-3 flex flex-wrap gap-2 text-sm">
+            {nearby.map((item) => (
+              <li key={item.path}>
+                <Link
+                  to={item.path}
+                  className="inline-block rounded-full bg-white/80 px-3 py-1.5 text-stone-800 hover:bg-white"
+                >
+                  {item.shortName}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </>
+      ) : null}
+      </div>
       {children.length > 0 ? (
         <>
-          <h2 className="mt-10 text-xl tracking-tight text-stone-900">Bağlı bölgeler</h2>
-          <ul className="mt-3 space-y-2 text-sm">
+          <h2 className="mt-10 text-xl tracking-tight text-stone-900">Mahalleler</h2>
+          <ul
+            className={
+              wide
+                ? "mt-4 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4"
+                : "mt-4 grid gap-2 text-sm sm:grid-cols-2"
+            }
+          >
             {children.map((item) => (
               <li key={item.path}>
-                <Link to={item.path} className="underline-offset-4 hover:underline">
+                <Link
+                  to={item.path}
+                  className={
+                    wide
+                      ? "block break-words rounded-xl bg-white/70 px-3 py-2 text-sm text-stone-800 hover:bg-white"
+                      : "underline-offset-4 hover:underline"
+                  }
+                >
                   {item.shortName}
                 </Link>
               </li>
