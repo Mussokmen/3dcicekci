@@ -335,9 +335,9 @@ const baseServiceAreas: ServiceArea[] = [
     relatedCategorySlugs: ["buketler", "orkideler", "kutular", "celenkler"],
     body: [
       "Çekirge, Osmangazi’ye bağlı, Bursa’nın eski semtlerindendir ve kaplıcalarıyla bilinir. Hüdavendigar Külliyesi buradadır; semt Hüdavendigar ve I. Murat adlarıyla da anılmıştır. Mevlid yazarı Süleyman Çelebi’nin mezarı, Lâmi Çelebi Mescidi ve Karagöz ile Hacivat’ın temsilî mezarı da bu mahallededir.",
-      "Çekirge’ye çiçek ev, iş yeri veya hastane adresine hazırlanır. Çekirge siparişi atölyede taze kurulur; ambalaj yola çıkana kadar korunur. Kart notunu Çekirge siparişinde siz yazarsınız. Kaplıca, konak ya da apartman adresinde bina adı açık yazılır.",
+      "Çekirge’ye çiçek siparişlerinizi eve, iş yerine veya hastaneye teslim ediyoruz. Çiçekler atölyemizde taze olarak hazırlanır ve özenle paketlenir. Kart notunuz, belirlediğiniz cümleyle siparişe eklenir.",
       "Kaplıca ziyaretine Çekirge için [buket](/magaza/buketler) götürülür. Konakta duracak bir bitki [orkide](/magaza/orkideler) olur. Masaya [kutu çiçek](/magaza/kutular) bırakılır. Anma gününde [çelenk](/magaza/celenkler) hazırlanır.",
-      "Çekirge adresini ve kart notunu WhatsApp’tan yazabilirsiniz.",
+      "Siparişinizi WhatsApp düğmesinden kolayca iletebilirsiniz.",
     ],
   },
   {
@@ -348,13 +348,13 @@ const baseServiceAreas: ServiceArea[] = [
     kind: "neighborhood",
     parentSlug: "osmangazi",
     description:
-      "Heykel’e çiçek gönderimi. Heykel, Osmangazi Belediyesi’nin mahalle listesinde ayrı bir ad olarak yer almaz.",
+      "Heykel’e çiçek gönderimi. Heykel, Bursa’nın tarihî merkezinde, Atatürk heykelinin bulunduğu Hükümet Meydanı ve çevresine verilen addır.",
     relatedCategorySlugs: ["buketler", "orkideler", "kutular", "celenkler"],
     body: [
-      "Heykel, Osmangazi Belediyesi’nin mahalle listesinde ayrı bir ad olarak yer almaz. Bursa’da bu ad, Atatürk heykelinin bulunduğu Hükümet Meydanı çevresi için kullanılır.",
-      "Çiçek, Heykel adresine ev, iş yeri veya hastane için hazırlanır. Atölyede taze hazırlanan Heykel çiçeği, ambalajı bozulmadan teslim edilir. Heykel’e gidecek kartın metnini siz belirlersiniz. Hükümet Meydanı çevresindeki adreste bina adı yazılır.",
+      "Heykel, Bursa’nın tarihî merkezinde, Atatürk heykelinin bulunduğu Hükümet Meydanı ve çevresine verilen addır. Anıtı heykeltıraş Nijat Sirel yapmıştır; 29 Ekim 1931’de açılmıştır. Bronz heykel, mermer kaide üzerinde atlı bir kumandan olarak durur.",
+      "Heykel çevresindeki iş yerlerine, muayenehanelere ve hastanelere çiçek gönderiyoruz. Açılış, tebrik ve geçmiş olsun siparişleri atölyemizde taze hazırlanır ve şık bir ambalajla teslim edilir. Kart notunu siz belirlersiniz.",
       "Heykel içindeki bir iş yerine [kutu çiçek](/magaza/kutular) uygundur. Ziyarete [buket](/magaza/buketler), kalıcı bitkiye [orkide](/magaza/orkideler) eşlik eder. Anma ve cenaze için [çelenk](/magaza/celenkler) hazırlanır.",
-      "Beğendiğiniz düzeni WhatsApp’tan, Heykel adresiyle birlikte haber verebilirsiniz.",
+      "Siparişinizi WhatsApp düğmesinden kolayca iletebilirsiniz.",
     ],
   },
   {
@@ -369,9 +369,9 @@ const baseServiceAreas: ServiceArea[] = [
     relatedCategorySlugs: ["buketler", "orkideler", "kutular", "celenkler"],
     body: [
       "Demirtaş, Osmangazi’ye bağlı bir mahalledir. Bir dönem ayrı belediyeydi; eski belediye binası bugün halk eğitim merkezi olarak kullanılır. TOFAŞ fabrikası bu semttedir.",
-      "Demirtaş’a çiçek ev, iş yeri veya hastane adresine hazırlanır. Demirtaş siparişi atölyede taze kurulur; ambalaj yola çıkana kadar korunur. Kart notunu Demirtaş siparişinde siz yazarsınız. Fabrika ya da iş yeri siparişinde firma adı ve alıcının adı yazılır.",
+      "Demirtaş çevresindeki iş yerlerine, muayenehanelere ve hastanelere çiçek gönderiyoruz. Açılış, tebrik ve geçmiş olsun siparişleri atölyemizde taze hazırlanır ve şık bir ambalajla teslim edilir. Kart notunu siz belirlersiniz.",
       "Demirtaş adresinde açılış ve teşekkür [buket](/magaza/buketler) ile karşılanır. Ofiste kalacak bitki [orkide](/magaza/orkideler), derli armağan [kutu çiçek](/magaza/kutular) olur. Anma gününde [çelenk](/magaza/celenkler) bağlanır.",
-      "WhatsApp’tan mahalle adını Demirtaş diye, kapı numarasını ve kart notunu yazabilirsiniz.",
+      "Siparişinizi WhatsApp düğmesinden kolayca iletebilirsiniz.",
     ],
   },
   {
@@ -386,9 +386,9 @@ const baseServiceAreas: ServiceArea[] = [
     relatedCategorySlugs: ["buketler", "orkideler", "kutular", "celenkler"],
     body: [
       "Soğanlı, Osmangazi’ye bağlı bir mahalledir. Osmangazi Belediyesi’nin Soğanlı Millet Bahçesi burada kurulmuştur; meyve bahçeleri, çocuk oyun alanları ve spor sahaları bu bahçededir.",
-      "Soğanlı’ya çiçek ev, iş yeri veya hastane adresine hazırlanır. Soğanlı siparişi atölyede taze kurulur; ambalaj yola çıkana kadar korunur. Kart notunu Soğanlı siparişinde siz yazarsınız. Soğanlı adresinde mahalle adı ve kapı numarası yeter.",
+      "Soğanlı’ya çiçek siparişlerinizi eve, iş yerine veya hastaneye teslim ediyoruz. Çiçekler atölyemizde taze olarak hazırlanır ve özenle paketlenir. Kart notunuz, belirlediğiniz cümleyle siparişe eklenir.",
       "Soğanlı evine yıl dönümünde [buket](/magaza/buketler) götürülür. Yeni evde duracak bitki [orkide](/magaza/orkideler) olur. Kutlama masasına [kutu çiçek](/magaza/kutular) bırakılır. Anma ve cenaze için [çelenk](/magaza/celenkler) hazırlanır.",
-      "Soğanlı adresini ve kart notunu WhatsApp’tan yazabilirsiniz.",
+      "Siparişinizi WhatsApp düğmesinden kolayca iletebilirsiniz.",
     ],
   },
   {
@@ -403,9 +403,9 @@ const baseServiceAreas: ServiceArea[] = [
     relatedCategorySlugs: ["buketler", "orkideler", "kutular", "celenkler"],
     body: [
       "Hamitler, Osmangazi’ye bağlı bir mahalledir ve Bursa Organize Sanayi Bölgesi’nin karşısındadır. Şehrin en büyük mezarlığı olan Hamitler Mezarlığı bu mahallededir.",
-      "Çiçek, Hamitler adresine ev, iş yeri veya hastane için hazırlanır. Atölyede taze hazırlanan Hamitler çiçeği, ambalajı bozulmadan teslim edilir. Hamitler’e gidecek kartın metnini siz belirlersiniz. Mezarlık ziyaretinde isim, iş yeri adresinde firma adı ayrıca yazılır.",
+      "Hamitler’e çiçek siparişlerinizi eve, iş yerine veya hastaneye teslim ediyoruz. Çiçekler atölyemizde taze olarak hazırlanır ve özenle paketlenir. Kart notunuz, belirlediğiniz cümleyle siparişe eklenir.",
       "Hamitler Mezarlığı için [çelenk](/magaza/celenkler) hazırlanır; kurdele metnini siz yazarsınız. Eve gidecek ziyarette [buket](/magaza/buketler) seçilir. Evde duracak bitki [orkide](/magaza/orkideler), küçük armağan [kutu çiçek](/magaza/kutular) olur.",
-      "Alıcının adını, Hamitler adresini ve kart notunu WhatsApp’tan yazmanız yeterli.",
+      "Siparişinizi WhatsApp düğmesinden kolayca iletebilirsiniz.",
     ],
   },
   {
@@ -421,9 +421,9 @@ const baseServiceAreas: ServiceArea[] = [
     relatedCategorySlugs: ["buketler", "orkideler", "kutular", "celenkler"],
     body: [
       "İhsaniye, Nilüfer’in merkez mahallelerindendir. Fatih Sultan Mehmet Bulvarı bu mahallededir ve İzmir Yolu’nu Mudanya yoluna bağlar. Ahmet Vefik Paşa Caddesi’ndeki kapalı pazarda cumartesi günleri semt pazarı ve giyim pazarı kurulur. Aynı yerde ayda bir el emeği pazarı ve antika pazarı da açılır.",
-      "İhsaniye’ye çiçek ev, iş yeri veya hastane adresine hazırlanır. İhsaniye siparişi atölyede taze kurulur; ambalaj yola çıkana kadar korunur. Kart notunu İhsaniye siparişinde siz yazarsınız. Ahmet Vefik Paşa Caddesi adresinde cadde adı ve daire numarası yazılır.",
+      "İhsaniye’ye çiçek siparişlerinizi eve, iş yerine veya hastaneye teslim ediyoruz. Çiçekler atölyemizde taze olarak hazırlanır ve özenle paketlenir. Kart notunuz, belirlediğiniz cümleyle siparişe eklenir.",
       "İhsaniye evine yıl dönümünde [buket](/magaza/buketler) götürülür. Yeni evde duracak bitki [orkide](/magaza/orkideler) olur. Kutlama masasına [kutu çiçek](/magaza/kutular) bırakılır. Anma ve cenaze için [çelenk](/magaza/celenkler) hazırlanır.",
-      "İhsaniye adresini ve kart notunu WhatsApp’tan yazabilirsiniz.",
+      "Siparişinizi WhatsApp düğmesinden kolayca iletebilirsiniz.",
     ],
   },
   {
@@ -440,9 +440,9 @@ const baseServiceAreas: ServiceArea[] = [
     relatedCategorySlugs: ["buketler", "orkideler", "kutular", "celenkler"],
     body: [
       "Özlüce, Nilüfer’e bağlı bir mahalledir. 19 Mayıs ve Yüzüncüyıl bu mahalleden ayrılan kesimlerdir; Yüzüncüyıl’ın kuzeyinde kalır. Çarşamba günleri Özer Sokak’ta semt pazarı kurulur. İnesi Parkı mahalledeki parklardan biridir.",
-      "Çiçek, Özlüce adresine ev, iş yeri veya hastane için hazırlanır. Atölyede taze hazırlanan Özlüce çiçeği, ambalajı bozulmadan teslim edilir. Özlüce’ye gidecek kartın metnini siz belirlersiniz. Özer Sokak adresinde sokak adı açık yazılır.",
+      "Özlüce’ye çiçek siparişlerinizi eve, iş yerine veya hastaneye teslim ediyoruz. Çiçekler atölyemizde taze olarak hazırlanır ve özenle paketlenir. Kart notunuz, belirlediğiniz cümleyle siparişe eklenir.",
       "Özlüce evine yıl dönümünde [buket](/magaza/buketler) götürülür. Yeni evde duracak bitki [orkide](/magaza/orkideler) olur. Kutlama masasına [kutu çiçek](/magaza/kutular) bırakılır. Anma ve cenaze için [çelenk](/magaza/celenkler) hazırlanır.",
-      "Beğendiğiniz düzeni WhatsApp’tan, Özlüce adresiyle birlikte haber verebilirsiniz.",
+      "Siparişinizi WhatsApp düğmesinden kolayca iletebilirsiniz.",
     ],
   },
   {
@@ -458,9 +458,9 @@ const baseServiceAreas: ServiceArea[] = [
     relatedCategorySlugs: ["buketler", "orkideler", "kutular", "celenkler"],
     body: [
       "FSM, Nilüfer’de Fatih Sultan Mehmet Bulvarı çevresi için kullanılan kısa addır. Bulvar İhsaniye Mahallesi’ndedir ve İzmir Yolu’nu Mudanya yoluna bağlar. Üzerinde hastaneler, muayenehaneler ve iş yerleri sıralanır.",
-      "Çiçek, FSM adresine ev, iş yeri veya hastane için hazırlanır. Atölyede taze hazırlanan FSM çiçeği, ambalajı bozulmadan teslim edilir. FSM’ye gidecek kartın metnini siz belirlersiniz. Bulvar üzerindeki iş yeri ya da hastane adresinde bina adı yazılır.",
+      "FSM çevresindeki iş yerlerine, muayenehanelere ve hastanelere çiçek gönderiyoruz. Açılış, tebrik ve geçmiş olsun siparişleri atölyemizde taze hazırlanır ve şık bir ambalajla teslim edilir. Kart notunu siz belirlersiniz.",
       "FSM içinde bir açılışta [kutu çiçek](/magaza/kutular) ya da [buket](/magaza/buketler) düşünülür. Masada duracak bitki için [orkide](/magaza/orkideler) seçilir. Eve gidecek doğum gününde [buket](/magaza/buketler) de uygundur. Anma için [çelenk](/magaza/celenkler) hazırlanır.",
-      "Alıcının adını, FSM adresini ve kart notunu WhatsApp’tan yazmanız yeterli.",
+      "Siparişinizi WhatsApp düğmesinden kolayca iletebilirsiniz.",
     ],
   },
   {
@@ -476,9 +476,9 @@ const baseServiceAreas: ServiceArea[] = [
     relatedCategorySlugs: ["buketler", "orkideler", "kutular", "celenkler"],
     body: [
       "Çamlıca, Nilüfer’in merkez mahallelerindendir. Kavakdere Caddesi ile Ardalı Sokak’taki kapalı pazarda çarşamba semt pazarı ve cumartesi üretici pazarı kurulur. Japon Parkı ve Azerbaycan Parkı mahalledeki açık alanlardandır.",
-      "Çiçek, Çamlıca adresine ev, iş yeri veya hastane için hazırlanır. Atölyede taze hazırlanan Çamlıca çiçeği, ambalajı bozulmadan teslim edilir. Çamlıca’ya gidecek kartın metnini siz belirlersiniz. Kavakdere Caddesi adresinde cadde adı yazılır.",
+      "Çamlıca’ya çiçek siparişlerinizi eve, iş yerine veya hastaneye teslim ediyoruz. Çiçekler atölyemizde taze olarak hazırlanır ve özenle paketlenir. Kart notunuz, belirlediğiniz cümleyle siparişe eklenir.",
       "Doğum gününde Çamlıca evine [buket](/magaza/buketler) götürülür. Birkaç gün duracak [orkide](/magaza/orkideler) ya da [kutu çiçek](/magaza/kutular) de seçilebilir. Anma gününde [çelenk](/magaza/celenkler) bağlanır.",
-      "Alıcının adını, Çamlıca adresini ve kart notunu WhatsApp’tan yazmanız yeterli.",
+      "Siparişinizi WhatsApp düğmesinden kolayca iletebilirsiniz.",
     ],
   },
   {
@@ -494,9 +494,9 @@ const baseServiceAreas: ServiceArea[] = [
     relatedCategorySlugs: ["buketler", "orkideler", "kutular", "celenkler"],
     body: [
       "Odunluk, Nilüfer’in merkez mahallelerindendir. Odunluk Caddesi’nde Hüdavendigar spor tesisleri, Orhangazi Caddesi’nde bir eğitim alanı bulunur.",
-      "Odunluk için hazırlanan çiçek eve, iş yerine ya da hastaneye gider. Düzen, Odunluk için atölyede taze tutulur ve özenli ambalajlanır. Odunluk kartındaki cümle size aittir. Odunluk Caddesi ya da Orhangazi Caddesi adresinde cadde adı yazılır.",
+      "Odunluk’a çiçek siparişlerinizi eve, iş yerine veya hastaneye teslim ediyoruz. Çiçekler atölyemizde taze olarak hazırlanır ve özenle paketlenir. Kart notunuz, belirlediğiniz cümleyle siparişe eklenir.",
       "Doğum gününde Odunluk evine [buket](/magaza/buketler) götürülür. Birkaç gün duracak [orkide](/magaza/orkideler) ya da [kutu çiçek](/magaza/kutular) de seçilebilir. Anma gününde [çelenk](/magaza/celenkler) bağlanır.",
-      "WhatsApp’tan Odunluk adresini, alıcıyı ve kart notunu iletebilirsiniz.",
+      "Sipariş vermek için WhatsApp düğmesini kullanabilirsiniz.",
     ],
   },
   {
@@ -513,9 +513,9 @@ const baseServiceAreas: ServiceArea[] = [
     relatedCategorySlugs: ["buketler", "orkideler", "kutular", "celenkler"],
     body: [
       "Ertuğrul, Nilüfer’de Bursa-Karacabey yolu üzerinde bir mahalledir ve Yüzüncüyıl’ın doğusunda, 29 Ekim’in yanında yer alır. Eski adı Çayırköy’dür. Çarşamba günleri 153. Sokak’ta semt pazarı kurulur. Emek Sokak’ta Zeki Müren Lisesi bulunur.",
-      "Ertuğrul’a çiçek gönderiminde teslimat evde, iş yerinde veya hastanede olur. Ertuğrul için seçilen düzen atölyede tamamlanır, ambalaj ayrıca korunur. Kısa dilek, Ertuğrul siparişinin kartında sizin sözünüzle durur. 153. Sokak ve Emek Sokak adreslerinde sokak numarası açık yazılır.",
+      "Ertuğrul’a çiçek siparişlerinizi eve, iş yerine veya hastaneye teslim ediyoruz. Çiçekler atölyemizde taze olarak hazırlanır ve özenle paketlenir. Kart notunuz, belirlediğiniz cümleyle siparişe eklenir.",
       "Doğum günü ve yıl dönümünde Ertuğrul evine [buket](/magaza/buketler) gider. Evde kalacak bitki için [orkide](/magaza/orkideler) uygundur. Masaya küçük bir [kutu çiçek](/magaza/kutular) bırakılır. Anma gününde [çelenk](/magaza/celenkler) hazırlanır.",
-      "WhatsApp mesajında Ertuğrul adresiyle birlikte kartta okunacak cümleyi iletebilirsiniz.",
+      "Sipariş vermek için WhatsApp düğmesini kullanabilirsiniz.",
     ],
   },
   {
@@ -532,9 +532,9 @@ const baseServiceAreas: ServiceArea[] = [
     relatedCategorySlugs: ["buketler", "orkideler", "kutular", "celenkler"],
     body: [
       "Görükle, Nilüfer’de Bursa-İzmir karayolunun hemen yanında, ağırlıklı olarak öğrencilerin yaşadığı bir mahalledir. Cumhuriyet öncesinde Rum köyüydü; mübadeleden sonra Uludağ Üniversitesi’nin ana yerleşkesi köy merası üzerine kurulunca yurtların bulunduğu bir kentsel alana döndü. Kuzeyinde Nilüfer Çayı, batısında İrfaniye, güneyinde Fevzi Çakmak Caddesi ile İzmir Yolu, doğusunda üniversite arazisi bulunur. Yerleşim Caddesi mahallenin bilinen caddesidir; Rıza Ağa Mübadele Kahvesi ile yanındaki Mübadele Evi 2016’da açılmıştır. Portakal Sokak’taki kapalı pazarda salı günü üretici, cuma günü giyim, cumartesi günü semt pazarı kurulur.",
-      "Çiçek, Görükle adresine ev, iş yeri veya hastane için hazırlanır. Atölyede taze hazırlanan Görükle çiçeği, ambalajı bozulmadan teslim edilir. Görükle’ye gidecek kartın metnini siz belirlersiniz. Yurt siparişinde alıcının adı ve blok, iş yerinde firma adı yazılır.",
+      "Görükle’deki yurt, site ve evlere çiçek gönderebilirsiniz. Mezuniyet, doğum günü ve tebrik siparişleri atölyemizde taze hazırlanır ve özenle paketlenir. Kartınıza yazmak istediğiniz cümleyi eklememiz yeterlidir.",
       "Mezuniyet ve doğum gününde Görükle için [buket](/magaza/buketler) istenir. Öğrenci odasında duracak bir bitki [orkide](/magaza/orkideler) olur. Kutlama masasına [kutu çiçek](/magaza/kutular) bırakılır. Tören ve anma için [çelenk](/magaza/celenkler) kurdele metniyle hazırlanır.",
-      "Beğendiğiniz düzeni WhatsApp’tan, Görükle adresiyle birlikte haber verebilirsiniz.",
+      "Siparişinizi WhatsApp düğmesinden kolayca iletebilirsiniz.",
     ],
   },
   {
@@ -550,9 +550,9 @@ const baseServiceAreas: ServiceArea[] = [
     relatedCategorySlugs: ["buketler", "orkideler", "kutular", "celenkler"],
     body: [
       "Ataevler, Nilüfer’in merkez mahallelerindendir. Pazar günleri Yılmaz Akkılıç Caddesi’nde kapalı semt pazarı kurulur. Aynı caddede Yılmaz Akkılıç Parkı, Nene Hatun Caddesi’nde Gezi Parkı, Selçukbey Sokak’ta Naim Süleymanoğlu Dinlenme Parkı bulunur.",
-      "Ataevler’e çiçek gönderiminde teslimat evde, iş yerinde veya hastanede olur. Ataevler için seçilen düzen atölyede tamamlanır, ambalaj ayrıca korunur. Kısa dilek, Ataevler siparişinin kartında sizin sözünüzle durur. Site adresinde blok ve daire, Yılmaz Akkılıç Caddesi geçiyorsa cadde adı yazılır.",
+      "Ataevler’e çiçek siparişlerinizi eve, iş yerine veya hastaneye teslim ediyoruz. Çiçekler atölyemizde taze olarak hazırlanır ve özenle paketlenir. Kart notunuz, belirlediğiniz cümleyle siparişe eklenir.",
       "Ataevler evine yıl dönümünde [buket](/magaza/buketler) götürülür. Yeni evde duracak bitki [orkide](/magaza/orkideler) olur. Kutlama masasına [kutu çiçek](/magaza/kutular) bırakılır. Anma ve cenaze için [çelenk](/magaza/celenkler) hazırlanır.",
-      "WhatsApp mesajında Ataevler adresiyle birlikte kartta okunacak cümleyi iletebilirsiniz.",
+      "Sipariş vermek için WhatsApp düğmesini kullanabilirsiniz.",
     ],
   },
   {
@@ -568,9 +568,9 @@ const baseServiceAreas: ServiceArea[] = [
     relatedCategorySlugs: ["buketler", "orkideler", "kutular", "celenkler"],
     body: [
       "Balat, Nilüfer’in merkez mahallelerindendir. Cumartesi günleri Bağ Sokak’ta kapalı semt pazarı kurulur. Bağ Sokak’ta Balat Meydanı, Ahi Evran Caddesi’nde Balat Atatürk Ormanı bulunur.",
-      "Çiçek, Balat adresine ev, iş yeri veya hastane için hazırlanır. Atölyede taze hazırlanan Balat çiçeği, ambalajı bozulmadan teslim edilir. Balat’a gidecek kartın metnini siz belirlersiniz. Bağ Sokak ve Ahi Evran Caddesi adreslerinde sokak adı yazılır.",
+      "Balat’a çiçek siparişlerinizi eve, iş yerine veya hastaneye teslim ediyoruz. Çiçekler atölyemizde taze olarak hazırlanır ve özenle paketlenir. Kart notunuz, belirlediğiniz cümleyle siparişe eklenir.",
       "Doğum günü ve yıl dönümünde Balat evine [buket](/magaza/buketler) gider. Evde kalacak bitki için [orkide](/magaza/orkideler) uygundur. Masaya küçük bir [kutu çiçek](/magaza/kutular) bırakılır. Anma gününde [çelenk](/magaza/celenkler) hazırlanır.",
-      "Alıcının adını, Balat adresini ve kart notunu WhatsApp’tan yazmanız yeterli.",
+      "Siparişinizi WhatsApp düğmesinden kolayca iletebilirsiniz.",
     ],
   },
   {
@@ -586,9 +586,9 @@ const baseServiceAreas: ServiceArea[] = [
     relatedCategorySlugs: ["buketler", "orkideler", "kutular", "celenkler"],
     body: [
       "Beşevler, Nilüfer’in merkez mahallelerindendir. Cumartesi günleri Beydağı Sokak’ta kapalı semt pazarı kurulur. Seyran Sokak’ta Prof. Dr. H. Ruhi Ekingen Parkı ve mahallede Buket Parkı bulunur.",
-      "Beşevler’e çiçek gönderiminde teslimat evde, iş yerinde veya hastanede olur. Beşevler için seçilen düzen atölyede tamamlanır, ambalaj ayrıca korunur. Kısa dilek, Beşevler siparişinin kartında sizin sözünüzle durur. Beydağı Sokak ya da Seyran Sokak adresinde sokak adı açık yazılır.",
+      "Beşevler’e çiçek siparişlerinizi eve, iş yerine veya hastaneye teslim ediyoruz. Çiçekler atölyemizde taze olarak hazırlanır ve özenle paketlenir. Kart notunuz, belirlediğiniz cümleyle siparişe eklenir.",
       "Doğum günü ve yıl dönümünde Beşevler evine [buket](/magaza/buketler) gider. Evde kalacak bitki için [orkide](/magaza/orkideler) uygundur. Masaya küçük bir [kutu çiçek](/magaza/kutular) bırakılır. Anma gününde [çelenk](/magaza/celenkler) hazırlanır.",
-      "Karttaki cümleyi ve Beşevler adresini WhatsApp mesajına yazmanız yeterli.",
+      "Sipariş vermek için WhatsApp düğmesini kullanabilirsiniz.",
     ],
   },
   {
@@ -603,9 +603,9 @@ const baseServiceAreas: ServiceArea[] = [
     relatedCategorySlugs: ["buketler", "orkideler", "kutular", "celenkler"],
     body: [
       "Erikli, Yıldırım’a bağlı bir mahalledir. 3. Cadde’de Erikli Kapalı Yüzme Havuzu vardır. 2024’te açılan Erikli Aile Sağlığı Merkezi de bu mahallededir.",
-      "Erikli için hazırlanan çiçek eve, iş yerine ya da hastaneye gider. Düzen, Erikli için atölyede taze tutulur ve özenli ambalajlanır. Erikli kartındaki cümle size aittir. 3. Cadde adresinde cadde adı yazılır.",
+      "Erikli’ye çiçek siparişlerinizi eve, iş yerine veya hastaneye teslim ediyoruz. Çiçekler atölyemizde taze olarak hazırlanır ve özenle paketlenir. Kart notunuz, belirlediğiniz cümleyle siparişe eklenir.",
       "Doğum günü ve yıl dönümünde Erikli evine [buket](/magaza/buketler) gider. Evde kalacak bitki için [orkide](/magaza/orkideler) uygundur. Masaya küçük bir [kutu çiçek](/magaza/kutular) bırakılır. Anma gününde [çelenk](/magaza/celenkler) hazırlanır.",
-      "Erikli için seçtiğiniz çiçeği ve kart notunu WhatsApp’tan gönderebilirsiniz.",
+      "Sipariş vermek için WhatsApp düğmesini kullanabilirsiniz.",
     ],
   },
   {
@@ -620,9 +620,9 @@ const baseServiceAreas: ServiceArea[] = [
     relatedCategorySlugs: ["buketler", "orkideler", "kutular", "celenkler"],
     body: [
       "Millet, Yıldırım’a bağlı bir mahalledir. Yıldırım Belediyesi burada 3111 ada kentsel dönüşüm projesi yürütür; planda konutla birlikte bir çarşı alanı vardır.",
-      "Millet için hazırlanan çiçek eve, iş yerine ya da hastaneye gider. Düzen, Millet için atölyede taze tutulur ve özenli ambalajlanır. Millet kartındaki cümle size aittir. Siparişte Millet adının yanında kapı numarasını da yazmanız yeter.",
+      "Millet’e çiçek siparişlerinizi eve, iş yerine veya hastaneye teslim ediyoruz. Çiçekler atölyemizde taze olarak hazırlanır ve özenle paketlenir. Kart notunuz, belirlediğiniz cümleyle siparişe eklenir.",
       "Doğum günü ve yıl dönümünde Millet evine [buket](/magaza/buketler) gider. Evde kalacak bitki için [orkide](/magaza/orkideler) uygundur. Masaya küçük bir [kutu çiçek](/magaza/kutular) bırakılır. Anma gününde [çelenk](/magaza/celenkler) hazırlanır.",
-      "Millet için seçtiğiniz çiçeği ve kart notunu WhatsApp’tan gönderebilirsiniz.",
+      "Sipariş vermek için WhatsApp düğmesini kullanabilirsiniz.",
     ],
   },
   {
@@ -637,9 +637,9 @@ const baseServiceAreas: ServiceArea[] = [
     relatedCategorySlugs: ["buketler", "orkideler", "kutular", "celenkler"],
     body: [
       "Arabayatağı, Yıldırım’a bağlı bir mahalledir. 93 Harbi’nden sonra göç edenlerin kurduğu bir köydü; Yıldırım ilçe olunca mahalle olmuştur. Güneyinde Ankara Caddesi vardır. Bu cadde girişinde Arabayatağı Fırını bilinir ve mahallenin güneyinden BursaRay geçer.",
-      "Arabayatağı’ya çiçek ev, iş yeri veya hastane adresine hazırlanır. Arabayatağı siparişi atölyede taze kurulur; ambalaj yola çıkana kadar korunur. Kart notunu Arabayatağı siparişinde siz yazarsınız. Ankara Caddesi adresinde cadde adı yazılır.",
+      "Arabayatağı’ya çiçek siparişlerinizi eve, iş yerine veya hastaneye teslim ediyoruz. Çiçekler atölyemizde taze olarak hazırlanır ve özenle paketlenir. Kart notunuz, belirlediğiniz cümleyle siparişe eklenir.",
       "Doğum gününde Arabayatağı evine [buket](/magaza/buketler) götürülür. Birkaç gün duracak [orkide](/magaza/orkideler) ya da [kutu çiçek](/magaza/kutular) de seçilebilir. Anma gününde [çelenk](/magaza/celenkler) bağlanır.",
-      "Arabayatağı adresini ve kart notunu WhatsApp’tan yazabilirsiniz.",
+      "Siparişinizi WhatsApp düğmesinden kolayca iletebilirsiniz.",
     ],
   },
   {
@@ -654,9 +654,9 @@ const baseServiceAreas: ServiceArea[] = [
     relatedCategorySlugs: ["buketler", "orkideler", "kutular", "celenkler"],
     body: [
       "Esenevler, Yıldırım’a bağlı bir mahalledir. Erdoğan Caddesi ile 2. Cadde, belediyenin yol çalışmasında Ankara Yolu’na bağlanan güzergâh olarak geçer. Bu hat Yiğitler ve 75. Yıl mahallelerinin de ulaşımındadır.",
-      "Esenevler’e çiçek ev, iş yeri veya hastane adresine hazırlanır. Esenevler siparişi atölyede taze kurulur; ambalaj yola çıkana kadar korunur. Kart notunu Esenevler siparişinde siz yazarsınız. Erdoğan Caddesi adresinde cadde adı yazılır.",
+      "Esenevler’e çiçek siparişlerinizi eve, iş yerine veya hastaneye teslim ediyoruz. Çiçekler atölyemizde taze olarak hazırlanır ve özenle paketlenir. Kart notunuz, belirlediğiniz cümleyle siparişe eklenir.",
       "Esenevler evine yıl dönümünde [buket](/magaza/buketler) götürülür. Yeni evde duracak bitki [orkide](/magaza/orkideler) olur. Kutlama masasına [kutu çiçek](/magaza/kutular) bırakılır. Anma ve cenaze için [çelenk](/magaza/celenkler) hazırlanır.",
-      "WhatsApp’tan mahalle adını Esenevler diye, kapı numarasını ve kart notunu yazabilirsiniz.",
+      "Siparişinizi WhatsApp düğmesinden kolayca iletebilirsiniz.",
     ],
   },
 ];
