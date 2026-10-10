@@ -75,11 +75,11 @@ export function ProductDetailPage() {
       </nav>
 
       <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
-        <div className="order-2 lg:order-1">
+        <div>
           <ProductGallery name={product.name} images={product.gallery} />
         </div>
 
-        <div className="order-1 lg:sticky lg:top-24 lg:order-2 lg:self-start">
+        <div className="lg:sticky lg:top-24 lg:self-start">
           <p className="text-xs font-medium tracking-[0.18em] text-stone-500 uppercase">{categoryName}</p>
           <h1 className="mt-2 text-3xl font-semibold tracking-tight text-stone-900 md:text-4xl">
             {product.name}
