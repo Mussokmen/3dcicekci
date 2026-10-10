@@ -30,7 +30,7 @@ const categoryNotes: Record<string, CategoryNote[]> = {
   buketler: [
     { text: "Kart notunu kısa tutun; teslimde okunması kolay olur." },
     { text: "Suya koyunca sapı taze kalır; vazoyu teslimde hazır bulundurmak yeter." },
-    { text: "Saplı düzen yolda kutu kadar durağan değildir; mahalle ve saati yazın." },
+    { text: "Saplı buket elde taşınır; kutu ise yolda daha düzgün kalır. Mahalleyi mesaja yazın." },
   ],
   orkideler: [
     { text: "Dal sayısı fotoğraftakiyle aynı dilden teslim edilir." },
@@ -42,7 +42,7 @@ const categoryNotes: Record<string, CategoryNote[]> = {
     },
   ],
   kutular: [
-    { text: "Kutu düzeni yolda saplı bukete göre daha durağandır." },
+    { text: "Kutu düzeni yolda saplı bukete göre daha düzgün kalır." },
     { text: "İç düzen fotoğraftakiyle aynı dilden hazırlanır; stok yoksa alternatif konuşuruz." },
     { text: "Hediye tesliminde mahalle tarifini mesaja ekleyin." },
   ],

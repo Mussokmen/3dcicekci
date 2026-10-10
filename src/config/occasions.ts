@@ -39,7 +39,7 @@ export const occasions: Occasion[] = [
     categorySlugs: ["orkideler", "buketler"],
     body: [
       "Hastane odasında ağır kokulu veya çok büyük aranjman rahatsız edebilir. Saksılı orkide veya küçük buket sık tercih edilir. Hastane giriş kuralları varsa teslim noktasını mesajda belirtin.",
-      "Osmangazi ve Nilüfer’deki sağlık kuruluşlarına teslim, ziyaret saatine bağlıdır. Güvenlik kaydı için alıcı adı şarttır.",
+      "Osmangazi ve Nilüfer’deki sağlık kuruluşlarına teslimde alıcının adı ve bölüm yazılır.",
     ],
   },
   {
@@ -60,7 +60,7 @@ export const occasions: Occasion[] = [
     description: "Bursa ofis ve ev için saksılı orkide teslimi.",
     categorySlugs: ["orkideler"],
     body: [
-      "Ofis tesliminde kabul saati ve kat bilgisi olmadan bekletmek orkideye zarar verir. Fotoğraftaki saksı ve dal sayısıyla teslimi eşleştirmeye çalışırız; tek dal ile dolu saksıyı karıştırmayın.",
+      "Ofiste kat ve alıcının adı yazılır; orkide teslimden önce haber verilerek çıkar. Fotoğraftaki saksı ve dal sayısıyla teslimi eşleştirmeye çalışırız; tek dal ile dolu saksıyı karıştırmayın.",
       "Işık ve sulama notunu kısa tutarız. Nilüfer ve Osmangazi işyerlerinde bu ürün sık seçilir. Saksı atölyede, fotoğraftaki düzene göre hazırlanır.",
     ],
   },
@@ -71,8 +71,8 @@ export const occasions: Occasion[] = [
     description: "Bursa’da çikolatalı ve gül kutuları. WhatsApp sipariş.",
     categorySlugs: ["kutular"],
     body: [
-      "Kutu düzenleri yolda saplı bukete göre daha durağan kalır. İç düzen, fotoğrafta görünen hâliyle hazırlanır. Görseller kendi atölye çekimlerimizdir.",
-      "Sevgililer günü ve doğum günü yoğunluğunda saati erken yazın. Teslim Bursa ili içinde, mahalle tarifine göredir.",
+      "Kutu düzenleri yolda formunu korur. İç düzen, fotoğrafta görünen hâliyle hazırlanır. Görseller kendi atölye çekimlerimizdir.",
+      "Sevgililer günü ve doğum günü yoğunluğunda saati erken yazın. Teslim Bursa ili içinde, mahalle adına göre planlanır.",
     ],
   },
 ];
