@@ -29,6 +29,10 @@ type RouteMeta = {
   links?: RouteLink[];
 };
 
+function plainSummary(value: string) {
+  return value.replace(/\[([^\]]+)\]\((\/[^)\s]+)\)/g, "$1");
+}
+
 function escapeHtml(value: string) {
   return value
     .replaceAll("&", "&amp;")
@@ -198,7 +202,7 @@ function collectRoutes(root: string): RouteMeta[] {
       title: `${area.name} · ${site.name}`,
       description: area.description,
       heading: area.name,
-      summary: area.body.join(" "),
+      summary: plainSummary(area.body.join(" ")),
     });
   }
 

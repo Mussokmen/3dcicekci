@@ -1,4 +1,4 @@
-import { niluferNeighborhoodDrafts } from "./nilufer-mahalleleri.ts";
+import { legacyNeighborhoodCopy, niluferNeighborhoodDrafts } from "./nilufer-mahalleleri.ts";
 
 export type AreaKind = "hub" | "district" | "neighborhood";
 
@@ -699,10 +699,18 @@ const draftedNeighborhoods: ServiceArea[] = niluferNeighborhoodDrafts.map((draft
 export const serviceAreas: ServiceArea[] = [...baseServiceAreas, ...draftedNeighborhoods].map(
   (area) => {
     if (area.kind !== "neighborhood") return area;
+    const refreshed = legacyNeighborhoodCopy[area.slug];
     return {
       ...area,
       name: neighborhoodTitle(area.shortName),
       nearbySlugs: area.nearbySlugs ?? legacyNearby[area.slug],
+      ...(refreshed
+        ? {
+            description: refreshed.description,
+            body: refreshed.body,
+            relatedCategorySlugs: refreshed.relatedCategorySlugs,
+          }
+        : {}),
     };
   },
 );
