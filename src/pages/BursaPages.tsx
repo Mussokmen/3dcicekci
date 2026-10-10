@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { CategoryLinks, FaqList, WhatsAppCta } from "@/components/content/ContentBits";
 import { Seo } from "@/components/Seo";
@@ -8,6 +9,28 @@ import {
   getServiceAreaBySlug,
 } from "@/config/areas";
 import { buildWhatsAppUrl, generalWhatsAppMessage } from "@/config/site";
+
+function RichText({ text }: { text: string }) {
+  const nodes: ReactNode[] = [];
+  const pattern = /\[([^\]]+)\]\((\/[^)\s]+)\)/g;
+  let last = 0;
+  for (const match of text.matchAll(pattern)) {
+    const index = match.index ?? 0;
+    if (index > last) nodes.push(text.slice(last, index));
+    nodes.push(
+      <Link
+        key={`${index}-${match[2]}`}
+        to={match[2]}
+        className="underline decoration-stone-300 underline-offset-4 hover:text-stone-900"
+      >
+        {match[1]}
+      </Link>,
+    );
+    last = index + match[0].length;
+  }
+  if (last < text.length) nodes.push(text.slice(last));
+  return nodes;
+}
 
 export function BursaIndexPage() {
   const districts = getDistrictAreas();
@@ -174,7 +197,9 @@ export function BursaAreaPage() {
       <h1 className="mt-4 text-4xl tracking-tight break-words text-stone-900">{area.name}</h1>
       <div className="mt-6 space-y-4 text-base leading-relaxed text-stone-600">
         {area.body.map((paragraph, index) => (
-          <p key={`${area.slug}-${index}`}>{paragraph}</p>
+          <p key={`${area.slug}-${index}`}>
+            <RichText text={paragraph} />
+          </p>
         ))}
       </div>
       <CategoryLinks slugs={area.relatedCategorySlugs} />
