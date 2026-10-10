@@ -1,0 +1,7 @@
+# HTML, sitemap, robots.txt ve llms.txt Cloudflare Pages varsayılanını kullanır:
+# Cache-Control: public, max-age=0, must-revalidate
+# Genel bir /* kuralı aynı başlığı /assets/* ile birleştirir; tarayıcı ilk
+# max-age değerini okuduğu için karma dosyalar önbelleğe alınmaz.
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable

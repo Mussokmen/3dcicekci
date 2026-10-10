@@ -2,10 +2,10 @@ import fs from "node:fs";
 import path from "node:path";
 import type { Plugin } from "vite";
 import { categories } from "./src/config/categories.ts";
-import { getDistrictAreas, getNeighborhoods } from "./src/config/areas.ts";
+import { getDistrictAreas, getNeighborhoods, getServiceAreaBySlug } from "./src/config/areas.ts";
 import { occasions } from "./src/config/occasions.ts";
 import { guides } from "./src/config/guides.ts";
-import { homeHeading, homeIntro, pageUrl, shopIntro, site } from "./src/config/site.ts";
+import { floristJsonLd, homeHeading, homeIntro, pageUrl, shopIntro, site } from "./src/config/site.ts";
 
 type OgImage = {
   url: string;
@@ -19,6 +19,11 @@ type RouteLink = {
   label: string;
 };
 
+type Crumb = {
+  name: string;
+  path: string;
+};
+
 type RouteMeta = {
   path: string;
   title: string;
@@ -27,6 +32,7 @@ type RouteMeta = {
   summary: string;
   image?: OgImage;
   links?: RouteLink[];
+  crumbs?: Crumb[];
 };
 
 function plainSummary(value: string) {
@@ -42,11 +48,13 @@ function escapeHtml(value: string) {
 }
 
 function publicHref(routePath: string) {
-  const prefix = process.env.GITHUB_PAGES === "true" ? "/3dcicekci" : "";
-  if (routePath === "/" || routePath === "") return `${prefix}/`;
+  if (routePath === "/" || routePath === "") return "/";
   const normalized = routePath.startsWith("/") ? routePath : `/${routePath}`;
-  const slashed = normalized.endsWith("/") ? normalized : `${normalized}/`;
-  return `${prefix}${slashed}`;
+  return normalized.endsWith("/") ? normalized : `${normalized}/`;
+}
+
+function crumbs(...items: Crumb[]): Crumb[] {
+  return items;
 }
 
 function webpSize(filePath: string) {
@@ -116,6 +124,7 @@ function collectRoutes(root: string): RouteMeta[] {
       description: site.defaultDescription,
       heading: homeHeading,
       summary: homeIntro,
+      crumbs: crumbs({ name: "Ana Sayfa", path: "/" }),
       links: categories.map((category) => ({
         path: `/magaza/${category.slug}`,
         label: category.name,
@@ -127,6 +136,7 @@ function collectRoutes(root: string): RouteMeta[] {
       description: shopIntro,
       heading: "Mağaza",
       summary: shopIntro,
+      crumbs: crumbs({ name: "Ana Sayfa", path: "/" }, { name: "Mağaza", path: "/magaza" }),
     },
     {
       path: "/hakkimizda",
@@ -134,6 +144,7 @@ function collectRoutes(root: string): RouteMeta[] {
       description: aboutSummary,
       heading: "Hakkımızda",
       summary: aboutSummary,
+      crumbs: crumbs({ name: "Ana Sayfa", path: "/" }, { name: "Hakkımızda", path: "/hakkimizda" }),
     },
     {
       path: "/iletisim",
@@ -141,6 +152,7 @@ function collectRoutes(root: string): RouteMeta[] {
       description: contactSummary,
       heading: "İletişim",
       summary: contactSummary,
+      crumbs: crumbs({ name: "Ana Sayfa", path: "/" }, { name: "İletişim", path: "/iletisim" }),
     },
     {
       path: "/gizlilik-politikasi",
@@ -148,6 +160,10 @@ function collectRoutes(root: string): RouteMeta[] {
       description: privacySummary,
       heading: "Gizlilik Politikası",
       summary: privacySummary,
+      crumbs: crumbs(
+        { name: "Ana Sayfa", path: "/" },
+        { name: "Gizlilik Politikası", path: "/gizlilik-politikasi" },
+      ),
     },
     {
       path: "/cerez-politikasi",
@@ -155,6 +171,7 @@ function collectRoutes(root: string): RouteMeta[] {
       description: cookieSummary,
       heading: "Çerez Politikası",
       summary: cookieSummary,
+      crumbs: crumbs({ name: "Ana Sayfa", path: "/" }, { name: "Çerez Politikası", path: "/cerez-politikasi" }),
     },
     {
       path: "/bursa",
@@ -162,6 +179,7 @@ function collectRoutes(root: string): RouteMeta[] {
       description: bursaSummary,
       heading: "Bursa çiçek gönderimi",
       summary: bursaSummary,
+      crumbs: crumbs({ name: "Ana Sayfa", path: "/" }, { name: "Bursa Teslimatı", path: "/bursa" }),
     },
     {
       path: "/ozel-tasarim",
@@ -169,6 +187,7 @@ function collectRoutes(root: string): RouteMeta[] {
       description: customSummary,
       heading: "Özel tasarımlar",
       summary: customSummary,
+      crumbs: crumbs({ name: "Ana Sayfa", path: "/" }, { name: "Özel Tasarım", path: "/ozel-tasarim" }),
     },
     {
       path: "/ozel-gunler",
@@ -176,6 +195,7 @@ function collectRoutes(root: string): RouteMeta[] {
       description: occasionSummary,
       heading: "Özel günler",
       summary: occasionSummary,
+      crumbs: crumbs({ name: "Ana Sayfa", path: "/" }, { name: "Özel Günler", path: "/ozel-gunler" }),
     },
     {
       path: "/rehber",
@@ -183,6 +203,7 @@ function collectRoutes(root: string): RouteMeta[] {
       description: guideSummary,
       heading: "Rehber",
       summary: guideSummary,
+      crumbs: crumbs({ name: "Ana Sayfa", path: "/" }, { name: "Rehber", path: "/rehber" }),
     },
   ];
 
@@ -193,16 +214,28 @@ function collectRoutes(root: string): RouteMeta[] {
       description: category.description,
       heading: category.name,
       summary: category.description,
+      crumbs: crumbs(
+        { name: "Ana Sayfa", path: "/" },
+        { name: "Mağaza", path: "/magaza" },
+        { name: category.name, path: `/magaza/${category.slug}` },
+      ),
     });
   }
 
   for (const area of [...getDistrictAreas(), ...getNeighborhoods()]) {
+    const parent = area.parentSlug ? getServiceAreaBySlug(area.parentSlug) : undefined;
     routes.push({
       path: area.path,
       title: `${area.name} · ${site.name}`,
       description: area.description,
       heading: area.name,
       summary: plainSummary(area.body.join(" ")),
+      crumbs: crumbs(
+        { name: "Ana Sayfa", path: "/" },
+        { name: "Bursa Teslimatı", path: "/bursa" },
+        ...(parent ? [{ name: parent.shortName, path: parent.path }] : []),
+        { name: area.shortName, path: area.path },
+      ),
     });
   }
 
@@ -213,6 +246,11 @@ function collectRoutes(root: string): RouteMeta[] {
       description: occasion.description,
       heading: occasion.name,
       summary: occasion.body.join(" "),
+      crumbs: crumbs(
+        { name: "Ana Sayfa", path: "/" },
+        { name: "Özel Günler", path: "/ozel-gunler" },
+        { name: occasion.name, path: occasion.path },
+      ),
     });
   }
 
@@ -223,6 +261,11 @@ function collectRoutes(root: string): RouteMeta[] {
       description: guide.description,
       heading: guide.name,
       summary: guide.body.join(" "),
+      crumbs: crumbs(
+        { name: "Ana Sayfa", path: "/" },
+        { name: "Rehber", path: "/rehber" },
+        { name: guide.name, path: guide.path },
+      ),
     });
   }
 
@@ -231,13 +274,15 @@ function collectRoutes(root: string): RouteMeta[] {
   if (fs.existsSync(productsFile)) {
     const source = fs.readFileSync(productsFile, "utf8");
     const matches = source.matchAll(
-      /slug:\s*"([^"]+)",\s*name:\s*"([^"]+)",\s*category:\s*"[^"]+",\s*description:\s*"([^"]+)",\s*file:\s*"([^"]+)"/g,
+      /slug:\s*"([^"]+)",\s*name:\s*"([^"]+)",\s*category:\s*"([^"]+)",\s*description:\s*"([^"]+)",\s*file:\s*"([^"]+)"/g,
     );
     for (const match of matches) {
       const slug = match[1];
       const name = match[2];
-      const description = match[3];
-      const file = match[4];
+      const categorySlug = match[3];
+      const description = match[4];
+      const file = match[5];
+      const category = categories.find((item) => item.slug === categorySlug);
       const sourceImage = path.join(root, "src/assets/urunler", file);
       let image: OgImage | undefined;
 
@@ -260,6 +305,12 @@ function collectRoutes(root: string): RouteMeta[] {
         heading: name,
         summary: description,
         image,
+        crumbs: crumbs(
+          { name: "Ana Sayfa", path: "/" },
+          { name: "Mağaza", path: "/magaza" },
+          ...(category ? [{ name: category.name, path: `/magaza/${category.slug}` }] : []),
+          { name, path: `/urun/${slug}` },
+        ),
       });
     }
   }
@@ -278,6 +329,99 @@ function imageTags(image: OgImage | undefined) {
   if (image.height) tags.push(`<meta property="og:image:height" content="${image.height}" />`);
   if (image.alt) tags.push(`<meta property="og:image:alt" content="${escapeHtml(image.alt)}" />`);
   return tags;
+}
+
+function jsonLdTags(route: RouteMeta) {
+  const blocks: unknown[] = [floristJsonLd()];
+
+  if (route.path === "/") {
+    blocks.push({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: site.name,
+      url: site.url,
+    });
+  }
+
+  if (route.crumbs && route.crumbs.length > 0) {
+    blocks.push({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: route.crumbs.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.name,
+        item: pageUrl(item.path),
+      })),
+    });
+  }
+
+  if (route.path.startsWith("/urun/")) {
+    blocks.push({
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: route.heading,
+      description: route.description,
+      image: route.image?.url ?? `${site.url}${site.ogImagePath}`,
+      brand: { "@type": "Brand", name: site.name },
+    });
+  }
+
+  return blocks.map(
+    (block) =>
+      `<script type="application/ld+json">${JSON.stringify(block).replaceAll("<", "\\u003c")}</script>`,
+  );
+}
+
+function notFoundHtml() {
+  return `<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Sayfa bulunamadı · ${escapeHtml(site.name)}</title>
+    <style>
+      body { margin: 0; background: #f7f3ee; color: #1c1917; font-family: Georgia, "Times New Roman", serif; }
+      main { max-width: 36rem; margin: 0 auto; padding: 4.5rem 1.25rem; }
+      a { color: inherit; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Sayfa bulunamadı</h1>
+      <p>Bu adres sitede yok. Ana sayfa, mağaza veya Bursa teslimat sayfasından devam edin.</p>
+      <p><a href="/">Ana sayfa</a> · <a href="/magaza/">Mağaza</a> · <a href="/bursa/">Bursa teslimatı</a></p>
+    </main>
+  </body>
+</html>
+`;
+}
+
+const aiCrawlers = [
+  "GPTBot",
+  "OAI-SearchBot",
+  "ChatGPT-User",
+  "ClaudeBot",
+  "Claude-SearchBot",
+  "Claude-User",
+  "PerplexityBot",
+  "Perplexity-User",
+  "Google-Extended",
+  "Googlebot",
+  "Bingbot",
+  "Applebot",
+  "Applebot-Extended",
+  "CCBot",
+  "Meta-ExternalAgent",
+  "Amazonbot",
+  "DuckAssistBot",
+  "YandexBot",
+];
+
+function robotsTxt() {
+  const groups = ["*", ...aiCrawlers].map((agent) => `User-agent: ${agent}\nAllow: /\n`);
+  return `${groups.join("\n")}\nSitemap: ${site.url}/sitemap.xml\n`;
 }
 
 function injectHead(template: string, route: RouteMeta) {
@@ -308,7 +452,7 @@ function injectHead(template: string, route: RouteMeta) {
     );
   }
 
-  const headTags = tags.join("\n    ");
+  const headTags = [...tags, ...jsonLdTags(route)].join("\n    ");
 
   if (html.includes("<!--seo-head-->")) {
     html = html.replace("<!--seo-head-->", headTags);
@@ -352,6 +496,11 @@ export function seoPrerenderPlugin(): Plugin {
         fs.copyFileSync(hero, ogDest);
       }
 
+      const logo = path.join(root, "src/assets/logo.png");
+      if (fs.existsSync(logo)) {
+        fs.copyFileSync(logo, path.join(dist, "logo.png"));
+      }
+
       const template = fs.readFileSync(indexPath, "utf8");
       const routes = collectRoutes(root);
 
@@ -366,17 +515,31 @@ export function seoPrerenderPlugin(): Plugin {
         fs.writeFileSync(path.join(outDir, "index.html"), html);
       }
 
-      fs.copyFileSync(indexPath, path.join(dist, "404.html"));
+      fs.writeFileSync(path.join(dist, "404.html"), notFoundHtml());
 
+      const lastmod = new Date().toISOString().slice(0, 10);
+      const seen = new Set<string>();
       const urls = routes
-        .map((route) => `  <url>\n    <loc>${escapeHtml(pageUrl(route.path))}</loc>\n  </url>`)
+        .map((route) => {
+          const loc = pageUrl(route.path);
+          if (seen.has(loc)) {
+            throw new Error(`Sitemap adresi yineleniyor: ${loc}`);
+          }
+          seen.add(loc);
+          const filePath =
+            route.path === "/"
+              ? path.join(dist, "index.html")
+              : path.join(dist, route.path.slice(1), "index.html");
+          if (!fs.existsSync(filePath)) {
+            throw new Error(`Sitemap adresi için sayfa yok: ${loc}`);
+          }
+          return `  <url>\n    <loc>${escapeHtml(loc)}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </url>`;
+        })
         .join("\n");
 
       const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
       fs.writeFileSync(path.join(dist, "sitemap.xml"), sitemap);
-
-      const robots = `User-agent: *\nAllow: /\n\nSitemap: ${site.url}/sitemap.xml\n`;
-      fs.writeFileSync(path.join(dist, "robots.txt"), robots);
+      fs.writeFileSync(path.join(dist, "robots.txt"), robotsTxt());
     },
   };
 }

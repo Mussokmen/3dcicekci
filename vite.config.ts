@@ -8,7 +8,7 @@ import { seoPrerenderPlugin } from './vite.seo-plugin.ts'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
-  base: process.env.GITHUB_PAGES === "true" ? "/3dcicekci/" : "/",
+  base: "/",
   plugins: [react(), tailwindcss(), seoPrerenderPlugin()],
   resolve: {
     alias: {
