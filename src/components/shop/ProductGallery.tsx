@@ -30,8 +30,8 @@ export function ProductGallery({ name, images }: ProductGalleryProps) {
           alt={`${name}, Bursa teslim`}
           width={800}
           height={1000}
-          decoding="async"
-          className="aspect-[4/5] w-full object-cover md:aspect-[3/4]"
+          fetchPriority="high"
+          className="aspect-[4/5] w-full max-w-full object-cover md:aspect-[3/4]"
         />
       </div>
       {images.length > 1 ? (
